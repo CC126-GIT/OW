@@ -1,0 +1,661 @@
+/* 
+ * 英雄主题色样式 - 每个英雄独特颜色方案
+ * 文件名：hero-themes.css
+ */
+
+/* ========== 英雄标题颜色渐变 ========== */
+/* 每个英雄的标题使用独特的颜色渐变 */
+
+/* 源氏 - 青绿色渐变 */
+[data-hero="genji"] .hero-title {
+    background: linear-gradient(45deg, #00ff9d, #00e6ff, #00ff9d) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    text-shadow: 0 0 30px rgba(0, 255, 157, 0.3) !important;
+    animation: genjiTitleGlow 3s ease-in-out infinite alternate !important;
+}
+
+@keyframes genjiTitleGlow {
+    0% {
+        text-shadow: 0 0 20px rgba(0, 255, 157, 0.3),
+                     0 0 40px rgba(0, 255, 157, 0.2);
+    }
+    100% {
+        text-shadow: 0 0 30px rgba(0, 255, 157, 0.4),
+                     0 0 60px rgba(0, 255, 157, 0.3),
+                     0 0 80px rgba(0, 255, 157, 0.2);
+    }
+}
+
+/* 天使 - 金色渐变 */
+[data-hero="mercy"] .hero-title {
+    background: linear-gradient(45deg, #ffd700, #fffacd, #ffd700) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    text-shadow: 0 0 30px rgba(255, 215, 0, 0.3) !important;
+    animation: mercyTitleGlow 3s ease-in-out infinite alternate !important;
+}
+
+@keyframes mercyTitleGlow {
+    0% {
+        text-shadow: 0 0 20px rgba(255, 215, 0, 0.3),
+                     0 0 40px rgba(255, 215, 0, 0.2);
+    }
+    100% {
+        text-shadow: 0 0 30px rgba(255, 215, 0, 0.4),
+                     0 0 60px rgba(255, 215, 0, 0.3),
+                     0 0 80px rgba(255, 215, 0, 0.2);
+    }
+}
+
+/* 半藏 - 深蓝色渐变 */
+[data-hero="hanzo"] .hero-title {
+    background: linear-gradient(45deg, #0066cc, #66b3ff, #0066cc) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    text-shadow: 0 0 30px rgba(0, 102, 204, 0.3) !important;
+    animation: hanzoTitleGlow 4s ease-in-out infinite alternate !important;
+}
+
+@keyframes hanzoTitleGlow {
+    0% {
+        text-shadow: 0 0 20px rgba(0, 102, 204, 0.3),
+                     0 0 40px rgba(0, 102, 204, 0.2);
+    }
+    100% {
+        text-shadow: 0 0 30px rgba(0, 102, 204, 0.4),
+                     0 0 60px rgba(0, 102, 204, 0.3),
+                     0 0 80px rgba(0, 102, 204, 0.2);
+    }
+}
+
+/* 堡垒 - 铁灰色渐变 */
+[data-hero="bastion"] .hero-title {
+    background: linear-gradient(45deg, #808080, #c0c0c0, #808080) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    text-shadow: 0 0 30px rgba(128, 128, 128, 0.3) !important;
+    animation: bastionTitleGlow 3s ease-in-out infinite alternate !important;
+}
+
+@keyframes bastionTitleGlow {
+    0% {
+        text-shadow: 0 0 20px rgba(128, 128, 128, 0.3),
+                     0 0 40px rgba(128, 128, 128, 0.2);
+    }
+    100% {
+        text-shadow: 0 0 30px rgba(128, 128, 128, 0.4),
+                     0 0 60px rgba(128, 128, 128, 0.3),
+                     0 0 80px rgba(128, 128, 128, 0.2);
+    }
+}
+
+/* D.Va - 粉紫色渐变 */
+[data-hero="dva"] .hero-title {
+    background: linear-gradient(45deg, #ff66b2, #cc66ff, #ff66b2) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    text-shadow: 0 0 30px rgba(255, 102, 178, 0.3) !important;
+    animation: dvaTitleGlow 3s ease-in-out infinite alternate !important;
+}
+
+@keyframes dvaTitleGlow {
+    0% {
+        text-shadow: 0 0 20px rgba(255, 102, 178, 0.3),
+                     0 0 40px rgba(255, 102, 178, 0.2);
+    }
+    100% {
+        text-shadow: 0 0 30px rgba(255, 102, 178, 0.4),
+                     0 0 60px rgba(255, 102, 178, 0.3),
+                     0 0 80px rgba(255, 102, 178, 0.2);
+    }
+}
+
+/* 猎空 - 橙色渐变 */
+[data-hero="tracer"] .hero-title {
+    background: linear-gradient(45deg, #ff6600, #ffcc00, #ff6600) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    text-shadow: 0 0 30px rgba(255, 102, 0, 0.3) !important;
+    animation: tracerTitleGlow 2.5s ease-in-out infinite alternate !important;
+}
+
+@keyframes tracerTitleGlow {
+    0% {
+        text-shadow: 0 0 20px rgba(255, 102, 0, 0.3),
+                     0 0 40px rgba(255, 102, 0, 0.2);
+    }
+    100% {
+        text-shadow: 0 0 30px rgba(255, 102, 0, 0.4),
+                     0 0 60px rgba(255, 102, 0, 0.3),
+                     0 0 80px rgba(255, 102, 0, 0.2);
+    }
+}
+
+/* 雾子 - 紫色渐变 */
+[data-hero="kiriko"] .hero-title {
+    background: linear-gradient(45deg, #9933cc, #ff66cc, #9933cc) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    text-shadow: 0 0 30px rgba(153, 51, 204, 0.3) !important;
+    animation: kirikoTitleGlow 3.5s ease-in-out infinite alternate !important;
+}
+
+@keyframes kirikoTitleGlow {
+    0% {
+        text-shadow: 0 0 20px rgba(153, 51, 204, 0.3),
+                     0 0 40px rgba(153, 51, 204, 0.2);
+    }
+    100% {
+        text-shadow: 0 0 30px rgba(153, 51, 204, 0.4),
+                     0 0 60px rgba(153, 51, 204, 0.3),
+                     0 0 80px rgba(153, 51, 204, 0.2);
+    }
+}
+
+/* 渣客女王 - 红色渐变 */
+[data-hero="junkerqueen"] .hero-title {
+    background: linear-gradient(45deg, #cc0000, #ff6600, #cc0000) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    text-shadow: 0 0 30px rgba(204, 0, 0, 0.3) !important;
+    animation: junkerqueenTitleGlow 3s ease-in-out infinite alternate !important;
+}
+
+@keyframes junkerqueenTitleGlow {
+    0% {
+        text-shadow: 0 0 20px rgba(204, 0, 0, 0.3),
+                     0 0 40px rgba(204, 0, 0, 0.2);
+    }
+    100% {
+        text-shadow: 0 0 30px rgba(204, 0, 0, 0.4),
+                     0 0 60px rgba(204, 0, 0, 0.3),
+                     0 0 80px rgba(204, 0, 0, 0.2);
+    }
+}
+
+/* 破坏球 - 黄色渐变 */
+[data-hero="wreckingball"] .hero-title {
+    background: linear-gradient(45deg, #ffcc00, #ff9900, #ffcc00) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    text-shadow: 0 0 30px rgba(255, 204, 0, 0.3) !important;
+    animation: wreckingballTitleGlow 4s ease-in-out infinite alternate !important;
+}
+
+@keyframes wreckingballTitleGlow {
+    0% {
+        text-shadow: 0 0 20px rgba(255, 204, 0, 0.3),
+                     0 0 40px rgba(255, 204, 0, 0.2);
+    }
+    100% {
+        text-shadow: 0 0 30px rgba(255, 204, 0, 0.4),
+                     0 0 60px rgba(255, 204, 0, 0.3),
+                     0 0 80px rgba(255, 204, 0, 0.2);
+    }
+}
+
+/* 死神 - 暗红色渐变 */
+[data-hero="reaper"] .hero-title {
+    background: linear-gradient(45deg, #660000, #cc0000, #660000) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    text-shadow: 0 0 30px rgba(102, 0, 0, 0.4) !important;
+    animation: reaperTitleGlow 4s ease-in-out infinite alternate !important;
+}
+
+@keyframes reaperTitleGlow {
+    0% {
+        text-shadow: 0 0 25px rgba(102, 0, 0, 0.4),
+                     0 0 50px rgba(102, 0, 0, 0.3);
+    }
+    100% {
+        text-shadow: 0 0 35px rgba(102, 0, 0, 0.5),
+                     0 0 70px rgba(102, 0, 0, 0.4),
+                     0 0 90px rgba(102, 0, 0, 0.3);
+    }
+}
+
+/* 卡西迪 - 棕色渐变 */
+[data-hero="cassidy"] .hero-title {
+    background: linear-gradient(45deg, #8b4513, #d2b48c, #8b4513) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    text-shadow: 0 0 30px rgba(139, 69, 19, 0.3) !important;
+    animation: cassidyTitleGlow 3s ease-in-out infinite alternate !important;
+}
+
+@keyframes cassidyTitleGlow {
+    0% {
+        text-shadow: 0 0 20px rgba(139, 69, 19, 0.3),
+                     0 0 40px rgba(139, 69, 19, 0.2);
+    }
+    100% {
+        text-shadow: 0 0 30px rgba(139, 69, 19, 0.4),
+                     0 0 60px rgba(139, 69, 19, 0.3),
+                     0 0 80px rgba(139, 69, 19, 0.2);
+    }
+}
+
+/* ========== 英雄技能编号颜色 ========== */
+[data-hero="genji"] .skill-number {
+    background: linear-gradient(135deg, #00ff9d, #00cc7a) !important;
+    color: #003322 !important;
+    box-shadow: 0 4px 15px rgba(0, 255, 157, 0.3) !important;
+}
+
+[data-hero="mercy"] .skill-number {
+    background: linear-gradient(135deg, #ffd700, #ffcc00) !important;
+    color: #333300 !important;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3) !important;
+}
+
+[data-hero="hanzo"] .skill-number {
+    background: linear-gradient(135deg, #0066cc, #0052a3) !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3) !important;
+}
+
+[data-hero="bastion"] .skill-number {
+    background: linear-gradient(135deg, #808080, #666666) !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(128, 128, 128, 0.3) !important;
+}
+
+[data-hero="dva"] .skill-number {
+    background: linear-gradient(135deg, #ff66b2, #ff3399) !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(255, 102, 178, 0.3) !important;
+}
+
+[data-hero="tracer"] .skill-number {
+    background: linear-gradient(135deg, #ff6600, #e65c00) !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3) !important;
+}
+
+[data-hero="kiriko"] .skill-number {
+    background: linear-gradient(135deg, #9933cc, #7a29a3) !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(153, 51, 204, 0.3) !important;
+}
+
+[data-hero="junkerqueen"] .skill-number {
+    background: linear-gradient(135deg, #cc0000, #a30000) !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(204, 0, 0, 0.3) !important;
+}
+
+[data-hero="wreckingball"] .skill-number {
+    background: linear-gradient(135deg, #ffcc00, #e6b800) !important;
+    color: #333300 !important;
+    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3) !important;
+}
+
+[data-hero="reaper"] .skill-number {
+    background: linear-gradient(135deg, #660000, #4d0000) !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(102, 0, 0, 0.3) !important;
+}
+
+[data-hero="cassidy"] .skill-number {
+    background: linear-gradient(135deg, #8b4513, #6b3510) !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3) !important;
+}
+
+/* ========== 英雄卡片边框颜色 ========== */
+[data-hero="genji"] .info-card:hover {
+    border-color: rgba(0, 255, 157, 0.4) !important;
+    box-shadow: 0 15px 40px rgba(0, 255, 157, 0.15) !important;
+}
+
+[data-hero="mercy"] .info-card:hover {
+    border-color: rgba(255, 215, 0, 0.4) !important;
+    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.15) !important;
+}
+
+[data-hero="hanzo"] .info-card:hover {
+    border-color: rgba(0, 102, 204, 0.4) !important;
+    box-shadow: 0 15px 40px rgba(0, 102, 204, 0.15) !important;
+}
+
+[data-hero="bastion"] .info-card:hover {
+    border-color: rgba(128, 128, 128, 0.4) !important;
+    box-shadow: 0 15px 40px rgba(128, 128, 128, 0.15) !important;
+}
+
+[data-hero="dva"] .info-card:hover {
+    border-color: rgba(255, 102, 178, 0.4) !important;
+    box-shadow: 0 15px 40px rgba(255, 102, 178, 0.15) !important;
+}
+
+[data-hero="tracer"] .info-card:hover {
+    border-color: rgba(255, 102, 0, 0.4) !important;
+    box-shadow: 0 15px 40px rgba(255, 102, 0, 0.15) !important;
+}
+
+[data-hero="kiriko"] .info-card:hover {
+    border-color: rgba(153, 51, 204, 0.4) !important;
+    box-shadow: 0 15px 40px rgba(153, 51, 204, 0.15) !important;
+}
+
+[data-hero="junkerqueen"] .info-card:hover {
+    border-color: rgba(204, 0, 0, 0.4) !important;
+    box-shadow: 0 15px 40px rgba(204, 0, 0, 0.15) !important;
+}
+
+[data-hero="wreckingball"] .info-card:hover {
+    border-color: rgba(255, 204, 0, 0.4) !important;
+    box-shadow: 0 15px 40px rgba(255, 204, 0, 0.15) !important;
+}
+
+[data-hero="reaper"] .info-card:hover {
+    border-color: rgba(102, 0, 0, 0.4) !important;
+    box-shadow: 0 15px 40px rgba(102, 0, 0, 0.15) !important;
+}
+
+[data-hero="cassidy"] .info-card:hover {
+    border-color: rgba(139, 69, 19, 0.4) !important;
+    box-shadow: 0 15px 40px rgba(139, 69, 19, 0.15) !important;
+}
+
+/* ========== 英雄技能卡片边框颜色 ========== */
+[data-hero="genji"] .skill-card {
+    border-left-color: #00ff9d !important;
+}
+
+[data-hero="mercy"] .skill-card {
+    border-left-color: #ffd700 !important;
+}
+
+[data-hero="hanzo"] .skill-card {
+    border-left-color: #0066cc !important;
+}
+
+[data-hero="bastion"] .skill-card {
+    border-left-color: #808080 !important;
+}
+
+[data-hero="dva"] .skill-card {
+    border-left-color: #ff66b2 !important;
+}
+
+[data-hero="tracer"] .skill-card {
+    border-left-color: #ff6600 !important;
+}
+
+[data-hero="kiriko"] .skill-card {
+    border-left-color: #9933cc !important;
+}
+
+[data-hero="junkerqueen"] .skill-card {
+    border-left-color: #cc0000 !important;
+}
+
+[data-hero="wreckingball"] .skill-card {
+    border-left-color: #ffcc00 !important;
+}
+
+[data-hero="reaper"] .skill-card {
+    border-left-color: #660000 !important;
+}
+
+[data-hero="cassidy"] .skill-card {
+    border-left-color: #8b4513 !important;
+}
+
+/* ========== 英雄图片边框颜色 ========== */
+[data-hero="genji"] .hero-centered-image {
+    border-color: rgba(0, 255, 157, 0.5) !important;
+    box-shadow: 0 10px 35px rgba(0, 255, 157, 0.25) !important;
+}
+
+[data-hero="genji"] .hero-centered-image:hover {
+    border-color: #00ff9d !important;
+    box-shadow: 0 15px 45px rgba(0, 255, 157, 0.35) !important;
+}
+
+[data-hero="mercy"] .hero-centered-image {
+    border-color: rgba(255, 215, 0, 0.5) !important;
+    box-shadow: 0 10px 35px rgba(255, 215, 0, 0.25) !important;
+}
+
+[data-hero="mercy"] .hero-centered-image:hover {
+    border-color: #ffd700 !important;
+    box-shadow: 0 15px 45px rgba(255, 215, 0, 0.35) !important;
+}
+
+[data-hero="hanzo"] .hero-centered-image {
+    border-color: rgba(0, 102, 204, 0.5) !important;
+    box-shadow: 0 10px 35px rgba(0, 102, 204, 0.25) !important;
+}
+
+[data-hero="hanzo"] .hero-centered-image:hover {
+    border-color: #0066cc !important;
+    box-shadow: 0 15px 45px rgba(0, 102, 204, 0.35) !important;
+}
+
+[data-hero="bastion"] .hero-centered-image {
+    border-color: rgba(128, 128, 128, 0.5) !important;
+    box-shadow: 0 10px 35px rgba(128, 128, 128, 0.25) !important;
+}
+
+[data-hero="bastion"] .hero-centered-image:hover {
+    border-color: #808080 !important;
+    box-shadow: 0 15px 45px rgba(128, 128, 128, 0.35) !important;
+}
+
+[data-hero="dva"] .hero-centered-image {
+    border-color: rgba(255, 102, 178, 0.5) !important;
+    box-shadow: 0 10px 35px rgba(255, 102, 178, 0.25) !important;
+}
+
+[data-hero="dva"] .hero-centered-image:hover {
+    border-color: #ff66b2 !important;
+    box-shadow: 0 15px 45px rgba(255, 102, 178, 0.35) !important;
+}
+
+[data-hero="tracer"] .hero-centered-image {
+    border-color: rgba(255, 102, 0, 0.5) !important;
+    box-shadow: 0 10px 35px rgba(255, 102, 0, 0.25) !important;
+}
+
+[data-hero="tracer"] .hero-centered-image:hover {
+    border-color: #ff6600 !important;
+    box-shadow: 0 15px 45px rgba(255, 102, 0, 0.35) !important;
+}
+
+[data-hero="kiriko"] .hero-centered-image {
+    border-color: rgba(153, 51, 204, 0.5) !important;
+    box-shadow: 0 10px 35px rgba(153, 51, 204, 0.25) !important;
+}
+
+[data-hero="kiriko"] .hero-centered-image:hover {
+    border-color: #9933cc !important;
+    box-shadow: 0 15px 45px rgba(153, 51, 204, 0.35) !important;
+}
+
+[data-hero="junkerqueen"] .hero-centered-image {
+    border-color: rgba(204, 0, 0, 0.5) !important;
+    box-shadow: 0 10px 35px rgba(204, 0, 0, 0.25) !important;
+}
+
+[data-hero="junkerqueen"] .hero-centered-image:hover {
+    border-color: #cc0000 !important;
+    box-shadow: 0 15px 45px rgba(204, 0, 0, 0.35) !important;
+}
+
+[data-hero="wreckingball"] .hero-centered-image {
+    border-color: rgba(255, 204, 0, 0.5) !important;
+    box-shadow: 0 10px 35px rgba(255, 204, 0, 0.25) !important;
+}
+
+[data-hero="wreckingball"] .hero-centered-image:hover {
+    border-color: #ffcc00 !important;
+    box-shadow: 0 15px 45px rgba(255, 204, 0, 0.35) !important;
+}
+
+[data-hero="reaper"] .hero-centered-image {
+    border-color: rgba(102, 0, 0, 0.5) !important;
+    box-shadow: 0 10px 35px rgba(102, 0, 0, 0.25) !important;
+}
+
+[data-hero="reaper"] .hero-centered-image:hover {
+    border-color: #660000 !important;
+    box-shadow: 0 15px 45px rgba(102, 0, 0, 0.35) !important;
+}
+
+[data-hero="cassidy"] .hero-centered-image {
+    border-color: rgba(139, 69, 19, 0.5) !important;
+    box-shadow: 0 10px 35px rgba(139, 69, 19, 0.25) !important;
+}
+
+[data-hero="cassidy"] .hero-centered-image:hover {
+    border-color: #8b4513 !important;
+    box-shadow: 0 15px 45px rgba(139, 69, 19, 0.35) !important;
+}
+
+/* ========== 返回按钮颜色 ========== */
+[data-hero="genji"] .back-btn {
+    background: linear-gradient(135deg, rgba(0, 255, 157, 0.2), rgba(0, 255, 157, 0.1)) !important;
+    color: #00ff9d !important;
+    border-color: rgba(0, 255, 157, 0.3) !important;
+}
+
+[data-hero="genji"] .back-btn:hover {
+    background: linear-gradient(135deg, rgba(0, 255, 157, 0.3), rgba(0, 255, 157, 0.2)) !important;
+    border-color: #00ff9d !important;
+    box-shadow: 0 5px 20px rgba(0, 255, 157, 0.2) !important;
+}
+
+[data-hero="mercy"] .back-btn {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0.1)) !important;
+    color: #ffd700 !important;
+    border-color: rgba(255, 215, 0, 0.3) !important;
+}
+
+[data-hero="mercy"] .back-btn:hover {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.3), rgba(255, 215, 0, 0.2)) !important;
+    border-color: #ffd700 !important;
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2) !important;
+}
+
+[data-hero="hanzo"] .back-btn {
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.2), rgba(0, 102, 204, 0.1)) !important;
+    color: #66b3ff !important;
+    border-color: rgba(0, 102, 204, 0.3) !important;
+}
+
+[data-hero="hanzo"] .back-btn:hover {
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.3), rgba(0, 102, 204, 0.2)) !important;
+    border-color: #0066cc !important;
+    box-shadow: 0 5px 20px rgba(0, 102, 204, 0.2) !important;
+}
+
+[data-hero="bastion"] .back-btn {
+    background: linear-gradient(135deg, rgba(128, 128, 128, 0.2), rgba(128, 128, 128, 0.1)) !important;
+    color: #c0c0c0 !important;
+    border-color: rgba(128, 128, 128, 0.3) !important;
+}
+
+[data-hero="bastion"] .back-btn:hover {
+    background: linear-gradient(135deg, rgba(128, 128, 128, 0.3), rgba(128, 128, 128, 0.2)) !important;
+    border-color: #808080 !important;
+    box-shadow: 0 5px 20px rgba(128, 128, 128, 0.2) !important;
+}
+
+[data-hero="dva"] .back-btn {
+    background: linear-gradient(135deg, rgba(255, 102, 178, 0.2), rgba(255, 102, 178, 0.1)) !important;
+    color: #ff66b2 !important;
+    border-color: rgba(255, 102, 178, 0.3) !important;
+}
+
+[data-hero="dva"] .back-btn:hover {
+    background: linear-gradient(135deg, rgba(255, 102, 178, 0.3), rgba(255, 102, 178, 0.2)) !important;
+    border-color: #ff66b2 !important;
+    box-shadow: 0 5px 20px rgba(255, 102, 178, 0.2) !important;
+}
+
+[data-hero="tracer"] .back-btn {
+    background: linear-gradient(135deg, rgba(255, 102, 0, 0.2), rgba(255, 102, 0, 0.1)) !important;
+    color: #ff6600 !important;
+    border-color: rgba(255, 102, 0, 0.3) !important;
+}
+
+[data-hero="tracer"] .back-btn:hover {
+    background: linear-gradient(135deg, rgba(255, 102, 0, 0.3), rgba(255, 102, 0, 0.2)) !important;
+    border-color: #ff6600 !important;
+    box-shadow: 0 5px 20px rgba(255, 102, 0, 0.2) !important;
+}
+
+[data-hero="kiriko"] .back-btn {
+    background: linear-gradient(135deg, rgba(153, 51, 204, 0.2), rgba(153, 51, 204, 0.1)) !important;
+    color: #9933cc !important;
+    border-color: rgba(153, 51, 204, 0.3) !important;
+}
+
+[data-hero="kiriko"] .back-btn:hover {
+    background: linear-gradient(135deg, rgba(153, 51, 204, 0.3), rgba(153, 51, 204, 0.2)) !important;
+    border-color: #9933cc !important;
+    box-shadow: 0 5px 20px rgba(153, 51, 204, 0.2) !important;
+}
+
+[data-hero="junkerqueen"] .back-btn {
+    background: linear-gradient(135deg, rgba(204, 0, 0, 0.2), rgba(204, 0, 0, 0.1)) !important;
+    color: #cc0000 !important;
+    border-color: rgba(204, 0, 0, 0.3) !important;
+}
+
+[data-hero="junkerqueen"] .back-btn:hover {
+    background: linear-gradient(135deg, rgba(204, 0, 0, 0.3), rgba(204, 0, 0, 0.2)) !important;
+    border-color: #cc0000 !important;
+    box-shadow: 0 5px 20px rgba(204, 0, 0, 0.2) !important;
+}
+
+[data-hero="wreckingball"] .back-btn {
+    background: linear-gradient(135deg, rgba(255, 204, 0, 0.2), rgba(255, 204, 0, 0.1)) !important;
+    color: #ffcc00 !important;
+    border-color: rgba(255, 204, 0, 0.3) !important;
+}
+
+[data-hero="wreckingball"] .back-btn:hover {
+    background: linear-gradient(135deg, rgba(255, 204, 0, 0.3), rgba(255, 204, 0, 0.2)) !important;
+    border-color: #ffcc00 !important;
+    box-shadow: 0 5px 20px rgba(255, 204, 0, 0.2) !important;
+}
+
+[data-hero="reaper"] .back-btn {
+    background: linear-gradient(135deg, rgba(102, 0, 0, 0.2), rgba(102, 0, 0, 0.1)) !important;
+    color: #cc0000 !important;
+    border-color: rgba(102, 0, 0, 0.3) !important;
+}
+
+[data-hero="reaper"] .back-btn:hover {
+    background: linear-gradient(135deg, rgba(102, 0, 0, 0.3), rgba(102, 0, 0, 0.2)) !important;
+    border-color: #660000 !important;
+    box-shadow: 0 5px 20px rgba(102, 0, 0, 0.2) !important;
+}
+
+[data-hero="cassidy"] .back-btn {
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.2), rgba(139, 69, 19, 0.1)) !important;
+    color: #d2b48c !important;
+    border-color: rgba(139, 69, 19, 0.3) !important;
+}
+
+[data-hero="cassidy"] .back-btn:hover {
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.3), rgba(139, 69, 19, 0.2)) !important;
+    border-color: #8b4513 !important;
+    box-shadow: 0 5px 20px rgba(139, 69, 19, 0.2) !important;
+}

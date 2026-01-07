@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>半藏 - 英雄详情 | 守望先锋风格官网</title>
+    
+    <!-- 引入 Bootstrap 5 CSS -->
+    <link href="../../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入自定义CSS -->
+    <link href="../../../assets/css/style.css" rel="stylesheet">
+    <!-- 引入英雄详情页专用CSS -->
+    <link href="../../../assets/css/hero-detail.css" rel="stylesheet">
+    <!-- 引入英雄居中布局CSS -->
+    <link href="../../../assets/css/hero-centered.css" rel="stylesheet">
+    <!-- 引入英雄主题色CSS -->
+    <link href="../../../assets/css/hero-themes.css" rel="stylesheet">
+    <!-- 引入 Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <style>
+        /* 页面加载时的过渡效果 */
+        body.hero-centered-page {
+            animation: pageFadeIn 0.5s ease-out;
+        }
+        
+        @keyframes pageFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* 确保内容完全显示 */
+        .hero-centered-page .hero-detail-main {
+            min-height: calc(100vh - 300px);
+        }
+        
+        /* 导航栏滚动时的padding调整 */
+        .main-navbar.scrolled + .hero-detail-main {
+            padding-top: 85px;
+        }
+        
+        /* 半藏专属微调 */
+        [data-hero="hanzo"] .hero-title-section::after {
+            background: radial-gradient(circle, rgba(0, 102, 204, 0.15), transparent 70%);
+        }
+        
+        /* 箭矢动画效果 */
+        @keyframes arrowGlide {
+            0% {
+                transform: translateX(-100px) rotate(-45deg);
+                opacity: 0;
+            }
+            10%, 90% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateX(100vw) rotate(-45deg);
+                opacity: 0;
+            }
+        }
+        
+        /* 暴风雪粒子效果 */
+        @keyframes snowFall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body class="hero-detail-page hero-centered-page" data-hero="hanzo">
+    <!-- ========== 导航栏 ========== -->
+    <nav class="navbar navbar-expand-lg navbar-dark main-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="../../../index.html">
+                <img src="../../../assets/img/logo.png" alt="网站Logo" class="navbar-logo">
+                OVERWATCH
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../../index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../index.html">英雄</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../news/index.html">新闻</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-people-fill"></i> 社区</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-gift-fill"></i> 福利</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-trophy-fill"></i> 电竞</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-shop"></i> 商城</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== 英雄详情内容 ========== -->
+    <main class="hero-detail-main">
+        <div class="container">
+            <!-- 重新设计的标题区域 -->
+            <div class="hero-header-container">
+                <!-- 返回按钮在左上角 -->
+                <div class="back-btn-container">
+                    <a href="../index.html" class="back-btn">
+                        <i class="bi bi-arrow-left"></i> 返回英雄列表
+                    </a>
+                </div>
+                
+                <!-- 标题和角色居中 -->
+                <div class="hero-title-section">
+                    <h1 class="hero-title">半藏</h1>
+                    <span class="hero-role-badge" data-role="输出">输出</span>
+                </div>
+            </div>
+            
+            <div class="hero-content-container">
+                <!-- 英雄图片 -->
+                <div class="hero-image-container">
+                    <img src="../../../assets/img/半藏.webp" alt="半藏" class="hero-centered-image">
+                </div>
+                
+                <!-- 英雄简介 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-person-badge me-2"></i>英雄简介</h3>
+                    <p class="intro-text">半藏是一名精准的狙击手，使用传统的和弓进行远程攻击。他能够攀爬墙壁，用音波箭探测敌人位置，并用风暴箭快速攻击。他的终极技能"竜"能够穿透墙壁和护盾，对路径上的所有敌人造成毁灭性打击。作为岛田家族的长子，半藏拥有精湛的箭术和卓越的战斗智慧。</p>
+                </div>
+                
+                <!-- 技能介绍 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-tools me-2"></i>技能介绍</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">01</span>
+                                <h4 class="skill-name">和弓</h4>
+                            </div>
+                            <p class="skill-desc">半藏的主要武器，拉满弓弦后发射一支强力箭矢，造成最高125点伤害（蓄力0.75秒）。爆头伤害为250点，可以秒杀大多数脆皮英雄。箭矢有下坠，需要预判弹道。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">02</span>
+                                <h4 class="skill-name">暴风雨</h4>
+                            </div>
+                            <p class="skill-desc">快速连续发射6支箭矢，每支造成70点伤害。暴风雨的箭矢会以扇形扩散，适合近距离战斗或对大型目标造成快速伤害。冷却时间10秒。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">03</span>
+                                <h4 class="skill-name">音波箭</h4>
+                            </div>
+                            <p class="skill-desc">发射一枚探测箭，显示10米半径范围内的所有敌人轮廓，持续6秒。音波箭可以附着在墙面或地面上，提供持续视野。冷却时间12秒，是侦察和反隐身的利器。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">04</span>
+                                <h4 class="skill-name">竜</h4>
+                            </div>
+                            <p class="skill-desc">终极技能，发射一条贯穿全图的巨龙，对路径上的所有敌人造成每秒300点伤害。竜可以穿透墙壁、护盾和障碍物，持续6秒。需要1687点能量充能，是强大的区域控制和伤害技能。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 被动技能 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-lightning-charge me-2"></i>被动技能</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">P1</span>
+                                <h4 class="skill-name">攀爬</h4>
+                            </div>
+                            <p class="skill-desc">半藏可以在垂直墙面上攀爬，大幅增强他的垂直机动性。按住跳跃键即可攀爬，允许他到达制高点，获得更好的射击角度和视野优势。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">P2</span>
+                                <h4 class="skill-name">暴击箭</h4>
+                            </div>
+                            <p class="skill-desc">半藏的箭矢在飞行一段距离后会自动消失，但在消失前必定会保持拉满弓时的伤害。这意味着半藏可以在极限距离依然保持满伤害输出。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 背景故事 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-book me-2"></i>背景故事</h3>
+                    <div class="story-content">
+                        <p>半藏，原名岛田半藏，出生于日本花村一个古老而强大的黑道家族——岛田家族。作为家族的长子，半藏从小就接受严格的训练，学习家族的传统武术和弓术，被培养为家族的继承人。他的箭术天赋异禀，很快超越了所有导师，成为家族历史上最杰出的弓箭手。</p>
+                        
+                        <p>半藏深爱着岛田家族，但他对家族从事的非法军火交易感到矛盾。他试图改革家族，将其引向合法经营，但遭到了保守派的强烈反对。与此同时，他的弟弟源氏对家族事务毫无兴趣，沉迷于科技和现代武术，兄弟二人渐行渐远。</p>
+                        
+                        <p>岛田家族首领去世后，家族内部爆发了继承权之争。许多家族长老更青睐源氏，认为他更具创新精神。在一次激烈的争吵后，半藏与源氏被迫进行决斗。半藏用箭射中了源氏的心脏，以为杀死了弟弟，痛苦地离开了现场，从此背负着弑弟的罪孽。</p>
+                        
+                        <p>源氏"死后"，半藏放弃了家族继承权，将岛田家族交给长老们管理，自己则开始了自我放逐的旅程。他游走于世界各地，试图通过修行来赎罪。半藏成为了一个孤独的流浪者，偶尔接受雇佣兵工作，但他的内心始终被罪恶感折磨。</p>
+                        
+                        <p>多年后，半藏得知源氏并没有死，而是被守望先锋救活并改造为半机械人。这个消息让他既欣慰又痛苦。他开始暗中关注源氏的动向，希望能有机会与弟弟和解，但又不确定该如何面对。</p>
+                        
+                        <p>现在，半藏继续着他的流浪生活，用他精湛的箭术帮助需要帮助的人。他不再使用岛田家族的姓氏，以简单的"半藏"自称。他最大的愿望是找到内心的平静，并与弟弟源氏和解，共同让岛田家族摆脱犯罪的阴影。</p>
+                        
+                        <p class="highlight">"真正的力量来自内心的平静。"——半藏</p>
+                    </div>
+                </div>
+                
+                <!-- 英雄数据 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-graph-up me-2"></i>英雄数据</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-label">难度等级</span>
+                            <span class="stat-value hard">困难</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">生命值</span>
+                            <span class="stat-value">200</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">移动速度</span>
+                            <span class="stat-value medium">中等</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">远程伤害</span>
+                            <span class="stat-value excellent">顶级</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">爆发伤害</span>
+                            <span class="stat-value high">高</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">生存能力</span>
+                            <span class="stat-value medium">中等</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">机动性</span>
+                            <span class="stat-value medium">中等</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">团队贡献</span>
+                            <span class="stat-value high">高</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 使用技巧 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-lightbulb me-2"></i>使用技巧</h3>
+                    <div class="tips-content">
+                        <p><strong>1. 占据有利位置：</strong>半藏依赖高点和有利位置。利用攀爬能力到达制高点，获得更好的视野和射击角度。优先占领二楼、高台等位置。</p>
+                        
+                        <p><strong>2. 预判射击：</strong>半藏的箭矢有飞行时间和下坠，需要预判敌人的移动轨迹。练习对不同距离的目标进行精准射击，特别是移动目标。</p>
+                        
+                        <p><strong>3. 音波箭的使用：</strong>音波箭是半藏的核心侦察工具。在进入危险区域前先使用音波箭侦察，或在关键位置放置音波箭监视敌方动向。</p>
+                        
+                        <p><strong>4. 暴风雨的应用：</strong>暴风雨适合近距离战斗或对大型目标（如坦克）造成快速伤害。当敌人接近时使用暴风雨，或配合音波箭在拐角处预判射击。</p>
+                        
+                        <p><strong>5. 竜的释放时机：</strong>终极技能"竜"有多种用法：封路、逼退敌人、配合队友控制技能、穿过据点清场。注意竜的移动速度较慢，需要预判释放位置。</p>
+                        
+                        <p><strong>6. 安全距离作战：</strong>半藏是远程英雄，应保持安全距离作战。避免与高机动性英雄近距离交战，利用攀爬快速撤离危险区域。</p>
+                    </div>
+                </div>
+                
+                <!-- 战斗定位 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-crosshair me-2"></i>战斗定位</h3>
+                    <div class="story-content">
+                        <p><strong>远程狙击手：</strong>半藏的主要职责是在安全距离对敌人造成高额伤害。他的爆头伤害可以秒杀大多数脆皮英雄，是敌方支援和输出英雄的威胁。</p>
+                        
+                        <p><strong>战场侦察者：</strong>通过音波箭提供关键视野，半藏可以为团队侦察敌方位置、发现绕后敌人、监视目标点。他的侦察能力对团队决策至关重要。</p>
+                        
+                        <p><strong>区域控制者：</strong>终极技能"竜"是强大的区域控制工具，可以封锁通道、逼退敌人、清空目标区域。半藏通过竜可以改变战场格局。</p>
+                        
+                        <p><strong>后排威胁：</strong>半藏的存在迫使敌方后排英雄时刻注意自己的位置，限制他们的行动自由。他的高伤害威胁可以打乱敌方阵型。</p>
+                        
+                        <p><strong>地形利用者：</strong>凭借攀爬能力，半藏可以充分利用地形优势，从意想不到的角度发起攻击，同时保持自身安全。</p>
+                    </div>
+                </div>
+                
+                <!-- 箭术进阶 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-bullseye me-2"></i>箭术进阶</h3>
+                    <div class="story-content">
+                        <p><strong>几何箭术：</strong>半藏可以利用墙壁反弹箭矢攻击掩体后的敌人。这种技巧需要精确的角度计算，但可以攻击到直线无法命中的目标。</p>
+                        
+                        <p><strong>龙神箭：</strong>通过快速拉弓释放不蓄满的箭矢，虽然伤害较低但射速更快，适合近距离快速射击。</p>
+                        
+                        <p><strong>音波箭技巧：</strong>将音波箭射向高空可以获得更大范围的视野，射向敌人后方可以监视敌方支援线。</p>
+                        
+                        <p><strong>竜的配合：</strong>竜可以与查莉娅的重力喷涌、奥丽莎的防护屏障等技能配合，造成毁灭性的组合效果。</p>
+                        
+                        <p><strong>移动射击：</strong>在半空中（如从高处跳下时）射击可以保持移动速度同时输出伤害，增加生存能力。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== 页脚 ========== -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../../../assets/img/logo.png" alt="游戏Logo" class="footer-logo">
+                    <span class="footer-brand-text">大神</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#" class="footer-link">联系客服</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">网页报错</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">用户协议</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">隐私政策</a>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p>© 2026 守望先锋风格官网 - 仿制练习项目</p>
+                    <p class="footer-disclaimer">本网站为学习项目，非官方网站。所有守望先锋相关内容版权归暴雪娱乐所有。</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== JavaScript 文件 ========== -->
+    <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/js/main.js"></script>
+    <script>
+        // 页面加载时动态计算padding
+        document.addEventListener('DOMContentLoaded', function() {
+            // 计算导航栏高度并设置内容padding
+            function setContentPadding() {
+                const navbar = document.querySelector('.main-navbar');
+                const navbarHeight = navbar.offsetHeight;
+                
+                // 为所有需要调整的元素设置padding
+                const contentMain = document.querySelector('.hero-detail-main');
+                if (contentMain) {
+                    contentMain.style.paddingTop = navbarHeight + 'px';
+                }
+                
+                // 设置滚动时的padding
+                document.documentElement.style.scrollPaddingTop = navbarHeight + 'px';
+            }
+            
+            // 初始设置
+            setContentPadding();
+            
+            // 监听窗口大小变化
+            window.addEventListener('resize', setContentPadding);
+            
+            // 监听导航栏折叠状态变化
+            const navCollapse = document.getElementById('mainNav');
+            if (navCollapse) {
+                navCollapse.addEventListener('shown.bs.collapse', setContentPadding);
+                navCollapse.addEventListener('hidden.bs.collapse', setContentPadding);
+            }
+            
+            // 导航栏滚动效果
+            window.addEventListener('scroll', function() {
+                const navbar = document.querySelector('.main-navbar');
+                navbar.classList.toggle('scrolled', window.scrollY > 50);
+                
+                // 滚动时重新计算高度（如果需要）
+                if (window.scrollY > 50) {
+                    setContentPadding();
+                }
+            });
+            
+            // 页面加载动画
+            document.body.style.opacity = 0;
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => { document.body.style.opacity = 1; }, 100);
+            
+            // 为技能卡片添加悬停效果
+            const skillCards = document.querySelectorAll('.skill-card');
+            skillCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                    this.style.zIndex = '10';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.zIndex = '1';
+                });
+            });
+            
+            // 统计卡片悬停效果
+            const statItems = document.querySelectorAll('.stat-item');
+            statItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.08)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+            
+            // 半藏专属效果：箭矢动画
+            const heroTitle = document.querySelector('.hero-title');
+            if (heroTitle) {
+                // 创建箭矢动画效果
+                const createArrow = () => {
+                    const arrow = document.createElement('div');
+                    arrow.innerHTML = '➹';
+                    arrow.style.position = 'fixed';
+                    arrow.style.fontSize = '24px';
+                    arrow.style.color = '#66b3ff';
+                    arrow.style.top = Math.random() * 50 + 20 + '%';
+                    arrow.style.left = '-50px';
+                    arrow.style.zIndex = '9999';
+                    arrow.style.opacity = '0';
+                    arrow.style.textShadow = '0 0 10px #0066cc';
+                    arrow.style.animation = 'arrowGlide ' + (3 + Math.random() * 2) + 's linear forwards';
+                    arrow.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(arrow);
+                    
+                    // 动画结束后移除
+                    setTimeout(() => {
+                        arrow.remove();
+                    }, 5000);
+                };
+                
+                // 创建暴风雪粒子效果
+                const createSnowflake = () => {
+                    const snowflake = document.createElement('div');
+                    snowflake.innerHTML = '❄';
+                    snowflake.style.position = 'fixed';
+                    snowflake.style.fontSize = Math.random() * 10 + 8 + 'px';
+                    snowflake.style.color = '#66b3ff';
+                    snowflake.style.top = '-20px';
+                    snowflake.style.left = Math.random() * 100 + 'vw';
+                    snowflake.style.zIndex = '9999';
+                    snowflake.style.opacity = '0';
+                    snowflake.style.animation = 'snowFall ' + (5 + Math.random() * 5) + 's linear forwards';
+                    snowflake.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(snowflake);
+                    
+                    // 动画结束后移除
+                    setTimeout(() => {
+                        snowflake.remove();
+                    }, 10000);
+                };
+                
+                // 每2秒创建一个箭矢
+                setInterval(createArrow, 2000);
+                
+                // 每1秒创建一个暴风雪粒子
+                setInterval(createSnowflake, 1000);
+            }
+        });
+        
+        // 处理返回按钮的历史记录
+        document.querySelector('.back-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            // 如果有历史记录则返回，否则跳转到列表页
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.location.href = this.getAttribute('href');
+            }
+        });
+    </script>
+</body>
+</html>

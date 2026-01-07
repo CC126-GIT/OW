@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英雄阵容 - 守望先锋风格官网</title>
+    
+    <!-- 引入 Bootstrap 5 CSS -->
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入自定义CSS（包含导航栏样式） -->
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    <!-- 引入英雄页面专用CSS -->
+    <link href="../../assets/css/heroes.css" rel="stylesheet">
+    <!-- 引入 Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+<body class="heroes-page">
+    <!-- ========== 导航栏 ========== -->
+    <nav class="navbar navbar-expand-lg navbar-dark main-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html">
+                <img src="../../assets/img/logo.png" alt="网站Logo" class="navbar-logo">
+                OVERWATCH
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">英雄</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../news/index.html">新闻</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-people-fill"></i> 社区</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-gift-fill"></i> 福利</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-trophy-fill"></i> 电竞</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-shop"></i> 商城</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== 英雄页面内容 ========== -->
+    <main class="heroes-main">
+        <div class="heroes-header">
+            <div class="container">
+                <h1 class="heroes-title">英雄阵容</h1>
+                <p class="heroes-subtitle">选择你的英雄，加入守望先锋的队伍。每个英雄都有独特的技能和玩法，找到最适合你的战斗风格。</p>
+            </div>
+        </div>
+        
+        <div class="container">
+            <!-- 英雄网格 -->
+            <div class="row g-4" id="heroes-grid">
+                <!-- 英雄将在这里动态加载 -->
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== 页脚 ========== -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../../assets/img/logo.png" alt="游戏Logo" class="footer-logo">
+                    <span class="footer-brand-text">大神</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#" class="footer-link">联系客服</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">网页报错</a>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p>© 2026 守望先锋风格官网 - 仿制练习项目</p>
+                    <p class="footer-disclaimer">本网站为学习项目，非官方网站</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== JavaScript 文件 ========== -->
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    <script>
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.main-navbar');
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+        
+        // 页面加载动画
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.style.opacity = 0;
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => { document.body.style.opacity = 1; }, 100);
+            
+            // 加载英雄数据
+            loadHeroes();
+        });
+        
+        // 英雄数据 - 11个英雄（webp格式）
+        const heroes = [
+            { id: 'genji', name: '源氏', role: '输出', avatar: '源氏.webp' },
+            { id: 'mercy', name: '天使', role: '支援', avatar: '天使.webp' },
+            { id: 'hanzo', name: '半藏', role: '输出', avatar: '半藏.webp' },
+            { id: 'bastion', name: '堡垒', role: '输出', avatar: '堡垒.webp' },
+            { id: 'dva', name: 'D.Va', role: '重装', avatar: 'D.Va.webp' },
+            { id: 'tracer', name: '猎空', role: '输出', avatar: '猎空.webp' },
+            { id: 'kiriko', name: '雾子', role: '支援', avatar: '雾子.webp' },
+            { id: 'junkerqueen', name: '渣客女王', role: '重装', avatar: '渣客女王.webp' },
+            { id: 'wreckingball', name: '破坏球', role: '重装', avatar: '破坏球.webp' },
+            { id: 'reaper', name: '死神', role: '输出', avatar: '死神.webp' },
+            { id: 'cassidy', name: '卡西迪', role: '输出', avatar: '卡西迪.webp' }
+        ];
+        
+        // 加载英雄到网格
+        function loadHeroes() {
+            const grid = document.getElementById('heroes-grid');
+            
+            heroes.forEach(hero => {
+                const heroCard = `
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <a href="details/${hero.id}.html" class="hero-card">
+                            <div class="hero-avatar-container">
+                                <img src="../../assets/img/${hero.avatar}" alt="${hero.name}" class="hero-avatar" 
+                                     onerror="this.onerror=null; this.src='../../assets/img/logo.png'">
+                            </div>
+                            <h3 class="hero-name">${hero.name}</h3>
+                            <span class="hero-role">${hero.role}</span>
+                        </a>
+                    </div>
+                `;
+                
+                grid.innerHTML += heroCard;
+            });
+        }
+    </script>
+</body>
+</html>

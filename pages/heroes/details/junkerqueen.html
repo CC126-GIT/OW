@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>渣客女王 - 英雄详情 | 守望先锋风格官网</title>
+    
+    <!-- 引入 Bootstrap 5 CSS -->
+    <link href="../../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入自定义CSS -->
+    <link href="../../../assets/css/style.css" rel="stylesheet">
+    <!-- 引入英雄详情页专用CSS -->
+    <link href="../../../assets/css/hero-detail.css" rel="stylesheet">
+    <!-- 引入英雄居中布局CSS -->
+    <link href="../../../assets/css/hero-centered.css" rel="stylesheet">
+    <!-- 引入英雄主题色CSS -->
+    <link href="../../../assets/css/hero-themes.css" rel="stylesheet">
+    <!-- 引入 Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+<body class="hero-detail-page hero-centered-page" data-hero="junkerqueen">
+    <!-- ========== 导航栏 ========== -->
+    <nav class="navbar navbar-expand-lg navbar-dark main-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="../../../index.html">
+                <img src="../../../assets/img/logo.png" alt="网站Logo" class="navbar-logo">
+                OVERWATCH
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../../index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../index.html">英雄</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../news/index.html">新闻</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-people-fill"></i> 社区</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-gift-fill"></i> 福利</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-trophy-fill"></i> 电竞</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-shop"></i> 商城</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== 英雄详情内容 ========== -->
+    <main class="hero-detail-main">
+        <div class="container">
+            <!-- 重新设计的标题区域 -->
+            <div class="hero-header-container">
+                <!-- 返回按钮在左上角 -->
+                <div class="back-btn-container">
+                    <a href="../index.html" class="back-btn">
+                        <i class="bi bi-arrow-left"></i> 返回英雄列表
+                    </a>
+                </div>
+                
+                <!-- 标题和角色居中 -->
+                <div class="hero-title-section">
+                    <h1 class="hero-title">渣客女王</h1>
+                    <span class="hero-role-badge" data-role="重装">重装</span>
+                </div>
+            </div>
+            
+            <div class="hero-content-container">
+                <!-- 英雄图片 -->
+                <div class="hero-image-container">
+                    <img src="../../../assets/img/渣客女王.webp" alt="渣客女王" class="hero-centered-image">
+                </div>
+                
+                <!-- 英雄简介 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-person-badge me-2"></i>英雄简介</h3>
+                    <p class="intro-text">渣客女王是渣客镇无情的统治者，一位使用霰弹枪和战斧的激进坦克英雄。她可以通过造成伤害来为自己和附近盟友提供治疗，使用霰弹枪进行近距离战斗，投掷战斧造成伤害并施加流血效果。她的"命令怒吼"可以为自己和盟友提供额外生命值和移动速度，"格拉迪乌斯"可以刺穿敌人并施加流血效果，而终极技能"横冲直撞"则可以拉拽敌人并造成大量伤害。</p>
+                </div>
+                
+                <!-- 技能介绍 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-tools me-2"></i>技能介绍</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">01</span>
+                                <h4 class="skill-name">渣客霰弹枪</h4>
+                            </div>
+                            <p class="skill-desc">渣客女王的主要武器，一把泵动式霰弹枪。每次射击发射6枚弹片，每枚弹片造成50点伤害，近距离威力巨大但射程有限。装填时间0.5秒，弹匣容量6发。适合近距离交战，是渣客女王的主要输出手段。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">02</span>
+                                <h4 class="skill-name">投掷战斧</h4>
+                            </div>
+                            <p class="skill-desc">渣客女王投掷她的战斧，对命中的敌人造成90点直接伤害，并在5秒内施加持续伤害（流血效果）。如果击中墙壁，战斧会停留在墙上，可以重新拾取以缩短冷却时间。是施加流血效果和远程骚扰的关键技能。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">03</span>
+                                <h4 class="skill-name">格拉迪乌斯</h4>
+                            </div>
+                            <p class="skill-desc">渣客女王向前冲刺并刺出她的刀，对命中的敌人造成80点伤害并施加流血效果。技能期间渣客女王获得伤害减免，可以在命中后快速收回刀以减少冷却时间。是突击和施加流血效果的重要技能。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">04</span>
+                                <h4 class="skill-name">横冲直撞</h4>
+                            </div>
+                            <p class="skill-desc">渣客女王的终极技能，她向前冲锋，抓住命中的敌人并将他们拖到路径终点，造成100点碰撞伤害和50点落地伤害。如果敌人撞到墙壁，还会受到额外伤害。是一个强大的控制技能，可以将敌人从有利位置拉出。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 被动技能 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-lightning-charge me-2"></i>被动技能</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">P1</span>
+                                <h4 class="skill-name">肾上腺素</h4>
+                            </div>
+                            <p class="skill-desc">渣客女王的所有流血效果伤害（来自战斧、格拉迪乌斯和锯齿利刃）会为她提供持续的自我治疗。治疗量为流血伤害的30%，这个被动使她在战斗中具有极高的生存能力。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">P2</span>
+                                <h4 class="skill-name">命令怒吼</h4>
+                            </div>
+                            <p class="skill-desc">渣客女王吼叫，为自己和附近盟友提供200点额外生命值，持续5秒。额外生命值会随时间衰减。冷却时间11秒。这是一个强大的团队保护技能，可以拯救处于危险中的队友。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 背景故事 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-book me-2"></i>背景故事</h3>
+                    <div class="story-content">
+                        <p>渣客女王出生于渣客镇，这个位于澳大利亚内陆的废土小镇以暴力、混乱和自由而闻名。她从小就在这个弱肉强食的环境中长大，学会了只有最强者才能生存的道理。</p>
+                        
+                        <p>她的真实姓名无人知晓，人们只知道她是"渣客女王"。她通过无数场战斗和决斗赢得了这个称号，击败了所有挑战者，最终统治了渣客镇。</p>
+                        
+                        <p>渣客女王是一位天生的战士和领袖。她不仅拥有强大的个人战斗能力，还懂得如何激励和领导她的追随者。她的统治方式简单而直接：强者为尊，但她也会保护那些忠于她的人。</p>
+                        
+                        <p>她的武器都是亲手制作的，包括她的霰弹枪、战斧和刀。这些武器不仅致命，而且体现了渣客镇的粗糙美学和实用主义精神。她的装备上装饰着各种战利品，每一件都代表着一场胜利。</p>
+                        
+                        <p>渣客女王对渣客镇有着复杂的感情。她热爱这里的自由和混乱，但也看到了这里的局限。她梦想着将渣客镇的影响力扩展到整个世界，证明即使是被遗忘的人也能成为统治者。</p>
+                        
+                        <p>在守望先锋解散后，渣客镇成为了各种罪犯、流浪者和叛逆者的避风港。渣客女王利用这个机会扩大了她的势力，将渣客镇从一个混乱的定居点变成了一个有组织的势力。</p>
+                        
+                        <p>现在，渣客女王不再满足于仅仅统治渣客镇。她将目光投向了更广阔的世界，准备向世界证明，来自废土的统治者同样值得尊重和畏惧。</p>
+                        
+                        <p class="highlight">"在渣客镇，只有强者才能生存，而我就是最强的！"——渣客女王</p>
+                    </div>
+                </div>
+                
+                <!-- 英雄数据 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-graph-up me-2"></i>英雄数据</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-label">难度等级</span>
+                            <span class="stat-value medium">中等</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">生命值</span>
+                            <span class="stat-value">425</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">护甲</span>
+                            <span class="stat-value">150</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">近距离伤害</span>
+                            <span class="stat-value excellent">顶级</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">生存能力</span>
+                            <span class="stat-value high">高</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">机动性</span>
+                            <span class="stat-value medium">中等</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">控制能力</span>
+                            <span class="stat-value high">高</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">团队贡献</span>
+                            <span class="stat-value high">高</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 使用技巧 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-lightbulb me-2"></i>使用技巧</h3>
+                    <div class="tips-content">
+                        <p><strong>1. 流血效果管理：</strong>渣客女王的流血效果是关键机制。尽量对多个敌人施加流血效果来最大化肾上腺素被动提供的治疗量。流血伤害可以穿透护盾。</p>
+                        
+                        <p><strong>2. 战斧使用技巧：</strong>投掷战斧不仅可以造成伤害，还能施加流血效果。尽量击中敌人，如果击中墙壁可以快速拾取以减少冷却时间。战斧可以用于远程骚扰。</p>
+                        
+                        <p><strong>3. 格拉迪乌斯时机：</strong>格拉迪乌斯是重要的突进技能。使用它快速接近敌人并施加流血效果，但要注意技能结束后可能会处于危险位置。</p>
+                        
+                        <p><strong>4. 命令怒吼策略：</strong>命令怒吼可以为团队提供额外生命值。最佳使用时机包括：团战开始时、队友生命值较低时、需要强行占领目标点时。</p>
+                        
+                        <p><strong>5. 横冲直撞运用：</strong>终极技能横冲直撞是强大的控制技能。可以用来将敌方坦克或支援英雄从有利位置拉出，或者在狭窄空间造成大量伤害。</p>
+                        
+                        <p><strong>6. 位置保持：</strong>渣客女王虽然是坦克，但更适合近距离作战。利用掩体接近敌人，避免在开阔地带与远程英雄交战。</p>
+                    </div>
+                </div>
+                
+                <!-- 战斗定位 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-crosshair me-2"></i>战斗定位</h3>
+                    <div class="story-content">
+                        <p><strong>激进展坦：</strong>渣客女王是一位进攻性极强的坦克，适合在前线施加压力。她的流血效果和持续治疗让她能够在战斗中坚持很久。</p>
+                        
+                        <p><strong>流血效果施加者：</strong>通过多种技能施加流血效果，渣客女王可以持续对敌人造成伤害并为自己提供治疗。她是少数具有持续伤害能力的坦克。</p>
+                        
+                        <p><strong>团队增益提供者：</strong>命令怒吼可以为整个团队提供额外生命值，这在团战中非常关键。渣客女王需要合理使用这个技能来保护队友。</p>
+                        
+                        <p><strong>控制专家：</strong>横冲直撞是强大的控制技能，可以打乱敌方阵型并将关键目标从保护中拉出。这个技能可以改变团战局势。</p>
+                        
+                        <p><strong>近距离专家：</strong>渣客女王的所有技能都适合近距离作战。她应该尽量靠近敌人，利用霰弹枪和流血效果造成最大伤害。</p>
+                    </div>
+                </div>
+                
+                <!-- 电竞技巧 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-controller me-2"></i>电竞技巧</h3>
+                    <div class="story-content">
+                        <p><strong>1. 技能连招：</strong>高级玩家会使用技能连招最大化伤害。例如：投掷战斧施加流血 → 格拉迪乌斯突进并再次施加流血 → 近距离霰弹枪射击。</p>
+                        
+                        <p><strong>2. 战斧拾取：</strong>拾取投出的战斧可以大幅减少冷却时间。在安全的情况下尽量拾取战斧，或者规划投掷路线以便快速拾取。</p>
+                        
+                        <p><strong>3. 命令怒吼时机：</strong>在高端局中，命令怒吼的时机至关重要。预判敌方爆发伤害时机提前使用，或者配合队友的进攻时机使用。</p>
+                        
+                        <p><strong>4. 横冲直撞配合：</strong>横冲直撞可以配合队友的控制技能使用，例如配合查莉娅的重力喷涌或毛妹的重力龙卷风，造成毁灭性效果。</p>
+                        
+                        <p><strong>5. 目标优先级：</strong>优先攻击那些没有自愈能力的敌人，最大化流血效果的伤害。避免与具有清除流血效果的英雄（如雾子）单挑。</p>
+                        
+                        <p><strong>6. 地图控制：</strong>渣客女王擅长在狭窄空间和室内战斗。引导敌人在这些区域交战，最大化她的优势。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== 页脚 ========== -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../../../assets/img/logo.png" alt="游戏Logo" class="footer-logo">
+                    <span class="footer-brand-text">守望先锋</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#" class="footer-link">联系客服</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">网页报错</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">用户协议</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">隐私政策</a>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p>© 2026 守望先锋风格官网 - 仿制练习项目</p>
+                    <p class="footer-disclaimer">本网站为学习项目，非官方网站。所有守望先锋相关内容版权归暴雪娱乐所有。</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== JavaScript 文件 ========== -->
+    <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/js/main.js"></script>
+    <script>
+        // 渣客女王专属动画效果
+        document.addEventListener('DOMContentLoaded', function() {
+            // 为技能卡片添加悬停效果
+            const skillCards = document.querySelectorAll('.skill-card');
+            skillCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                    this.style.zIndex = '10';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.zIndex = '1';
+                });
+            });
+            
+            // 统计卡片悬停效果
+            const statItems = document.querySelectorAll('.stat-item');
+            statItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.08)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+            
+            // 返回按钮的历史记录处理
+            const backBtn = document.querySelector('.back-btn');
+            if (backBtn) {
+                backBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (window.history.length > 1) {
+                        window.history.back();
+                    } else {
+                        window.location.href = this.getAttribute('href');
+                    }
+                });
+            }
+            
+            // 页面加载动画
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => { 
+                document.body.style.opacity = '1'; 
+            }, 100);
+            
+            // 渣客女王专属动画
+            const heroAttribute = document.body.getAttribute('data-hero');
+            if (heroAttribute === 'junkerqueen') {
+                console.log('初始化渣客女王动画效果...');
+                
+                // 创建血液飞溅动画
+                const createBloodSplash = () => {
+                    const blood = document.createElement('div');
+                    blood.innerHTML = '●';
+                    blood.style.position = 'fixed';
+                    blood.style.fontSize = Math.random() * 10 + 5 + 'px';
+                    blood.style.color = '#cc0000';
+                    blood.style.top = Math.random() * 100 + 'vh';
+                    blood.style.left = Math.random() * 100 + 'vw';
+                    blood.style.zIndex = '9999';
+                    blood.style.opacity = '0';
+                    blood.style.textShadow = '0 0 6px #ff0000';
+                    blood.style.animation = 'bloodSplash 3s ease-in-out forwards';
+                    blood.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(blood);
+                    
+                    setTimeout(() => {
+                        if (blood.parentNode) blood.remove();
+                    }, 4000);
+                };
+                
+                // 创建废土尘埃动画
+                const createDustParticle = () => {
+                    const dust = document.createElement('div');
+                    dust.innerHTML = '✶';
+                    dust.style.position = 'fixed';
+                    dust.style.fontSize = Math.random() * 12 + 8 + 'px';
+                    dust.style.color = '#8b4513';
+                    dust.style.top = Math.random() * 100 + 'vh';
+                    dust.style.left = Math.random() * 100 + 'vw';
+                    dust.style.zIndex = '9999';
+                    dust.style.opacity = '0';
+                    dust.style.textShadow = '0 0 4px #a0522d';
+                    dust.style.animation = 'dustParticle 4s ease-in-out forwards';
+                    dust.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(dust);
+                    
+                    setTimeout(() => {
+                        if (dust.parentNode) dust.remove();
+                    }, 5000);
+                };
+                
+                // 创建斧头旋转动画
+                const createAxeSpin = () => {
+                    const axe = document.createElement('div');
+                    axe.innerHTML = '⚔';
+                    axe.style.position = 'fixed';
+                    axe.style.fontSize = Math.random() * 20 + 15 + 'px';
+                    axe.style.color = '#cc0000';
+                    axe.style.top = Math.random() * 100 + 'vh';
+                    axe.style.left = Math.random() * 100 + 'vw';
+                    axe.style.zIndex = '9999';
+                    axe.style.opacity = '0';
+                    axe.style.textShadow = '0 0 10px #ff0000';
+                    axe.style.animation = 'axeSpin 2s linear forwards';
+                    axe.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(axe);
+                    
+                    setTimeout(() => {
+                        if (axe.parentNode) axe.remove();
+                    }, 3000);
+                };
+                
+                // 添加动画关键帧
+                const style = document.createElement('style');
+                style.textContent = `
+                    @keyframes bloodSplash {
+                        0% {
+                            transform: translateY(0) rotate(0deg) scale(0.5);
+                            opacity: 0;
+                        }
+                        20% {
+                            opacity: 0.7;
+                        }
+                        80% {
+                            opacity: 0.7;
+                        }
+                        100% {
+                            transform: translateY(-100px) rotate(180deg) scale(1.5);
+                            opacity: 0;
+                        }
+                    }
+                    
+                    @keyframes dustParticle {
+                        0% {
+                            transform: translateX(0) translateY(0) scale(0.8);
+                            opacity: 0;
+                        }
+                        30% {
+                            opacity: 0.6;
+                        }
+                        70% {
+                            opacity: 0.6;
+                        }
+                        100% {
+                            transform: translateX(${Math.random() * 100 - 50}px) translateY(-80px) scale(1.2);
+                            opacity: 0;
+                        }
+                    }
+                    
+                    @keyframes axeSpin {
+                        0% {
+                            transform: translateY(100px) rotate(0deg) scale(0.8);
+                            opacity: 0;
+                        }
+                        20% {
+                            opacity: 0.9;
+                        }
+                        80% {
+                            opacity: 0.9;
+                        }
+                        100% {
+                            transform: translateY(-100px) rotate(720deg) scale(1.5);
+                            opacity: 0;
+                        }
+                    }
+                `;
+                document.head.appendChild(style);
+                
+                // 每隔1.5秒创建一个血液飞溅
+                setInterval(createBloodSplash, 1500);
+                
+                // 每隔3秒创建一个废土尘埃
+                setInterval(createDustParticle, 3000);
+                
+                // 每隔4秒创建一个斧头旋转
+                setInterval(createAxeSpin, 4000);
+                
+                // 渣客女王标志性语音文本效果
+                const titleText = document.querySelector('.hero-title');
+                if (titleText) {
+                    const originalText = titleText.textContent;
+                    const phrases = ["我就是渣客镇！", "渣客女王在此！", "弱者退散！", "见识下废土的力量！"];
+                    
+                    setInterval(() => {
+                        const phrase = phrases[Math.floor(Math.random() * phrases.length)];
+                        titleText.textContent = phrase;
+                        titleText.style.transform = 'scale(1.05)';
+                        titleText.style.transition = 'transform 0.3s ease';
+                        titleText.style.color = '#ff0000';
+                        
+                        setTimeout(() => {
+                            titleText.textContent = originalText;
+                            titleText.style.transform = 'scale(1)';
+                            titleText.style.color = ''; // 恢复默认颜色
+                        }, 1500);
+                    }, 10000);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>死神 - 英雄详情 | 守望先锋风格官网</title>
+    
+    <!-- 引入 Bootstrap 5 CSS -->
+    <link href="../../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入自定义CSS -->
+    <link href="../../../assets/css/style.css" rel="stylesheet">
+    <!-- 引入英雄详情页专用CSS -->
+    <link href="../../../assets/css/hero-detail.css" rel="stylesheet">
+    <!-- 引入英雄居中布局CSS -->
+    <link href="../../../assets/css/hero-centered.css" rel="stylesheet">
+    <!-- 引入英雄主题色CSS -->
+    <link href="../../../assets/css/hero-themes.css" rel="stylesheet">
+    <!-- 引入 Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+<body class="hero-detail-page hero-centered-page" data-hero="reaper">
+    <!-- ========== 导航栏 ========== -->
+    <nav class="navbar navbar-expand-lg navbar-dark main-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="../../../index.html">
+                <img src="../../../assets/img/logo.png" alt="网站Logo" class="navbar-logo">
+                OVERWATCH
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../../index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../index.html">英雄</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../news/index.html">新闻</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-people-fill"></i> 社区</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-gift-fill"></i> 福利</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-trophy-fill"></i> 电竞</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-shop"></i> 商城</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== 英雄详情内容 ========== -->
+    <main class="hero-detail-main">
+        <div class="container">
+            <!-- 重新设计的标题区域 -->
+            <div class="hero-header-container">
+                <!-- 返回按钮在左上角 -->
+                <div class="back-btn-container">
+                    <a href="../index.html" class="back-btn">
+                        <i class="bi bi-arrow-left"></i> 返回英雄列表
+                    </a>
+                </div>
+                
+                <!-- 标题和角色居中 -->
+                <div class="hero-title-section">
+                    <h1 class="hero-title">死神</h1>
+                    <span class="hero-role-badge" data-role="输出">输出</span>
+                </div>
+            </div>
+            
+            <div class="hero-content-container">
+                <!-- 英雄图片 -->
+                <div class="hero-image-container">
+                    <img src="../../../assets/img/死神.webp" alt="死神" class="hero-centered-image">
+                </div>
+                
+                <!-- 英雄简介 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-person-badge me-2"></i>英雄简介</h3>
+                    <p class="intro-text">死神是守望先锋中最神秘、最致命的杀手之一，真名加布里埃尔·雷耶斯。他曾是守望先锋的指挥官，但在一次实验事故后身体发生了可怕的变化，获得了化为黑雾的能力。现在他手持地狱火霰弹枪，以收割灵魂为生，能够通过影子步快速移动，用死亡绽放造成巨大范围伤害，并通过造成伤害来治疗自己。死神是一名近距离爆发伤害极高的英雄，擅长从侧翼和后方突袭敌人。</p>
+                </div>
+                
+                <!-- 技能介绍 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-tools me-2"></i>技能介绍</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">01</span>
+                                <h4 class="skill-name">地狱火霰弹枪</h4>
+                            </div>
+                            <p class="skill-desc">死神的主要武器，双持霰弹枪，每把枪每次射击发射8枚弹片，每枚弹片造成6点伤害。近距离威力巨大，可以造成高达140点的爆发伤害，但射程很短，距离越远伤害衰减越严重。换弹时会扔掉两把空枪并掏出新枪，换弹时间1.5秒。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">02</span>
+                                <h4 class="skill-name">幽灵形态</h4>
+                            </div>
+                            <p class="skill-desc">死神进入幽灵形态，化为黑雾无法被选中或攻击，移动速度增加50%，但无法攻击或使用其他技能。持续3秒，可以用来躲避致命伤害、穿越敌人或逃离危险。冷却时间8秒。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">03</span>
+                                <h4 class="skill-name">影子步</h4>
+                            </div>
+                            <p class="skill-desc">死神标记一个位置，短暂延迟后传送到该位置。传送距离较远，可以跨越地形和障碍物。是死神快速进入战场或逃离的关键技能。冷却时间10秒，使用期间无法被攻击。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">04</span>
+                                <h4 class="skill-name">死亡绽放</h4>
+                            </div>
+                            <p class="skill-desc">死神的终极技能，快速旋转并持续向周围所有敌人发射霰弹枪弹片，每秒造成170点伤害，持续3秒。总伤害高达510点，是游戏中范围最广的终极技能之一。使用期间死神可以缓慢移动，但可以被控制技能打断。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 被动技能 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-lightning-charge me-2"></i>被动技能</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">P1</span>
+                                <h4 class="skill-name">收割</h4>
+                            </div>
+                            <p class="skill-desc">死神对敌人造成伤害时，会恢复相当于伤害量35%的生命值。这个被动让他具有极强的生存能力，能够在战斗中持续作战。收割对护盾和屏障无效，只对生命值造成伤害时才生效。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">P2</span>
+                                <h4 class="skill-name">死亡印记</h4>
+                            </div>
+                            <p class="skill-desc">死神拾取阵亡敌人掉落的灵魂碎片，每个碎片为他恢复50点生命值。这个被动鼓励死神在战场上积极移动，收集碎片维持生命值。碎片只会在敌人被击杀的位置出现，持续一段时间后消失。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 背景故事 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-book me-2"></i>背景故事</h3>
+                    <div class="story-content">
+                        <p>加布里埃尔·雷耶斯曾是守望先锋的创始成员之一，也是最初的指挥官。他是一位出色的士兵和战略家，但在一次任务中遭遇了严重的实验事故，导致他的身体发生了不可逆转的变化。</p>
+                        
+                        <p>事故发生在"瑞士守望先锋总部"的一场战斗中。雷耶斯与杰克·莫里森（士兵76）发生了激烈冲突，最终导致总部爆炸。雷耶斯被认为在爆炸中丧生，但实际上他幸存了下来，但身体已经发生了可怕的变化。</p>
+                        
+                        <p>现在，雷耶斯以"死神"的身份活动。他的身体不断在生与死之间挣扎，细胞以惊人的速度分解和再生。这种状态让他承受着巨大的痛苦，但也赋予了他特殊的能力。</p>
+                        
+                        <p>死神成为了世界上最高效的杀手之一。他为黑爪组织工作，执行各种暗杀和破坏任务。他的目标名单上包括许多前守望先锋成员和其他重要人物。</p>
+                        
+                        <p>尽管外表冷酷无情，但死神的行为背后有着复杂的原因。他对守望先锋和这个世界充满了怨恨，认为这个世界背叛了他。他相信只有通过毁灭和混乱，才能创造出一个更好的新世界。</p>
+                        
+                        <p>死神最大的谜团是他的真实目的。他不仅在执行黑爪的任务，还在追寻着自己的目标。有些人认为他在寻找治愈自己的方法，有些人则认为他在执行某种更大的计划。</p>
+                        
+                        <p>现在，死神继续在世界各地活动，收割着灵魂，执行着任务。他是黑暗中的杀手，是敌人最可怕的噩梦，也是一个被自己的过去所困扰的悲剧人物。</p>
+                        
+                        <p class="highlight">"死亡不是终点，而是开始。"——死神</p>
+                    </div>
+                </div>
+                
+                <!-- 英雄数据 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-graph-up me-2"></i>英雄数据</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-label">难度等级</span>
+                            <span class="stat-value medium">中等</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">生命值</span>
+                            <span class="stat-value">250</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">近距离伤害</span>
+                            <span class="stat-value excellent">顶级</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">机动性</span>
+                            <span class="stat-value medium">中等</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">生存能力</span>
+                            <span class="stat-value high">高</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">射程</span>
+                            <span class="stat-value low">低</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">终极技能威力</span>
+                            <span class="stat-value excellent">顶级</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">团队贡献</span>
+                            <span class="stat-value medium">中等</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 使用技巧 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-lightbulb me-2"></i>使用技巧</h3>
+                    <div class="tips-content">
+                        <p><strong>1. 近距离作战：</strong>死神的霰弹枪在近距离伤害极高，但距离越远伤害衰减越严重。尽量靠近敌人作战，最佳战斗距离是5米以内。</p>
+                        
+                        <p><strong>2. 收割被动利用：</strong>死神的收割被动让他可以通过造成伤害治疗自己。在战斗中积极攻击敌人维持生命值，避免在没有敌人可攻击时承受伤害。</p>
+                        
+                        <p><strong>3. 幽灵形态时机：</strong>幽灵形态是关键的生存技能。最佳使用时机包括：躲避敌方终极技能、逃离危险、穿越敌方防线。记住在幽灵形态下不能攻击。</p>
+                        
+                        <p><strong>4. 影子步运用：</strong>影子步可以用来快速进入战场、逃离危险或调整位置。使用前要确保目标位置安全，避免传送到敌人中间。</p>
+                        
+                        <p><strong>5. 死亡绽放使用：</strong>终极技能死亡绽放威力巨大但容易被中断。最佳使用时机包括：敌方被控制时、从高处跳下使用时、在狭窄空间使用。可以配合幽灵形态接近敌人后使用。</p>
+                        
+                        <p><strong>6. 目标选择：</strong>优先攻击坦克和支援英雄。坦克体型大容易命中，支援英雄脆皮容易击杀。避免与远程输出英雄正面交战。</p>
+                    </div>
+                </div>
+                
+                <!-- 战斗定位 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-crosshair me-2"></i>战斗定位</h3>
+                    <div class="story-content">
+                        <p><strong>近距离杀手：</strong>死神是游戏中最好的近距离杀手之一，可以在短时间内造成巨大伤害。他应该尽量避免远距离交战，专注于近距离战斗。</p>
+                        
+                        <p><strong>坦克杀手：</strong>死神的霰弹枪对大型目标特别有效，可以快速击杀坦克英雄。他的收割被动也让他能够与坦克长时间交战。</p>
+                        
+                        <p><strong>侧翼突袭者：</strong>死神不适合正面作战，而是应该从侧翼或后方突袭敌人。利用影子步快速到达有利位置，从意想不到的角度发起攻击。</p>
+                        
+                        <p><strong>生存专家：</strong>凭借幽灵形态和收割被动，死神具有极高的生存能力。他可以在敌方队伍中造成混乱并生存下来。</p>
+                        
+                        <p><strong>终极技能清场者：</strong>死亡绽放是强大的清场技能，特别适合在敌方聚集时使用。一个成功的死亡绽放可以瞬间改变战局。</p>
+                    </div>
+                </div>
+                
+                <!-- 电竞技巧 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-controller me-2"></i>电竞技巧</h3>
+                    <div class="story-content">
+                        <p><strong>1. 影子步高级技巧：</strong>顶级玩家会使用影子步实现复杂移动，如从高处传送、穿越地图捷径、快速撤退等。掌握这些技巧可以大幅提升死神的机动性。</p>
+                        
+                        <p><strong>2. 幽灵形态预测：</strong>预判敌方控制技能和爆发伤害，提前使用幽灵形态躲避。例如，预判麦克雷的闪光弹或D.Va的自毁。</p>
+                        
+                        <p><strong>3. 死亡绽放配合：</strong>死亡绽放可以配合队友的控制技能使用，例如配合查莉娅的重力喷涌或毛妹的重力龙卷风，造成毁灭性效果。</p>
+                        
+                        <p><strong>4. 节奏控制：</strong>死神的战斗节奏应该是：使用影子步接近 → 造成伤害 → 使用幽灵形态撤退或躲避 → 等待技能冷却 → 再次攻击。</p>
+                        
+                        <p><strong>5. 地图控制：</strong>死神擅长在室内和狭窄空间战斗。引导敌人在这些区域交战，最大化他的优势。</p>
+                        
+                        <p><strong>6. 资源管理：</strong>管理好幽灵形态和影子步的冷却时间，不要一次性用完所有技能。保持至少一个技能用于紧急情况。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== 页脚 ========== -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../../../assets/img/logo.png" alt="游戏Logo" class="footer-logo">
+                    <span class="footer-brand-text">守望先锋</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#" class="footer-link">联系客服</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">网页报错</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">用户协议</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">隐私政策</a>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p>© 2026 守望先锋风格官网 - 仿制练习项目</p>
+                    <p class="footer-disclaimer">本网站为学习项目，非官方网站。所有守望先锋相关内容版权归暴雪娱乐所有。</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== JavaScript 文件 ========== -->
+    <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/js/main.js"></script>
+    <script>
+        // 死神专属动画效果
+        document.addEventListener('DOMContentLoaded', function() {
+            // 为技能卡片添加悬停效果
+            const skillCards = document.querySelectorAll('.skill-card');
+            skillCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                    this.style.zIndex = '10';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.zIndex = '1';
+                });
+            });
+            
+            // 统计卡片悬停效果
+            const statItems = document.querySelectorAll('.stat-item');
+            statItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.08)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+            
+            // 返回按钮的历史记录处理
+            const backBtn = document.querySelector('.back-btn');
+            if (backBtn) {
+                backBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (window.history.length > 1) {
+                        window.history.back();
+                    } else {
+                        window.location.href = this.getAttribute('href');
+                    }
+                });
+            }
+            
+            // 页面加载动画
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => { 
+                document.body.style.opacity = '1'; 
+            }, 100);
+            
+            // 死神专属动画
+            const heroAttribute = document.body.getAttribute('data-hero');
+            if (heroAttribute === 'reaper') {
+                console.log('初始化死神动画效果...');
+                
+                // 创建黑雾飘散动画
+                const createDarkMist = () => {
+                    const mist = document.createElement('div');
+                    mist.innerHTML = '☁';
+                    mist.style.position = 'fixed';
+                    mist.style.fontSize = Math.random() * 15 + 10 + 'px';
+                    mist.style.color = '#660000';
+                    mist.style.top = Math.random() * 100 + 'vh';
+                    mist.style.left = Math.random() * 100 + 'vw';
+                    mist.style.zIndex = '9999';
+                    mist.style.opacity = '0';
+                    mist.style.textShadow = '0 0 6px #330000';
+                    mist.style.animation = 'darkMist 4s ease-in-out forwards';
+                    mist.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(mist);
+                    
+                    setTimeout(() => {
+                        if (mist.parentNode) mist.remove();
+                    }, 5000);
+                };
+                
+                // 创建灵魂碎片动画
+                const createSoulFragment = () => {
+                    const soul = document.createElement('div');
+                    soul.innerHTML = '💀';
+                    soul.style.position = 'fixed';
+                    soul.style.fontSize = Math.random() * 12 + 8 + 'px';
+                    soul.style.color = '#990000';
+                    soul.style.top = Math.random() * 100 + 'vh';
+                    soul.style.left = Math.random() * 100 + 'vw';
+                    soul.style.zIndex = '9999';
+                    soul.style.opacity = '0';
+                    soul.style.textShadow = '0 0 5px #ff0000';
+                    soul.style.animation = 'soulFragment 3s ease-in-out forwards';
+                    soul.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(soul);
+                    
+                    setTimeout(() => {
+                        if (soul.parentNode) soul.remove();
+                    }, 4000);
+                };
+                
+                // 创建暗影传送动画
+                const createShadowTeleport = () => {
+                    const shadow = document.createElement('div');
+                    shadow.innerHTML = '🌀';
+                    shadow.style.position = 'fixed';
+                    shadow.style.fontSize = Math.random() * 18 + 12 + 'px';
+                    shadow.style.color = '#990000';
+                    shadow.style.top = Math.random() * 100 + 'vh';
+                    shadow.style.left = Math.random() * 100 + 'vw';
+                    shadow.style.zIndex = '9999';
+                    shadow.style.opacity = '0';
+                    shadow.style.textShadow = '0 0 8px #660000';
+                    shadow.style.animation = 'shadowTeleport 2.5s ease-in-out forwards';
+                    shadow.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(shadow);
+                    
+                    setTimeout(() => {
+                        if (shadow.parentNode) shadow.remove();
+                    }, 3500);
+                };
+                
+                // 创建死亡绽放旋转动画
+                const createDeathBlossom = () => {
+                    const blossom = document.createElement('div');
+                    blossom.innerHTML = '✴';
+                    blossom.style.position = 'fixed';
+                    blossom.style.fontSize = Math.random() * 20 + 15 + 'px';
+                    blossom.style.color = '#ff0000';
+                    blossom.style.top = Math.random() * 100 + 'vh';
+                    blossom.style.left = Math.random() * 100 + 'vw';
+                    blossom.style.zIndex = '9999';
+                    blossom.style.opacity = '0';
+                    blossom.style.textShadow = '0 0 10px #990000';
+                    blossom.style.animation = 'deathBlossom 3s linear forwards';
+                    blossom.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(blossom);
+                    
+                    setTimeout(() => {
+                        if (blossom.parentNode) blossom.remove();
+                    }, 4000);
+                };
+                
+                // 添加动画关键帧
+                const style = document.createElement('style');
+                style.textContent = `
+                    @keyframes darkMist {
+                        0% {
+                            transform: translateY(0) scale(0.8);
+                            opacity: 0;
+                        }
+                        30% {
+                            transform: translateY(-30px) scale(1);
+                            opacity: 0.7;
+                        }
+                        70% {
+                            transform: translateY(-60px) scale(1.2);
+                            opacity: 0.7;
+                        }
+                        100% {
+                            transform: translateY(-100px) scale(1.5);
+                            opacity: 0;
+                        }
+                    }
+                    
+                    @keyframes soulFragment {
+                        0% {
+                            transform: translateY(0) rotate(0deg) scale(0.6);
+                            opacity: 0;
+                        }
+                        20% {
+                            opacity: 0.8;
+                        }
+                        80% {
+                            opacity: 0.8;
+                        }
+                        100% {
+                            transform: translateY(-80px) rotate(360deg) scale(1);
+                            opacity: 0;
+                        }
+                    }
+                    
+                    @keyframes shadowTeleport {
+                        0% {
+                            transform: scale(0.5) rotate(0deg);
+                            opacity: 0;
+                        }
+                        30% {
+                            transform: scale(1.2) rotate(180deg);
+                            opacity: 0.9;
+                        }
+                        70% {
+                            transform: scale(1.2) rotate(360deg);
+                            opacity: 0.9;
+                        }
+                        100% {
+                            transform: scale(0.5) rotate(540deg);
+                            opacity: 0;
+                        }
+                    }
+                    
+                    @keyframes deathBlossom {
+                        0% {
+                            transform: scale(0.5) rotate(0deg);
+                            opacity: 0;
+                        }
+                        20% {
+                            transform: scale(1.3) rotate(90deg);
+                            opacity: 0.9;
+                        }
+                        80% {
+                            transform: scale(1.3) rotate(450deg);
+                            opacity: 0.9;
+                        }
+                        100% {
+                            transform: scale(0.5) rotate(720deg);
+                            opacity: 0;
+                        }
+                    }
+                `;
+                document.head.appendChild(style);
+                
+                // 每隔2秒创建一个黑雾飘散
+                setInterval(createDarkMist, 2000);
+                
+                // 每隔1.5秒创建一个灵魂碎片
+                setInterval(createSoulFragment, 1500);
+                
+                // 每隔3秒创建一个暗影传送
+                setInterval(createShadowTeleport, 3000);
+                
+                // 每隔4秒创建一个死亡绽放
+                setInterval(createDeathBlossom, 4000);
+                
+                // 死神标志性语音文本效果
+                const titleText = document.querySelector('.hero-title');
+                if (titleText) {
+                    const originalText = titleText.textContent;
+                    const phrases = ["死亡降临！", "无处可逃！", "收割开始！", "化为灰烬！"];
+                    
+                    setInterval(() => {
+                        const phrase = phrases[Math.floor(Math.random() * phrases.length)];
+                        titleText.textContent = phrase;
+                        titleText.style.transform = 'scale(1.05)';
+                        titleText.style.transition = 'transform 0.3s ease';
+                        titleText.style.color = '#cc0000';
+                        
+                        setTimeout(() => {
+                            titleText.textContent = originalText;
+                            titleText.style.transform = 'scale(1)';
+                            titleText.style.color = ''; // 恢复默认颜色
+                        }, 1500);
+                    }, 10000);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

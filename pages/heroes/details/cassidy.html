@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卡西迪 - 英雄详情 | 守望先锋风格官网</title>
+    
+    <!-- 引入 Bootstrap 5 CSS -->
+    <link href="../../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入自定义CSS -->
+    <link href="../../../assets/css/style.css" rel="stylesheet">
+    <!-- 引入英雄详情页专用CSS -->
+    <link href="../../../assets/css/hero-detail.css" rel="stylesheet">
+    <!-- 引入英雄居中布局CSS -->
+    <link href="../../../assets/css/hero-centered.css" rel="stylesheet">
+    <!-- 引入英雄主题色CSS -->
+    <link href="../../../assets/css/hero-themes.css" rel="stylesheet">
+    <!-- 引入 Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+<body class="hero-detail-page hero-centered-page" data-hero="cassidy">
+    <!-- ========== 导航栏 ========== -->
+    <nav class="navbar navbar-expand-lg navbar-dark main-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="../../../index.html">
+                <img src="../../../assets/img/logo.png" alt="网站Logo" class="navbar-logo">
+                OVERWATCH
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../../index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../index.html">英雄</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../news/index.html">新闻</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-people-fill"></i> 社区</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-gift-fill"></i> 福利</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-trophy-fill"></i> 电竞</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-shop"></i> 商城</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== 英雄详情内容 ========== -->
+    <main class="hero-detail-main">
+        <div class="container">
+            <!-- 重新设计的标题区域 -->
+            <div class="hero-header-container">
+                <!-- 返回按钮在左上角 -->
+                <div class="back-btn-container">
+                    <a href="../index.html" class="back-btn">
+                        <i class="bi bi-arrow-left"></i> 返回英雄列表
+                    </a>
+                </div>
+                
+                <!-- 标题和角色居中 -->
+                <div class="hero-title-section">
+                    <h1 class="hero-title">卡西迪</h1>
+                    <span class="hero-role-badge" data-role="输出">输出</span>
+                </div>
+            </div>
+            
+            <div class="hero-content-container">
+                <!-- 英雄图片 -->
+                <div class="hero-image-container">
+                    <img src="../../../assets/img/卡西迪.webp" alt="卡西迪" class="hero-centered-image">
+                </div>
+                
+                <!-- 英雄简介 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-person-badge me-2"></i>英雄简介</h3>
+                    <p class="intro-text">卡西迪，原名杰西·麦克雷，是一位来自美国西部的神枪手，以左轮手枪和高超的射击技巧闻名。他使用和平捍卫者左轮手枪进行精确射击，能够在远距离造成致命伤害。卡西迪还拥有战术翻滚技能可以快速躲避攻击并重新装弹，以及闪光弹可以眩晕敌人。他的终极技能"神射手"可以锁定多个敌人并造成高额伤害。作为一名前守望先锋特工，卡西迪现在以赏金猎人的身份活动，追捕世界上最为危险的目标。</p>
+                </div>
+                
+                <!-- 技能介绍 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-tools me-2"></i>技能介绍</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">01</span>
+                                <h4 class="skill-name">和平捍卫者</h4>
+                            </div>
+                            <p class="skill-desc">卡西迪的主要武器，一把六发左轮手枪。每发子弹造成70点伤害，爆头伤害140点。射击精准，几乎没有弹道扩散，适合中远距离作战。装填时间1.5秒，弹匣容量6发。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">02</span>
+                                <h4 class="skill-name">战术翻滚</h4>
+                            </div>
+                            <p class="skill-desc">卡西迪向移动方向翻滚一小段距离，同时瞬间完成装弹。可以用来躲避敌方攻击、调整位置或快速装弹。冷却时间6秒，是卡西迪提高生存能力和持续输出的关键技能。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">03</span>
+                                <h4 class="skill-name">闪光弹</h4>
+                            </div>
+                            <p class="skill-desc">卡西迪投掷一枚闪光弹，眩晕命中的敌人1.5秒。被眩晕的敌人无法移动、攻击或使用技能。可以用来打断敌方技能、创造击杀机会或保护自己。冷却时间10秒。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">04</span>
+                                <h4 class="skill-name">神射手</h4>
+                            </div>
+                            <p class="skill-desc">卡西迪的终极技能，拔出他的左轮手枪，锁定视野内的敌人。锁定时间越长伤害越高，最高可达275点。可以同时锁定多个敌人，松开鼠标时对所有锁定的敌人同时开枪。是强大的清场和击杀技能。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 被动技能 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-lightning-charge me-2"></i>被动技能</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">P1</span>
+                                <h4 class="skill-name">战斗装填</h4>
+                            </div>
+                            <p class="skill-desc">卡西迪每次爆头击杀敌人后，会立即完成装弹。这个被动鼓励卡西迪进行精准射击，通过爆头快速击杀敌人并保持火力持续输出。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">P2</span>
+                                <h4 class="skill-name">西部快枪手</h4>
+                            </div>
+                            <p class="skill-desc">卡西迪在6秒内没有射击后，下一发子弹的装弹速度加快50%。这个被动让他在交战时能够更快地射出第一发子弹，获得先手优势。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 背景故事 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-book me-2"></i>背景故事</h3>
+                    <div class="story-content">
+                        <p>杰西·麦克雷出生于美国新墨西哥州，成长在一个传统的西部小镇。他从小就对枪支有着特殊的天赋，十几岁时就已经是当地有名的神枪手。</p>
+                        
+                        <p>年轻时的麦克雷误入歧途，加入了臭名昭著的死局帮，一个由罪犯和亡命徒组成的组织。他在死局帮中迅速崭露头角，成为了帮派中最出色的枪手和成员之一。</p>
+                        
+                        <p>在一次针对守望先锋的袭击中，麦克雷被加布里埃尔·雷耶斯（死神）抓获。雷耶斯看中了麦克雷的才能，给了他两个选择：加入守望先锋的黑色行动小队"暗影守望"，或者在监狱中度过余生。</p>
+                        
+                        <p>麦克雷选择了前者，成为了暗影守望的一员。在雷耶斯的指导下，他学会了纪律和责任感，从一个自私的罪犯转变为一个有原则的特工。他参与了暗影守望的许多秘密行动，证明了自己是一名可靠的特工。</p>
+                        
+                        <p>守望先锋解散后，暗影守望也随之解体。麦克雷离开了组织，回到了美国西部。但他没有回到犯罪的生活，而是成为了一名赏金猎人，用自己的技能追捕罪犯和维护正义。</p>
+                        
+                        <p>现在，麦克雷以"卡西迪"的名字活动。他保留了自己标志性的西部风格装束和左轮手枪，继续在世界各地追捕最危险的罪犯。他相信，有些人需要被绳之以法，而他正是执行这份工作的人选。</p>
+                        
+                        <p>尽管外表看起来冷漠无情，但卡西迪内心深处有着自己的道德准则。他只接受他认为正义的任务，从不伤害无辜的人。他的名言是："正义不会自己伸张。"</p>
+                        
+                        <p class="highlight">"正义不会自己伸张。"——卡西迪</p>
+                    </div>
+                </div>
+                
+                <!-- 英雄数据 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-graph-up me-2"></i>英雄数据</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-label">难度等级</span>
+                            <span class="stat-value medium">中等</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">生命值</span>
+                            <span class="stat-value">225</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">单发伤害</span>
+                            <span class="stat-value excellent">顶级</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">精准度</span>
+                            <span class="stat-value excellent">顶级</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">机动性</span>
+                            <span class="stat-value medium">中等</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">生存能力</span>
+                            <span class="stat-value medium">中等</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">控制能力</span>
+                            <span class="stat-value high">高</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">团队贡献</span>
+                            <span class="stat-value medium">中等</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 使用技巧 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-lightbulb me-2"></i>使用技巧</h3>
+                    <div class="tips-content">
+                        <p><strong>1. 精准射击：</strong>卡西迪的左轮手枪伤害高但射速慢，需要精准射击。尽量瞄准敌人头部，特别是对付脆皮英雄时，爆头可以快速击杀。</p>
+                        
+                        <p><strong>2. 闪光弹运用：</strong>闪光弹是卡西迪的核心控制技能。最佳使用时机包括：打断敌方关键技能、阻止敌人逃跑、保护自己免受近战英雄攻击。</p>
+                        
+                        <p><strong>3. 战术翻滚时机：</strong>战术翻滚不仅可以躲避攻击，还能瞬间装弹。在弹匣快空时使用，可以保持火力持续输出。也可以用来躲避敌方技能或调整位置。</p>
+                        
+                        <p><strong>4. 神射手使用：</strong>终极技能神射手需要时间锁定敌人。最佳使用时机包括：从掩体后突然出现、在敌人被控制时使用、在敌人不注意时从侧翼使用。</p>
+                        
+                        <p><strong>5. 位置保持：</strong>卡西迪适合在中距离作战。保持与敌人的适当距离，既不要太近容易被近战英雄攻击，也不要太远影响命中率。</p>
+                        
+                        <p><strong>6. 目标优先级：</strong>优先攻击支援英雄和脆皮输出英雄。卡西迪的高单发伤害可以快速击杀这些目标，减少敌方治疗和输出。</p>
+                    </div>
+                </div>
+                
+                <!-- 战斗定位 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-crosshair me-2"></i>战斗定位</h3>
+                    <div class="story-content">
+                        <p><strong>中距离神枪手：</strong>卡西迪是一名优秀的中距离神枪手，可以在中远距离造成精准而致命的伤害。他不适合近距离混战或超远程狙击。</p>
+                        
+                        <p><strong>脆皮杀手：</strong>凭借高单发伤害和闪光弹控制，卡西迪可以快速击杀脆皮英雄。他是支援和输出英雄的噩梦。</p>
+                        
+                        <p><strong>控制专家：</strong>闪光弹是强大的控制技能，可以打断敌方关键技能、创造击杀机会、保护队友。卡西迪需要合理使用这个技能来影响战局。</p>
+                        
+                        <p><strong>侧翼威胁：</strong>卡西迪可以从侧翼对敌人造成巨大威胁。他的神射手技能特别适合从侧翼锁定多个敌人。</p>
+                        
+                        <p><strong>终极技能清场者：</strong>神射手是强大的清场技能，可以瞬间击杀多个敌人。一个成功的神射手可以完全改变团战局势。</p>
+                    </div>
+                </div>
+                
+                <!-- 电竞技巧 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-controller me-2"></i>电竞技巧</h3>
+                    <div class="story-content">
+                        <p><strong>1. 闪光弹预判：</strong>顶级玩家会预判敌方英雄的动作，提前投掷闪光弹。例如，预判源氏的突进或猎空的闪现位置。</p>
+                        
+                        <p><strong>2. 神射手时机：</strong>在高端局中，神射手的时机选择至关重要。等待敌方控制技能用完后再使用，或者配合队友的控制技能使用。</p>
+                        
+                        <p><strong>3. 战术翻滚技巧：</strong>战术翻滚不仅可以用来装弹和躲避，还可以取消其他技能的后摇。学会使用翻滚取消射击后摇，提高输出效率。</p>
+                        
+                        <p><strong>4. 爆头训练：</strong>卡西迪的爆头收益极高。在训练场或自定义游戏中练习爆头，提高精准度。记住不同英雄的头部命中框位置。</p>
+                        
+                        <p><strong>5. 地图掌握：</strong>卡西迪擅长在中距离的开放区域作战。熟悉地图的中距离交战点，选择有利于自己的位置。</p>
+                        
+                        <p><strong>6. 团队沟通：</strong>告诉队友你准备使用闪光弹或神射手，协调攻击目标。配合队友的控制技能可以最大化卡西迪的技能效果。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== 页脚 ========== -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../../../assets/img/logo.png" alt="游戏Logo" class="footer-logo">
+                    <span class="footer-brand-text">守望先锋</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#" class="footer-link">联系客服</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">网页报错</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">用户协议</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">隐私政策</a>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p>© 2026 守望先锋风格官网 - 仿制练习项目</p>
+                    <p class="footer-disclaimer">本网站为学习项目，非官方网站。所有守望先锋相关内容版权归暴雪娱乐所有。</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== JavaScript 文件 ========== -->
+    <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/js/main.js"></script>
+    <script>
+        // 卡西迪专属动画效果
+        document.addEventListener('DOMContentLoaded', function() {
+            // 为技能卡片添加悬停效果
+            const skillCards = document.querySelectorAll('.skill-card');
+            skillCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                    this.style.zIndex = '10';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.zIndex = '1';
+                });
+            });
+            
+            // 统计卡片悬停效果
+            const statItems = document.querySelectorAll('.stat-item');
+            statItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.08)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+            
+            // 返回按钮的历史记录处理
+            const backBtn = document.querySelector('.back-btn');
+            if (backBtn) {
+                backBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (window.history.length > 1) {
+                        window.history.back();
+                    } else {
+                        window.location.href = this.getAttribute('href');
+                    }
+                });
+            }
+            
+            // 页面加载动画
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => { 
+                document.body.style.opacity = '1'; 
+            }, 100);
+            
+            // 卡西迪专属动画
+            const heroAttribute = document.body.getAttribute('data-hero');
+            if (heroAttribute === 'cassidy') {
+                console.log('初始化卡西迪动画效果...');
+                
+                // 创建左轮弹壳动画
+                const createBulletShell = () => {
+                    const shell = document.createElement('div');
+                    shell.innerHTML = '🔘';
+                    shell.style.position = 'fixed';
+                    shell.style.fontSize = Math.random() * 10 + 5 + 'px';
+                    shell.style.color = '#8b4513';
+                    shell.style.top = Math.random() * 100 + 'vh';
+                    shell.style.left = Math.random() * 100 + 'vw';
+                    shell.style.zIndex = '9999';
+                    shell.style.opacity = '0';
+                    shell.style.textShadow = '0 0 4px #a0522d';
+                    shell.style.animation = 'bulletShell 3s ease-in-out forwards';
+                    shell.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(shell);
+                    
+                    setTimeout(() => {
+                        if (shell.parentNode) shell.remove();
+                    }, 4000);
+                };
+                
+                // 创建西部沙尘动画
+                const createDesertDust = () => {
+                    const dust = document.createElement('div');
+                    dust.innerHTML = '🌪';
+                    dust.style.position = 'fixed';
+                    dust.style.fontSize = Math.random() * 15 + 10 + 'px';
+                    dust.style.color = '#d2b48c';
+                    dust.style.top = Math.random() * 100 + 'vh';
+                    dust.style.left = Math.random() * 100 + 'vw';
+                    dust.style.zIndex = '9999';
+                    dust.style.opacity = '0';
+                    dust.style.textShadow = '0 0 6px #8b4513';
+                    dust.style.animation = 'desertDust 4s ease-in-out forwards';
+                    dust.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(dust);
+                    
+                    setTimeout(() => {
+                        if (dust.parentNode) dust.remove();
+                    }, 5000);
+                };
+                
+                // 创建牛仔帽旋转动画
+                const createCowboyHat = () => {
+                    const hat = document.createElement('div');
+                    hat.innerHTML = '👒';
+                    hat.style.position = 'fixed';
+                    hat.style.fontSize = Math.random() * 18 + 12 + 'px';
+                    hat.style.color = '#8b4513';
+                    hat.style.top = Math.random() * 100 + 'vh';
+                    hat.style.left = Math.random() * 100 + 'vw';
+                    hat.style.zIndex = '9999';
+                    hat.style.opacity = '0';
+                    hat.style.textShadow = '0 0 5px #a0522d';
+                    hat.style.animation = 'cowboyHat 3.5s ease-in-out forwards';
+                    hat.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(hat);
+                    
+                    setTimeout(() => {
+                        if (hat.parentNode) hat.remove();
+                    }, 4500);
+                };
+                
+                // 创建锁定准星动画
+                const createLockOnReticle = () => {
+                    const reticle = document.createElement('div');
+                    reticle.innerHTML = '🎯';
+                    reticle.style.position = 'fixed';
+                    reticle.style.fontSize = Math.random() * 20 + 15 + 'px';
+                    reticle.style.color = '#8b4513';
+                    reticle.style.top = Math.random() * 100 + 'vh';
+                    reticle.style.left = Math.random() * 100 + 'vw';
+                    reticle.style.zIndex = '9999';
+                    reticle.style.opacity = '0';
+                    reticle.style.textShadow = '0 0 8px #ff0000';
+                    reticle.style.animation = 'lockOnReticle 2.5s ease-in-out forwards';
+                    reticle.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(reticle);
+                    
+                    setTimeout(() => {
+                        if (reticle.parentNode) reticle.remove();
+                    }, 3500);
+                };
+                
+                // 添加动画关键帧
+                const style = document.createElement('style');
+                style.textContent = `
+                    @keyframes bulletShell {
+                        0% {
+                            transform: translateY(0) rotate(0deg) scale(0.6);
+                            opacity: 0;
+                        }
+                        20% {
+                            opacity: 0.7;
+                        }
+                        80% {
+                            opacity: 0.7;
+                        }
+                        100% {
+                            transform: translateY(-70px) rotate(360deg) scale(1);
+                            opacity: 0;
+                        }
+                    }
+                    
+                    @keyframes desertDust {
+                        0% {
+                            transform: translateY(0) scale(0.7);
+                            opacity: 0;
+                        }
+                        30% {
+                            transform: translateY(-40px) scale(1);
+                            opacity: 0.6;
+                        }
+                        70% {
+                            transform: translateY(-80px) scale(1.3);
+                            opacity: 0.6;
+                        }
+                        100% {
+                            transform: translateY(-120px) scale(1.5);
+                            opacity: 0;
+                        }
+                    }
+                    
+                    @keyframes cowboyHat {
+                        0% {
+                            transform: translateY(0) rotate(0deg) scale(0.8);
+                            opacity: 0;
+                        }
+                        25% {
+                            transform: translateY(-50px) rotate(180deg) scale(1);
+                            opacity: 0.8;
+                        }
+                        75% {
+                            transform: translateY(-100px) rotate(360deg) scale(1);
+                            opacity: 0.8;
+                        }
+                        100% {
+                            transform: translateY(-150px) rotate(540deg) scale(1.2);
+                            opacity: 0;
+                        }
+                    }
+                    
+                    @keyframes lockOnReticle {
+                        0% {
+                            transform: scale(0.5);
+                            opacity: 0;
+                        }
+                        30% {
+                            transform: scale(1.2);
+                            opacity: 0.9;
+                        }
+                        70% {
+                            transform: scale(1.2);
+                            opacity: 0.9;
+                        }
+                        100% {
+                            transform: scale(0.5);
+                            opacity: 0;
+                        }
+                    }
+                `;
+                document.head.appendChild(style);
+                
+                // 每隔1.5秒创建一个左轮弹壳
+                setInterval(createBulletShell, 1500);
+                
+                // 每隔3秒创建一个西部沙尘
+                setInterval(createDesertDust, 3000);
+                
+                // 每隔2.5秒创建一个牛仔帽
+                setInterval(createCowboyHat, 2500);
+                
+                // 每隔4秒创建一个锁定准星
+                setInterval(createLockOnReticle, 4000);
+                
+                // 卡西迪标志性语音文本效果
+                const titleText = document.querySelector('.hero-title');
+                if (titleText) {
+                    const originalText = titleText.textContent;
+                    const phrases = ["午时已到！", "正义不会自己伸张", "看清楚了！", "西部快枪！"];
+                    
+                    setInterval(() => {
+                        const phrase = phrases[Math.floor(Math.random() * phrases.length)];
+                        titleText.textContent = phrase;
+                        titleText.style.transform = 'scale(1.05)';
+                        titleText.style.transition = 'transform 0.3s ease';
+                        titleText.style.color = '#d2b48c';
+                        
+                        setTimeout(() => {
+                            titleText.textContent = originalText;
+                            titleText.style.transform = 'scale(1)';
+                            titleText.style.color = ''; // 恢复默认颜色
+                        }, 1500);
+                    }, 10000);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雾子 - 英雄详情 | 守望先锋风格官网</title>
+    
+    <!-- 引入 Bootstrap 5 CSS -->
+    <link href="../../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入自定义CSS -->
+    <link href="../../../assets/css/style.css" rel="stylesheet">
+    <!-- 引入英雄详情页专用CSS -->
+    <link href="../../../assets/css/hero-detail.css" rel="stylesheet">
+    <!-- 引入英雄居中布局CSS -->
+    <link href="../../../assets/css/hero-centered.css" rel="stylesheet">
+    <!-- 引入英雄主题色CSS -->
+    <link href="../../../assets/css/hero-themes.css" rel="stylesheet">
+    <!-- 引入 Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+<body class="hero-detail-page hero-centered-page" data-hero="kiriko">
+    <!-- ========== 导航栏 ========== -->
+    <nav class="navbar navbar-expand-lg navbar-dark main-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="../../../index.html">
+                <img src="../../../assets/img/logo.png" alt="网站Logo" class="navbar-logo">
+                OVERWATCH
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../../index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../index.html">英雄</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../news/index.html">新闻</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-people-fill"></i> 社区</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-gift-fill"></i> 福利</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-trophy-fill"></i> 电竞</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-shop"></i> 商城</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== 英雄详情内容 ========== -->
+    <main class="hero-detail-main">
+        <div class="container">
+            <!-- 重新设计的标题区域 -->
+            <div class="hero-header-container">
+                <!-- 返回按钮在左上角 -->
+                <div class="back-btn-container">
+                    <a href="../index.html" class="back-btn">
+                        <i class="bi bi-arrow-left"></i> 返回英雄列表
+                    </a>
+                </div>
+                
+                <!-- 标题和角色居中 -->
+                <div class="hero-title-section">
+                    <h1 class="hero-title">雾子</h1>
+                    <span class="hero-role-badge" data-role="支援">支援</span>
+                </div>
+            </div>
+            
+            <div class="hero-content-container">
+                <!-- 英雄图片 -->
+                <div class="hero-image-container">
+                    <img src="../../../assets/img/雾子.webp" alt="雾子" class="hero-centered-image">
+                </div>
+                
+                <!-- 英雄简介 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-person-badge me-2"></i>英雄简介</h3>
+                    <p class="intro-text">雾子（Kiriko）是一名来自日本的支援英雄，拥有神秘的忍者和神社会法术能力。她可以投掷治愈符咒治疗队友，使用苦无攻击敌人，并能使用"保护铃"让队友无敌瞬间。雾子还能通过"瞬"技能快速传送到队友身边，并通过"狐灵祝福"强化所有队友的能力。作为岛田家族的守护者后代，雾子将古老的忍术传统与现代技术相结合，创造出独特的战斗风格。</p>
+                </div>
+                
+                <!-- 技能介绍 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-tools me-2"></i>技能介绍</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">01</span>
+                                <h4 class="skill-name">治愈符咒</h4>
+                            </div>
+                            <p class="skill-desc">雾子的主要治疗技能，投掷治愈符咒追踪治疗队友。每次投掷会释放最多10张符咒，每张符咒治疗13点生命值。符咒会自动追踪受伤的队友，但如果瞄准队友投掷，治疗速度会更快。弹药无限，但有0.85秒的装填时间。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">02</span>
+                                <h4 class="skill-name">苦无</h4>
+                            </div>
+                            <p class="skill-desc">雾子的主要攻击武器，每次投掷一把苦无，造成40点伤害（爆头80点）。射速为每秒1.1次，可以造成稳定但需要精准的攻击。苦无弹道较慢，需要预判敌人移动轨迹。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">03</span>
+                                <h4 class="skill-name">保护铃</h4>
+                            </div>
+                            <p class="skill-desc">雾子的核心保护技能，扔出一个神社会保护铃，为范围内的队友提供短暂的无敌状态（约0.85秒），并清除所有负面效果。冷却时间14秒，是应对敌方控制技能和爆发伤害的关键。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">04</span>
+                                <h4 class="skill-name">狐灵祝福</h4>
+                            </div>
+                            <p class="skill-desc">雾子的终极技能，召唤一只狐灵向前冲锋，为沿途的所有队友提供移动速度、攻击速度和技能冷却时间减少的增益效果。增益持续10秒，可以在团战中创造巨大优势。需要1920点能量充能。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 被动技能 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-lightning-charge me-2"></i>被动技能</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">P1</span>
+                                <h4 class="skill-name">瞬</h4>
+                            </div>
+                            <p class="skill-desc">雾子的被动技能，可以快速传送到视野内的队友身边。传送距离较远，可以穿越墙壁和障碍物。是雾子保持生存能力和灵活性的关键技能，冷却时间7秒。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">P2</span>
+                                <h4 class="skill-name">爬墙</h4>
+                            </div>
+                            <p class="skill-desc">雾子可以像源氏和半藏一样爬墙，这让她能够到达大多数英雄无法到达的位置，获得更好的视野和治疗角度。爬墙时不能攻击或治疗，但可以观察战场形势。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 背景故事 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-book me-2"></i>背景故事</h3>
+                    <div class="story-content">
+                        <p>雾子（Kiriko）出生在日本的直布罗陀，是岛田家族的守护者后裔。她的母亲是岛田家族的神社守护者，父亲则是技术专家，这让她从小就接触到了传统的忍术和现代科技的结合。</p>
+                        
+                        <p>雾子的童年与源氏和半藏一起度过，三人是最好的朋友。他们一起在岛田城堡中训练，学习忍术和家族的传统。雾子的母亲是他们的导师，教导他们家族的历史和责任。</p>
+                        
+                        <p>随着岛田家族的衰落，雾子选择了不同的道路。她没有像源氏和半藏那样卷入家族斗争，而是专注于守护家族的神社和传统。她继承了母亲的守护者责任，成为了神社的守护者。</p>
+                        
+                        <p>雾子将传统的忍术与现代技术相结合，创造出了独特的战斗风格。她不仅掌握了古老的治愈符咒和苦无投掷技巧，还开发了保护铃这样的创新法术。她的武器和装备都体现了传统与现代的完美融合。</p>
+                        
+                        <p>尽管岛田家族已经解散，雾子依然守护着家族的神社和传统。她相信，即使在现代世界，古老的智慧和传统依然有其价值。她的目标不仅是保护神社，也是保护那些需要帮助的人。</p>
+                        
+                        <p>雾子经常说："保护需要保护的人，是我的责任。"这句话体现了她的使命感和对守护者传统的承诺。尽管她可以像其他忍者一样隐身暗处，但她选择站在光明中，直接帮助那些需要帮助的人。</p>
+                        
+                        <p>现在，雾子继续在世界各地旅行，帮助需要帮助的人，同时也在寻找岛田家族失散的成员。她相信，家族的遗产不应该被遗忘，而应该被传承和发扬光大。</p>
+                        
+                        <p class="highlight">"保护需要保护的人，是我的责任。"——雾子</p>
+                    </div>
+                </div>
+                
+                <!-- 英雄数据 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-graph-up me-2"></i>英雄数据</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-label">难度等级</span>
+                            <span class="stat-value high">高</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">生命值</span>
+                            <span class="stat-value">200</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">治疗能力</span>
+                            <span class="stat-value excellent">顶级</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">机动性</span>
+                            <span class="stat-value high">高</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">伤害输出</span>
+                            <span class="stat-value medium">中等</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">生存能力</span>
+                            <span class="stat-value high">高</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">团队贡献</span>
+                            <span class="stat-value excellent">顶级</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">技能复杂度</span>
+                            <span class="stat-value high">高</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 使用技巧 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-lightbulb me-2"></i>使用技巧</h3>
+                    <div class="tips-content">
+                        <p><strong>1. 治疗符咒技巧：</strong>雾子的治疗符咒会自动追踪队友，但直接瞄准队友投掷会更快。治疗时可以左右键交替使用，保持治疗和伤害输出的平衡。</p>
+                        
+                        <p><strong>2. 保护铃时机：</strong>保护铃是雾子最强大的技能，可以清除所有负面效果并提供短暂无敌。最佳使用时机包括：队友被安娜睡眠、被麦克雷闪光弹击中、即将受到大伤害时。</p>
+                        
+                        <p><strong>3. 苦无精准度：</strong>雾子的苦无伤害很高，但弹道较慢需要预判。优先攻击静止或缓慢移动的目标，如坦克、炮台等。爆头伤害翻倍，尽量瞄准头部。</p>
+                        
+                        <p><strong>4. 瞬的使用：</strong>瞬可以传送到视野内的任何队友身边。用于快速逃离危险、调整位置、治疗远处的队友。注意瞬的冷却时间，不要随意浪费。</p>
+                        
+                        <p><strong>5. 狐灵祝福时机：</strong>终极技能狐灵祝福可以极大地增强团队能力。最佳使用时机包括：团战开始时、攻击或防守目标点时、需要快速推进或撤退时。</p>
+                        
+                        <p><strong>6. 位置保持：</strong>雾子应该保持在后排，利用瞬的机动性调整位置。避免站在前线，但也不要离队友太远，以便随时使用瞬和治疗符咒。</p>
+                    </div>
+                </div>
+                
+                <!-- 战斗定位 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-crosshair me-2"></i>战斗定位</h3>
+                    <div class="story-content">
+                        <p><strong>主治疗者：</strong>雾子是一名强大的主治疗者，可以保持团队的健康状态。她的治疗符咒追踪能力让她可以专注于其他任务的同时治疗队友。</p>
+                        
+                        <p><strong>保护者：</strong>凭借保护铃技能，雾子可以保护队友免受致命伤害和控制效果。她的存在让敌方很难通过控制技能组合击杀队友。</p>
+                        
+                        <p><strong>机动支援：</strong>雾子拥有极高的机动性，可以快速到达任何队友身边。这让她可以灵活应对战场变化，支援多个位置。</p>
+                        
+                        <p><strong>副伤害输出：</strong>雾子的苦无可以造成可观的伤害，特别是爆头伤害。她可以在治疗间隙提供伤害输出，帮助团队击杀敌人。</p>
+                        
+                        <p><strong>团队增益者：</strong>狐灵祝福是强大的团队增益技能，可以大幅提升整个团队的战斗力。雾子需要选择合适的时机使用这个技能。</p>
+                    </div>
+                </div>
+                
+                <!-- 电竞技巧 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-controller me-2"></i>电竞技巧</h3>
+                    <div class="story-content">
+                        <p><strong>1. 技能优先级：</strong>在高端局中，技能使用顺序很重要。通常应该优先使用保护铃保护关键队友，然后使用瞬调整位置，最后使用治疗符咒和苦无。</p>
+                        
+                        <p><strong>2. 能量管理：</strong>雾子的终极技能充能很快，特别是在治疗和造成伤害时。积极制造伤害可以更快充能狐灵祝福，为团队创造优势。</p>
+                        
+                        <p><strong>3. 保护铃预测：</strong>顶级玩家需要预测敌方控制技能的释放时机。通过观察敌方英雄的站位和动作，预判他们即将使用的技能，提前使用保护铃。</p>
+                        
+                        <p><strong>4. 瞬的创造性使用：</strong>瞬不仅可以用于逃生，还可以用于创造性玩法。例如，瞬到源氏身上跟随他突入敌方后排，或瞬到法老之鹰身上获得空中视野。</p>
+                        
+                        <p><strong>5. 团队沟通：</strong>雾子需要与团队保持良好沟通。告诉队友保护铃的冷却时间，协调狐灵祝福的使用时机，提醒队友自己的位置。</p>
+                        
+                        <p><strong>6. 地形利用：</strong>雾子可以爬墙到达制高点，获得更好的视野和治疗角度。熟悉地图的爬墙点，最大化利用地形优势。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== 页脚 ========== -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../../../assets/img/logo.png" alt="游戏Logo" class="footer-logo">
+                    <span class="footer-brand-text">守望先锋</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#" class="footer-link">联系客服</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">网页报错</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">用户协议</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">隐私政策</a>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p>© 2026 守望先锋风格官网 - 仿制练习项目</p>
+                    <p class="footer-disclaimer">本网站为学习项目，非官方网站。所有守望先锋相关内容版权归暴雪娱乐所有。</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== JavaScript 文件 ========== -->
+    <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/js/main.js"></script>
+    <script>
+        // 雾子专属动画效果（使用第一种方案）
+        document.addEventListener('DOMContentLoaded', function() {
+            // 为技能卡片添加悬停效果
+            const skillCards = document.querySelectorAll('.skill-card');
+            skillCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                    this.style.zIndex = '10';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.zIndex = '1';
+                });
+            });
+            
+            // 统计卡片悬停效果
+            const statItems = document.querySelectorAll('.stat-item');
+            statItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.08)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+            
+            // 返回按钮的历史记录处理
+            const backBtn = document.querySelector('.back-btn');
+            if (backBtn) {
+                backBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (window.history.length > 1) {
+                        window.history.back();
+                    } else {
+                        window.location.href = this.getAttribute('href');
+                    }
+                });
+            }
+            
+            // 页面加载动画
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => { 
+                document.body.style.opacity = '1'; 
+            }, 100);
+            
+            // 雾子专属符纸动画
+            const heroAttribute = document.body.getAttribute('data-hero');
+            if (heroAttribute === 'kiriko') {
+                console.log('初始化雾子动画效果...');
+                
+                // 创建治愈符咒动画
+                const createHealingTalisman = () => {
+                    const talisman = document.createElement('div');
+                    talisman.innerHTML = '❀';
+                    talisman.style.position = 'fixed';
+                    talisman.style.fontSize = Math.random() * 15 + 10 + 'px';
+                    talisman.style.color = '#9933cc';
+                    talisman.style.top = Math.random() * 100 + 'vh';
+                    talisman.style.left = Math.random() * 100 + 'vw';
+                    talisman.style.zIndex = '9999';
+                    talisman.style.opacity = '0';
+                    talisman.style.textShadow = '0 0 8px #ff66cc';
+                    talisman.style.animation = 'talismanFloat 4s ease-in-out forwards';
+                    talisman.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(talisman);
+                    
+                    setTimeout(() => {
+                        if (talisman.parentNode) talisman.remove();
+                    }, 5000);
+                };
+                
+                // 创建狐狸灵动画
+                const createFoxSpirit = () => {
+                    const fox = document.createElement('div');
+                    fox.innerHTML = '🦊';
+                    fox.style.position = 'fixed';
+                    fox.style.fontSize = Math.random() * 25 + 15 + 'px';
+                    fox.style.color = '#ff66cc';
+                    fox.style.top = Math.random() * 100 + 'vh';
+                    fox.style.left = Math.random() * 100 + 'vw';
+                    fox.style.zIndex = '9999';
+                    fox.style.opacity = '0';
+                    fox.style.textShadow = '0 0 15px #9933cc';
+                    fox.style.animation = 'foxSpirit 5s ease-in-out forwards';
+                    fox.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(fox);
+                    
+                    setTimeout(() => {
+                        if (fox.parentNode) fox.remove();
+                    }, 6000);
+                };
+                
+                // 添加动画关键帧
+                const style = document.createElement('style');
+                style.textContent = `
+                    @keyframes talismanFloat {
+                        0% {
+                            transform: translateY(100px) rotate(0deg) scale(0.8);
+                            opacity: 0;
+                        }
+                        20% {
+                            opacity: 0.8;
+                        }
+                        80% {
+                            opacity: 0.8;
+                        }
+                        100% {
+                            transform: translateY(-150px) rotate(360deg) scale(1.2);
+                            opacity: 0;
+                        }
+                    }
+                    
+                    @keyframes foxSpirit {
+                        0% {
+                            transform: translateX(-100px) translateY(0) scale(0.5);
+                            opacity: 0;
+                        }
+                        20% {
+                            opacity: 0.9;
+                        }
+                        80% {
+                            opacity: 0.9;
+                        }
+                        100% {
+                            transform: translateX(100px) translateY(-50px) scale(1.5);
+                            opacity: 0;
+                        }
+                    }
+                `;
+                document.head.appendChild(style);
+                
+                // 每隔2秒创建一个治愈符咒
+                setInterval(createHealingTalisman, 2000);
+                
+                // 每隔5秒创建一个狐狸灵
+                setInterval(createFoxSpirit, 5000);
+                
+                // 雾子标志性语音文本效果
+                const titleText = document.querySelector('.hero-title');
+                if (titleText) {
+                    const originalText = titleText.textContent;
+                    const phrases = ["守护需要守护的人", "雾子参上", "相信守护的力量", "狐灵保佑"];
+                    
+                    setInterval(() => {
+                        const phrase = phrases[Math.floor(Math.random() * phrases.length)];
+                        titleText.textContent = phrase;
+                        titleText.style.transform = 'scale(1.05)';
+                        titleText.style.transition = 'transform 0.3s ease';
+                        titleText.style.color = '#cc66ff';
+                        
+                        setTimeout(() => {
+                            titleText.textContent = originalText;
+                            titleText.style.transform = 'scale(1)';
+                            titleText.style.color = ''; // 恢复默认颜色
+                        }, 1500);
+                    }, 10000);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

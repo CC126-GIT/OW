@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天使 - 英雄详情 | 守望先锋风格官网</title>
+    
+    <!-- 引入 Bootstrap 5 CSS -->
+    <link href="../../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入自定义CSS -->
+    <link href="../../../assets/css/style.css" rel="stylesheet">
+    <!-- 引入英雄详情页专用CSS -->
+    <link href="../../../assets/css/hero-detail.css" rel="stylesheet">
+    <!-- 引入英雄居中布局CSS -->
+    <link href="../../../assets/css/hero-centered.css" rel="stylesheet">
+    <!-- 引入英雄主题色CSS -->
+    <link href="../../../assets/css/hero-themes.css" rel="stylesheet">
+    <!-- 引入 Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <style>
+        /* 页面加载时的过渡效果 */
+        body.hero-centered-page {
+            animation: pageFadeIn 0.5s ease-out;
+        }
+        
+        @keyframes pageFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* 确保内容完全显示 */
+        .hero-centered-page .hero-detail-main {
+            min-height: calc(100vh - 300px);
+        }
+        
+        /* 导航栏滚动时的padding调整 */
+        .main-navbar.scrolled + .hero-detail-main {
+            padding-top: 85px;
+        }
+        
+        /* 天使专属微调 */
+        [data-hero="mercy"] .hero-title-section::after {
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.15), transparent 70%);
+        }
+    </style>
+</head>
+<body class="hero-detail-page hero-centered-page" data-hero="mercy">
+    <!-- ========== 导航栏 ========== -->
+    <nav class="navbar navbar-expand-lg navbar-dark main-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="../../../index.html">
+                <img src="../../../assets/img/logo.png" alt="网站Logo" class="navbar-logo">
+                OVERWATCH
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../../index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../index.html">英雄</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../news/index.html">新闻</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-people-fill"></i> 社区</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-gift-fill"></i> 福利</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-trophy-fill"></i> 电竞</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-shop"></i> 商城</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== 英雄详情内容 ========== -->
+    <main class="hero-detail-main">
+        <div class="container">
+            <!-- 重新设计的标题区域 -->
+            <div class="hero-header-container">
+                <!-- 返回按钮在左上角 -->
+                <div class="back-btn-container">
+                    <a href="../index.html" class="back-btn">
+                        <i class="bi bi-arrow-left"></i> 返回英雄列表
+                    </a>
+                </div>
+                
+                <!-- 标题和角色居中 -->
+                <div class="hero-title-section">
+                    <h1 class="hero-title">天使</h1>
+                    <span class="hero-role-badge" data-role="支援">支援</span>
+                </div>
+            </div>
+            
+            <div class="hero-content-container">
+                <!-- 英雄图片 -->
+                <div class="hero-image-container">
+                    <img src="../../../assets/img/天使.webp" alt="天使" class="hero-centered-image">
+                </div>
+                
+                <!-- 英雄简介 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-person-badge me-2"></i>英雄简介</h3>
+                    <p class="intro-text">天使是一名专业的医疗人员，她的使命是治疗队友、提高队友的伤害输出，并在关键时刻复活倒下的队友。她的机动性极强，能够快速飞向队友的位置。凭借她的"女武神"快速反应套装，天使可以在战场上灵活穿梭，是团队中不可或缺的支援核心。</p>
+                </div>
+                
+                <!-- 技能介绍 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-tools me-2"></i>技能介绍</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">01</span>
+                                <h4 class="skill-name">天使之杖</h4>
+                            </div>
+                            <p class="skill-desc">天使的主要武器，可以选择黄色光束持续治疗队友（每秒治疗55点），或蓝色光束增强队友的伤害输出30%。光束可以连接较远距离的队友，即使在障碍物后也能短暂保持连接。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">02</span>
+                                <h4 class="skill-name">守护天使</h4>
+                            </div>
+                            <p class="skill-desc">快速飞向一名队友，提供紧急支援。可以在飞行过程中取消，灵活调整位置。冷却时间1.5秒，是天使在战场中生存和快速转移的关键技能。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">03</span>
+                                <h4 class="skill-name">天使降临</h4>
+                            </div>
+                            <p class="skill-desc">按住跳跃键可以在空中缓慢下降，增加空中机动性。这使天使能够在空中更好地观察战场局势，躲避地面攻击，同时保持对队友的治疗或增强。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">04</span>
+                                <h4 class="skill-name">女武神</h4>
+                            </div>
+                            <p class="skill-desc">终极技能，激活"女武神"快速反应套装，持续15秒。期间可以飞行，同时治疗或增强多个队友，并且所有能力都得到增强。守护天使冷却时间缩短，天使之杖射程增加。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 被动技能 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-lightning-charge me-2"></i>被动技能</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">P1</span>
+                                <h4 class="skill-name">重生</h4>
+                            </div>
+                            <p class="skill-desc">天使能够复活倒下的队友，使其以满生命值重返战斗。复活需要1.75秒施法时间，期间天使无法移动。冷却时间30秒，是扭转战局的关键能力。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">P2</span>
+                                <h4 class="skill-name">自动恢复</h4>
+                            </div>
+                            <p class="skill-desc">天使在1.5秒内不受到伤害后，会自动恢复生命值，每秒恢复22点生命值。这个被动技能使天使在战场上具有更好的生存能力。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 背景故事 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-book me-2"></i>背景故事</h3>
+                    <div class="story-content">
+                        <p>安吉拉·齐格勒博士，代号"天使"，出生于瑞士苏黎世的一个学术世家。她的父母都是著名的医学研究者，从小培养了她对医学和科学的浓厚兴趣。天使在16岁时就以优异成绩获得第一个博士学位，随后又获得了多个医学和生物工程学学位，成为世界闻名的外科医生和科学家。</p>
+                        
+                        <p>智械危机期间，天使亲眼目睹了战争的残酷和生命的脆弱。这促使她投身于战地医疗研究，希望能够拯救更多生命。她设计并开发了"女武神"快速反应套装，这套装备结合了先进的医疗技术和纳米生物学，能够在战场上提供即时医疗支援。</p>
+                        
+                        <p>天使被守望先锋招募为首席医疗官，她的医疗技术和设备在无数任务中拯救了队员的生命。她坚持"不伤害任何人"的原则，即使在战斗中，她也只专注于治疗和救援，从不主动攻击敌人。她的"重生"技术更是医疗领域的革命性突破，能够在短时间内复活倒下的队友。</p>
+                        
+                        <p>瑞士守望先锋总部爆炸事件发生后，天使拒绝接受官方的事故报告。她相信这背后有更大的阴谋，决定离开守望先锋，自行调查真相。尽管如此，她从未放弃自己的医疗使命，继续在世界各地，特别是冲突地区和受灾区域，提供医疗援助。</p>
+                        
+                        <p>如今，天使作为一名独立的医疗工作者游走于世界各地。她相信，即使组织已经解散，救死扶伤的使命永远不会结束。每当战场上出现她的金色身影，队友们都知道，希望和生命得到了保障。</p>
+                        
+                        <p class="highlight">"英雄永不消逝，他们只是需要一点点帮助。"——天使</p>
+                    </div>
+                </div>
+                
+                <!-- 英雄数据 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-graph-up me-2"></i>英雄数据</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-label">难度等级</span>
+                            <span class="stat-value easy">简单</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">生命值</span>
+                            <span class="stat-value">200</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">移动速度</span>
+                            <span class="stat-value medium">中等</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">机动性</span>
+                            <span class="stat-value high">高</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">治疗能力</span>
+                            <span class="stat-value excellent">顶级</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">生存能力</span>
+                            <span class="stat-value medium">中等</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">技能冷却</span>
+                            <span class="stat-value low">短</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">团队贡献</span>
+                            <span class="stat-value excellent">极高</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 使用技巧 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-lightbulb me-2"></i>使用技巧</h3>
+                    <div class="tips-content">
+                        <p><strong>1. 治疗优先级：</strong>天使的治疗应该有明确的优先级。通常优先级为：低生命值的坦克 > 低生命值的输出 > 满生命值但正在承受伤害的队友 > 其他队友。同时注意自己的生存，活着才能治疗更多人。</p>
+                        
+                        <p><strong>2. 位置意识：</strong>天使应该始终保持移动，利用守护天使在队友之间灵活穿梭。避免长时间停留在一个位置，尽量利用掩体，同时保持对队友的视野以进行连接。</p>
+                        
+                        <p><strong>3. 蓝杖与黄杖切换：</strong>合理切换治疗（黄杖）和增伤（蓝杖）。当队友生命值安全时，尽量使用蓝杖增强输出英雄的伤害。在激烈交战时，专注于治疗。</p>
+                        
+                        <p><strong>4. 复活时机：</strong>复活是天使最强的能力，但也是最危险的。确保在安全的情况下使用复活，最好有掩体或队友的保护。避免在敌方火力下强行复活。</p>
+                        
+                        <p><strong>5. 女武神的使用：</strong>终极技能女武神是强大的团队增益技能。最佳的开启时机是团队交战开始时，或者需要快速治疗多个队友时。女武神期间可以飞行，利用这一点躲避敌方攻击。</p>
+                        
+                        <p><strong>6. 自我保护：</strong>天使是敌方优先攻击的目标。时刻注意敌方位置，特别是狙击手和绕后英雄。学会使用守护天使快速逃离危险，必要时可以切换到战斗天使手枪自卫。</p>
+                    </div>
+                </div>
+                
+                <!-- 战斗定位 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-crosshair me-2"></i>战斗定位</h3>
+                    <div class="story-content">
+                        <p><strong>主要治疗者：</strong>天使是团队的主要治疗者，负责维持队友的生命值。她拥有稳定的单体治疗能力，能够持续为一名队友提供治疗或伤害增强。</p>
+                        
+                        <p><strong>机动支援：</strong>凭借守护天使和天使降临，天使具有极高的机动性，能够快速响应战场各处的需求，为最需要的队友提供及时支援。</p>
+                        
+                        <p><strong>战局扭转者：</strong>天使的复活能力可以瞬间改变战局，让倒下的队友重返战场。正确的复活时机往往能够决定团战的胜负。</p>
+                        
+                        <p><strong>伤害放大器：</strong>通过蓝杖增强队友伤害，天使可以间接提高团队的整体输出。特别是在队友使用终极技能时，伤害增强效果尤为显著。</p>
+                        
+                        <p><strong>团队核心：</strong>天使的存在往往决定团队的持续作战能力。保护天使是团队的重要任务，而天使也需要通过良好的位置意识和机动性来保证自己的生存。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== 页脚 ========== -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../../../assets/img/logo.png" alt="游戏Logo" class="footer-logo">
+                    <span class="footer-brand-text">大神</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#" class="footer-link">联系客服</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">网页报错</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">用户协议</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">隐私政策</a>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p>© 2026 守望先锋风格官网 - 仿制练习项目</p>
+                    <p class="footer-disclaimer">本网站为学习项目，非官方网站。所有守望先锋相关内容版权归暴雪娱乐所有。</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== JavaScript 文件 ========== -->
+    <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/js/main.js"></script>
+    <script>
+        // 页面加载时动态计算padding
+        document.addEventListener('DOMContentLoaded', function() {
+            // 计算导航栏高度并设置内容padding
+            function setContentPadding() {
+                const navbar = document.querySelector('.main-navbar');
+                const navbarHeight = navbar.offsetHeight;
+                
+                // 为所有需要调整的元素设置padding
+                const contentMain = document.querySelector('.hero-detail-main');
+                if (contentMain) {
+                    contentMain.style.paddingTop = navbarHeight + 'px';
+                }
+                
+                // 设置滚动时的padding
+                document.documentElement.style.scrollPaddingTop = navbarHeight + 'px';
+            }
+            
+            // 初始设置
+            setContentPadding();
+            
+            // 监听窗口大小变化
+            window.addEventListener('resize', setContentPadding);
+            
+            // 监听导航栏折叠状态变化
+            const navCollapse = document.getElementById('mainNav');
+            if (navCollapse) {
+                navCollapse.addEventListener('shown.bs.collapse', setContentPadding);
+                navCollapse.addEventListener('hidden.bs.collapse', setContentPadding);
+            }
+            
+            // 导航栏滚动效果
+            window.addEventListener('scroll', function() {
+                const navbar = document.querySelector('.main-navbar');
+                navbar.classList.toggle('scrolled', window.scrollY > 50);
+                
+                // 滚动时重新计算高度（如果需要）
+                if (window.scrollY > 50) {
+                    setContentPadding();
+                }
+            });
+            
+            // 页面加载动画
+            document.body.style.opacity = 0;
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => { document.body.style.opacity = 1; }, 100);
+            
+            // 为技能卡片添加悬停效果
+            const skillCards = document.querySelectorAll('.skill-card');
+            skillCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                    this.style.zIndex = '10';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.zIndex = '1';
+                });
+            });
+            
+            // 统计卡片悬停效果
+            const statItems = document.querySelectorAll('.stat-item');
+            statItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.08)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        });
+        
+        // 处理返回按钮的历史记录
+        document.querySelector('.back-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            // 如果有历史记录则返回，否则跳转到列表页
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.location.href = this.getAttribute('href');
+            }
+        });
+        
+        // 天使专属效果：金色粒子飘落
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroTitle = document.querySelector('.hero-title');
+            if (heroTitle) {
+                // 创建金色光晕效果
+                setInterval(() => {
+                    const glow = document.createElement('div');
+                    glow.style.position = 'absolute';
+                    glow.style.width = '10px';
+                    glow.style.height = '10px';
+                    glow.style.background = 'radial-gradient(circle, #ffd700, transparent)';
+                    glow.style.borderRadius = '50%';
+                    glow.style.top = Math.random() * 100 + '%';
+                    glow.style.left = Math.random() * 100 + '%';
+                    glow.style.opacity = '0.7';
+                    glow.style.animation = 'floatUp 3s ease-in-out forwards';
+                    glow.style.zIndex = '5';
+                    
+                    document.querySelector('.hero-title-section').appendChild(glow);
+                    
+                    // 3秒后移除
+                    setTimeout(() => {
+                        glow.remove();
+                    }, 3000);
+                }, 1000);
+            }
+        });
+    </script>
+    
+    <style>
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-100px) scale(0);
+                opacity: 0;
+            }
+        }
+    </style>
+</body>
+</html>

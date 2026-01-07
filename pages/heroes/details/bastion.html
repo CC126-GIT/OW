@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>堡垒 - 英雄详情 | 守望先锋风格官网</title>
+    
+    <!-- 引入 Bootstrap 5 CSS -->
+    <link href="../../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入自定义CSS -->
+    <link href="../../../assets/css/style.css" rel="stylesheet">
+    <!-- 引入英雄详情页专用CSS -->
+    <link href="../../../assets/css/hero-detail.css" rel="stylesheet">
+    <!-- 引入英雄居中布局CSS -->
+    <link href="../../../assets/css/hero-centered.css" rel="stylesheet">
+    <!-- 引入英雄主题色CSS -->
+    <link href="../../../assets/css/hero-themes.css" rel="stylesheet">
+    <!-- 引入 Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <style>
+        /* 页面加载时的过渡效果 */
+        body.hero-centered-page {
+            animation: pageFadeIn 0.5s ease-out;
+        }
+        
+        @keyframes pageFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* 确保内容完全显示 */
+        .hero-centered-page .hero-detail-main {
+            min-height: calc(100vh - 300px);
+        }
+        
+        /* 导航栏滚动时的padding调整 */
+        .main-navbar.scrolled + .hero-detail-main {
+            padding-top: 85px;
+        }
+        
+        /* 堡垒专属微调 */
+        [data-hero="bastion"] .hero-title-section::after {
+            background: radial-gradient(circle, rgba(128, 128, 128, 0.15), transparent 70%);
+        }
+        
+        /* 机械齿轮动画效果 */
+        @keyframes gearSpin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        /* 子弹轨迹效果 */
+        @keyframes bulletTrail {
+            0% {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+            10%, 90% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateX(100vw);
+                opacity: 0;
+            }
+        }
+        
+        /* 机械火花效果 */
+        @keyframes sparkFlash {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.9;
+            }
+        }
+    </style>
+</head>
+<body class="hero-detail-page hero-centered-page" data-hero="bastion">
+    <!-- ========== 导航栏 ========== -->
+    <nav class="navbar navbar-expand-lg navbar-dark main-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="../../../index.html">
+                <img src="../../../assets/img/logo.png" alt="网站Logo" class="navbar-logo">
+                OVERWATCH
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../../index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../index.html">英雄</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../news/index.html">新闻</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-people-fill"></i> 社区</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-gift-fill"></i> 福利</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-trophy-fill"></i> 电竞</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-shop"></i> 商城</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== 英雄详情内容 ========== -->
+    <main class="hero-detail-main">
+        <div class="container">
+            <!-- 重新设计的标题区域 -->
+            <div class="hero-header-container">
+                <!-- 返回按钮在左上角 -->
+                <div class="back-btn-container">
+                    <a href="../index.html" class="back-btn">
+                        <i class="bi bi-arrow-left"></i> 返回英雄列表
+                    </a>
+                </div>
+                
+                <!-- 标题和角色居中 -->
+                <div class="hero-title-section">
+                    <h1 class="hero-title">堡垒</h1>
+                    <span class="hero-role-badge" data-role="输出">输出</span>
+                </div>
+            </div>
+            
+            <div class="hero-content-container">
+                <!-- 英雄图片 -->
+                <div class="hero-image-container">
+                    <img src="../../../assets/img/堡垒.webp" alt="堡垒" class="hero-centered-image">
+                </div>
+                
+                <!-- 英雄简介 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-person-badge me-2"></i>英雄简介</h3>
+                    <p class="intro-text">堡垒是一款经过改造的战斗机器人，最初在智械危机期间被制造用于战斗。它能够在侦察模式和哨卫模式之间切换，哨卫模式下变成一挺高伤害的转轮机枪。拥有自我修复能力，并且可以变形成坦克模式发射强力炮弹。尽管外表是战争机器，但堡垒拥有温和的个性，对自然世界充满好奇。</p>
+                </div>
+                
+                <!-- 技能介绍 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-tools me-2"></i>技能介绍</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">01</span>
+                                <h4 class="skill-name">侦查模式</h4>
+                            </div>
+                            <p class="skill-desc">堡垒的默认模式，使用自动步枪进行移动射击。射速适中，精度较高，适合中距离作战。在侦查模式下，堡垒可以自由移动，拥有全游戏中最高的300点生命值。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">02</span>
+                                <h4 class="skill-name">哨卫模式</h4>
+                            </div>
+                            <p class="skill-desc">堡垒变形为固定炮台，使用高速转轮机枪对敌人进行扫射。在此模式下无法移动，但获得20%的伤害减免，并且能够发射榴弹炮。伤害极高，是游戏中最强的持续火力之一。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">03</span>
+                                <h4 class="skill-name">自我修复</h4>
+                            </div>
+                            <p class="skill-desc">激活后，堡垒持续恢复生命值，每秒恢复75点。可以在两种模式下使用，但使用时会中断其他行动。是堡垒在战场上保持生存的关键能力。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">04</span>
+                                <h4 class="skill-name">坦克模式</h4>
+                            </div>
+                            <p class="skill-desc">终极技能，堡垒变形成一辆移动坦克，获得额外装甲并可以发射强力炮弹。每发炮弹造成205点范围伤害，最多储存3发炮弹。持续8秒，是强大的区域压制技能。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 被动技能 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-lightning-charge me-2"></i>被动技能</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">P1</span>
+                                <h4 class="skill-name">重新配置</h4>
+                            </div>
+                            <p class="skill-desc">堡垒可以在侦查模式和哨卫模式之间自由切换。切换需要1.5秒时间，期间无法行动但获得伤害减免。合理切换模式是掌握堡垒的关键。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">P2</span>
+                                <h4 class="skill-name">铁甲护身</h4>
+                            </div>
+                            <p class="skill-desc">在哨卫模式下，堡垒获得20%的伤害减免，并且对击退和击晕效果有更强的抵抗力。这使得堡垒在阵地战中更加坚固。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 背景故事 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-book me-2"></i>背景故事</h3>
+                    <div class="story-content">
+                        <p>堡垒最初是智械危机期间生产的SST实验型攻城机器人，型号E54。它被设计为高度模块化的战斗单位，能够在多种战斗环境中发挥作用。在战争期间，堡垒和其他同类机器人被部署到世界各地，对人类造成了巨大威胁。</p>
+                        
+                        <p>战争结束后，大多数堡垒型号的机器人被销毁或回收。然而，一台编号为E54的堡垒机器人被遗弃在德国黑森林中，数十年未被发现。在这期间，自然的力量慢慢侵蚀了它的外壳，藤蔓缠绕着它的机械结构，动物在它身边安家。</p>
+                        
+                        <p>一次偶然的雷击激活了堡垒的核心系统。当它重新启动时，它的战斗程序大部分已损坏，取而代之的是对周围自然世界的好奇。堡垒遇到了一只名叫甘瑟的小型鸣禽，这只小鸟非但没有害怕这个巨大的机器人，反而在它的肩上筑巢。</p>
+                        
+                        <p>在甘瑟的陪伴下，堡垒开始探索森林，学习自然世界的美丽。它不再记得自己的战斗使命，而是被鸟类、动物和植物的生命所吸引。堡垒开始记录它观察到的一切，像一台行走的自然观测站。</p>
+                        
+                        <p>堡垒的存在最终被人类发现。一开始，人们害怕这个战争机器人的回归，但当他们看到堡垒与甘瑟的互动，以及它对自然的无害观察时，态度开始转变。一些人开始保护堡垒，帮助它躲避那些仍想摧毁战争机器人的人。</p>
+                        
+                        <p>现在，堡垒继续在世界各地游历，观察自然，学习生命。它随身携带着甘瑟，这只小鸟既是它的朋友，也是它的向导。堡垒不再是一台战争机器，而是一个寻求理解和和平的探索者，尽管它的外表常常引起误解。</p>
+                        
+                        <p class="highlight">"哔哔...啵哔..."（善意与好奇的机械音）——堡垒</p>
+                    </div>
+                </div>
+                
+                <!-- 英雄数据 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-graph-up me-2"></i>英雄数据</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-label">难度等级</span>
+                            <span class="stat-value easy">简单</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">生命值</span>
+                            <span class="stat-value">300</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">移动速度</span>
+                            <span class="stat-value medium">中等</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">火力输出</span>
+                            <span class="stat-value excellent">顶级</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">防御能力</span>
+                            <span class="stat-value high">高</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">生存能力</span>
+                            <span class="stat-value high">高</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">机动性</span>
+                            <span class="stat-value low">低</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">团队贡献</span>
+                            <span class="stat-value medium">中等</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 使用技巧 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-lightbulb me-2"></i>使用技巧</h3>
+                    <div class="tips-content">
+                        <p><strong>1. 位置选择：</strong>堡垒极度依赖有利位置。选择有良好视野、背部安全的位置，并确保有撤退路线。高处、角落和有掩体的位置都是理想选择。</p>
+                        
+                        <p><strong>2. 模式切换时机：</strong>侦查模式用于移动和撤退，哨卫模式用于输出。不要长时间停留在哨卫模式，经常变换位置防止被针对。</p>
+                        
+                        <p><strong>3. 自我修复管理：</strong>自我修复是堡垒生存的关键。在受到伤害后及时使用，但不要在敌人火力下使用，因为使用时会中断射击。</p>
+                        
+                        <p><strong>4. 坦克模式释放：</strong>坦克模式是强大的区域控制技能。在敌人聚集时使用，或用来突破敌方防线。注意坦克模式下的移动速度较慢。</p>
+                        
+                        <p><strong>5. 团队配合：</strong>堡垒需要队友的保护。与能够提供屏障的坦克（如莱因哈特、奥丽莎）和有治疗能力的支援英雄配合。</p>
+                        
+                        <p><strong>6. 反制敌人：</strong>注意敌人的狙击手和绕后英雄。堡垒在哨卫模式下是固定靶子，容易被源氏、猎空等英雄针对。</p>
+                    </div>
+                </div>
+                
+                <!-- 战斗定位 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-crosshair me-2"></i>战斗定位</h3>
+                    <div class="story-content">
+                        <p><strong>定点火力：</strong>堡垒的主要职责是在有利位置提供持续的火力压制。在哨卫模式下，堡垒可以输出极高的伤害，压制敌方推进。</p>
+                        
+                        <p><strong>阵地防御：</strong>堡垒是优秀的防御者，能够守住关键位置和通道。在防守地图中，堡垒可以创造强大的火力点。</p>
+                        
+                        <p><strong>装甲突破：</strong>凭借高伤害输出，堡垒可以有效对抗敌方坦克，快速击破护盾和消灭重装英雄。</p>
+                        
+                        <p><strong>区域封锁：</strong>通过坦克模式和哨卫模式的组合，堡垒可以封锁重要区域，限制敌人的移动和推进。</p>
+                        
+                        <p><strong>团队火力核心：</strong>在团队中，堡垒往往是火力输出的核心。保护堡垒，让堡垒能够持续输出是团队的关键策略。</p>
+                    </div>
+                </div>
+                
+                <!-- 机械进阶 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-gear me-2"></i>机械进阶</h3>
+                    <div class="story-content">
+                        <p><strong>快速配置：</strong>学会在移动中快速切换模式。从侦查模式切换到哨卫模式需要1.5秒，但提前预判可以让你在敌人出现时立即开火。</p>
+                        
+                        <p><strong>火力转移：</strong>在哨卫模式下，堡垒可以快速切换目标。学会追踪多个敌人，优先攻击威胁最大的目标。</p>
+                        
+                        <p><strong>位置欺骗：</strong>不要长时间待在同一个位置。开火后变换位置，让敌人无法预判你的位置。</p>
+                        
+                        <p><strong>自我修复时机：</strong>在掩体后或敌人换弹时使用自我修复。不要在有直接威胁时修复，因为修复时无法反击。</p>
+                        
+                        <p><strong>坦克模式组合：</strong>坦克模式的炮弹可以造成范围伤害。将炮弹射向敌人聚集的区域或关键通道，最大化伤害效果。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== 页脚 ========== -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../../../assets/img/logo.png" alt="游戏Logo" class="footer-logo">
+                    <span class="footer-brand-text">大神</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#" class="footer-link">联系客服</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">网页报错</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">用户协议</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">隐私政策</a>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p>© 2026 守望先锋风格官网 - 仿制练习项目</p>
+                    <p class="footer-disclaimer">本网站为学习项目，非官方网站。所有守望先锋相关内容版权归暴雪娱乐所有。</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== JavaScript 文件 ========== -->
+    <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/js/main.js"></script>
+    <script>
+        // 页面加载时动态计算padding
+        document.addEventListener('DOMContentLoaded', function() {
+            // 计算导航栏高度并设置内容padding
+            function setContentPadding() {
+                const navbar = document.querySelector('.main-navbar');
+                const navbarHeight = navbar.offsetHeight;
+                
+                // 为所有需要调整的元素设置padding
+                const contentMain = document.querySelector('.hero-detail-main');
+                if (contentMain) {
+                    contentMain.style.paddingTop = navbarHeight + 'px';
+                }
+                
+                // 设置滚动时的padding
+                document.documentElement.style.scrollPaddingTop = navbarHeight + 'px';
+            }
+            
+            // 初始设置
+            setContentPadding();
+            
+            // 监听窗口大小变化
+            window.addEventListener('resize', setContentPadding);
+            
+            // 监听导航栏折叠状态变化
+            const navCollapse = document.getElementById('mainNav');
+            if (navCollapse) {
+                navCollapse.addEventListener('shown.bs.collapse', setContentPadding);
+                navCollapse.addEventListener('hidden.bs.collapse', setContentPadding);
+            }
+            
+            // 导航栏滚动效果
+            window.addEventListener('scroll', function() {
+                const navbar = document.querySelector('.main-navbar');
+                navbar.classList.toggle('scrolled', window.scrollY > 50);
+                
+                // 滚动时重新计算高度（如果需要）
+                if (window.scrollY > 50) {
+                    setContentPadding();
+                }
+            });
+            
+            // 页面加载动画
+            document.body.style.opacity = 0;
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => { document.body.style.opacity = 1; }, 100);
+            
+            // 为技能卡片添加悬停效果
+            const skillCards = document.querySelectorAll('.skill-card');
+            skillCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                    this.style.zIndex = '10';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.zIndex = '1';
+                });
+            });
+            
+            // 统计卡片悬停效果
+            const statItems = document.querySelectorAll('.stat-item');
+            statItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.08)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+            
+            // 堡垒专属效果：机械动画
+            const heroTitle = document.querySelector('.hero-title');
+            if (heroTitle) {
+                // 创建齿轮动画效果
+                const createGear = () => {
+                    const gear = document.createElement('div');
+                    gear.innerHTML = '⚙';
+                    gear.style.position = 'fixed';
+                    gear.style.fontSize = Math.random() * 20 + 10 + 'px';
+                    gear.style.color = '#c0c0c0';
+                    gear.style.top = Math.random() * 50 + 20 + '%';
+                    gear.style.left = Math.random() * 100 + 'vw';
+                    gear.style.zIndex = '9999';
+                    gear.style.opacity = '0.4';
+                    gear.style.textShadow = '0 0 5px #808080';
+                    gear.style.animation = 'gearSpin ' + (8 + Math.random() * 4) + 's linear infinite';
+                    gear.style.pointerEvents = 'none';
+                    gear.style.transformOrigin = 'center';
+                    
+                    document.body.appendChild(gear);
+                    
+                    // 10秒后移除
+                    setTimeout(() => {
+                        gear.remove();
+                    }, 10000);
+                };
+                
+                // 创建子弹轨迹效果
+                const createBulletTrail = () => {
+                    const trail = document.createElement('div');
+                    trail.innerHTML = '•';
+                    trail.style.position = 'fixed';
+                    trail.style.fontSize = '16px';
+                    trail.style.color = '#ff4444';
+                    trail.style.top = Math.random() * 50 + 25 + '%';
+                    trail.style.left = '-20px';
+                    trail.style.zIndex = '9999';
+                    trail.style.opacity = '0';
+                    trail.style.textShadow = '0 0 8px #ff0000';
+                    trail.style.animation = 'bulletTrail ' + (1 + Math.random() * 0.5) + 's linear forwards';
+                    trail.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(trail);
+                    
+                    // 动画结束后移除
+                    setTimeout(() => {
+                        trail.remove();
+                    }, 2000);
+                };
+                
+                // 创建机械火花效果
+                const createSpark = () => {
+                    const spark = document.createElement('div');
+                    spark.innerHTML = '✨';
+                    spark.style.position = 'fixed';
+                    spark.style.fontSize = Math.random() * 12 + 8 + 'px';
+                    spark.style.color = '#ffff00';
+                    spark.style.top = Math.random() * 100 + 'vh';
+                    spark.style.left = Math.random() * 100 + 'vw';
+                    spark.style.zIndex = '9999';
+                    spark.style.opacity = '0';
+                    spark.style.textShadow = '0 0 6px #ffaa00';
+                    spark.style.animation = 'sparkFlash ' + (0.5 + Math.random() * 0.5) + 's linear forwards';
+                    spark.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(spark);
+                    
+                    // 动画结束后移除
+                    setTimeout(() => {
+                        spark.remove();
+                    }, 1000);
+                };
+                
+                // 每3秒创建一个齿轮
+                setInterval(createGear, 3000);
+                
+                // 每1秒创建一个子弹轨迹
+                setInterval(createBulletTrail, 1000);
+                
+                // 每0.5秒创建一个火花
+                setInterval(createSpark, 500);
+                
+                // 添加机械音效模拟（通过CSS动画）
+                const heroSection = document.querySelector('.hero-title-section');
+                if (heroSection) {
+                    setInterval(() => {
+                        heroSection.style.boxShadow = '0 0 30px rgba(128, 128, 128, 0.5)';
+                        setTimeout(() => {
+                            heroSection.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.4)';
+                        }, 200);
+                    }, 3000);
+                }
+            }
+        });
+        
+        // 处理返回按钮的历史记录
+        document.querySelector('.back-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            // 如果有历史记录则返回，否则跳转到列表页
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.location.href = this.getAttribute('href');
+            }
+        });
+    </script>
+</body>
+</html>

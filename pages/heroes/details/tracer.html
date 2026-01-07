@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猎空 - 英雄详情 | 守望先锋风格官网</title>
+    
+    <!-- 引入 Bootstrap 5 CSS -->
+    <link href="../../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入自定义CSS -->
+    <link href="../../../assets/css/style.css" rel="stylesheet">
+    <!-- 引入英雄详情页专用CSS -->
+    <link href="../../../assets/css/hero-detail.css" rel="stylesheet">
+    <!-- 引入英雄居中布局CSS -->
+    <link href="../../../assets/css/hero-centered.css" rel="stylesheet">
+    <!-- 引入英雄主题色CSS -->
+    <link href="../../../assets/css/hero-themes.css" rel="stylesheet">
+    <!-- 引入 Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+<body class="hero-detail-page hero-centered-page" data-hero="tracer">
+    <!-- ========== 导航栏 ========== -->
+    <nav class="navbar navbar-expand-lg navbar-dark main-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="../../../index.html">
+                <img src="../../../assets/img/logo.png" alt="网站Logo" class="navbar-logo">
+                OVERWATCH
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../../index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../index.html">英雄</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../news/index.html">新闻</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-people-fill"></i> 社区</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-gift-fill"></i> 福利</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-trophy-fill"></i> 电竞</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-shop"></i> 商城</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== 英雄详情内容 ========== -->
+    <main class="hero-detail-main">
+        <div class="container">
+            <!-- 重新设计的标题区域 -->
+            <div class="hero-header-container">
+                <!-- 返回按钮在左上角 -->
+                <div class="back-btn-container">
+                    <a href="../index.html" class="back-btn">
+                        <i class="bi bi-arrow-left"></i> 返回英雄列表
+                    </a>
+                </div>
+                
+                <!-- 标题和角色居中 -->
+                <div class="hero-title-section">
+                    <h1 class="hero-title">猎空</h1>
+                    <span class="hero-role-badge" data-role="输出">输出</span>
+                </div>
+            </div>
+            
+            <div class="hero-content-container">
+                <!-- 英雄图片 -->
+                <div class="hero-image-container">
+                    <img src="../../../assets/img/猎空.webp" alt="猎空" class="hero-centered-image">
+                </div>
+                
+                <!-- 英雄简介 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-person-badge me-2"></i>英雄简介</h3>
+                    <p class="intro-text">猎空（Tracer），本名莉娜·奥克斯顿，是守望先锋的原型成员之一，也是游戏中最具代表性的英雄之一。她是一名具有时空操控能力的英雄，能够快速闪烁位移、回溯时间，并以高速机动性进行战斗。猎空手持双持脉冲手枪，具有极高的机动性，是游戏中速度最快、最灵活的英雄之一。</p>
+                </div>
+                
+                <!-- 技能介绍 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-tools me-2"></i>技能介绍</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">01</span>
+                                <h4 class="skill-name">脉冲手枪</h4>
+                            </div>
+                            <p class="skill-desc">猎空的主要武器，双持自动手枪，每发造成6点伤害，射速快，弹道精准。近距离爆发力强，但伤害随距离快速衰减。每个弹匣有40发子弹，换弹时间1秒。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">02</span>
+                                <h4 class="skill-name">闪现</h4>
+                            </div>
+                            <p class="skill-desc">猎空的核心技能，可以瞬间朝移动方向闪烁一小段距离，最多储存3次充能。每次使用消耗1次充能，每3秒自动充能1次。可以用来躲避技能、快速接近敌人或调整位置。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">03</span>
+                                <h4 class="skill-name">闪回</h4>
+                            </div>
+                            <p class="skill-desc">猎空回到3秒前的位置、生命值和弹药状态。这是强大的生存技能，可以清除所有负面状态，包括被施加的异常效果。冷却时间12秒。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">04</span>
+                                <h4 class="skill-name">脉冲炸弹</h4>
+                            </div>
+                            <p class="skill-desc">猎空的终极技能，扔出一枚黏性炸弹，附着在第一个接触的表面或敌人身上。3秒后爆炸，造成5-350点伤害，取决于与爆炸中心的距离。可以配合闪现快速接近敌人并投掷。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 被动技能 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-lightning-charge me-2"></i>被动技能</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">P1</span>
+                                <h4 class="skill-name">时空加速器</h4>
+                            </div>
+                            <p class="skill-desc">猎空的时空加速器让她比普通英雄移动速度快25%。她也是游戏中体型最小的英雄之一，这使得她更难被击中。这个被动让她天生具有极高的机动性。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">P2</span>
+                                <h4 class="skill-name">急速换弹</h4>
+                            </div>
+                            <p class="skill-desc">猎空的双枪换弹速度比其他英雄快15%，这个被动让她在战斗中能够保持持续的火力输出，减少换弹时的空窗期。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 背景故事 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-book me-2"></i>背景故事</h3>
+                    <div class="story-content">
+                        <p>莉娜·奥克斯顿（代号"猎空"）是守望先锋最年轻的成员之一，也是最具天赋的飞行员。她原本是英国皇家空军的一员，因其出色的飞行技巧和无畏的精神被选为"跃空"计划的一员。这个计划旨在测试一架原型战机——"跃空号"的极限性能。</p>
+                        
+                        <p>在一次试飞中，莉娜的跃空号出现故障，导致她和战机同时消失。人们都认为她已经牺牲，但几个月后，她奇迹般地重新出现。然而，这次事故改变了她——她的分子结构变得不稳定，导致她无法保持在当前时间中，不断地在时间中闪烁。</p>
+                        
+                        <p>守望先锋的科学家温斯顿为莉娜开发了一套"时间加速器"，这个装置让她能够控制自己的时间流，稳定她的分子结构。但装置也赋予了她操控时间的能力——能够快速闪现和回溯时间。</p>
+                        
+                        <p>加入守望先锋后，猎空成为了组织的明星特工。她乐观、勇敢、充满活力的个性让她深受队友喜爱。尽管经历了可怕的事故，但她从未失去对生活的热爱，反而更加珍惜每一刻。</p>
+                        
+                        <p>猎空最著名的名言是："别担心，交给我吧！"这句话完美体现了她的性格——总是充满信心，随时准备迎接挑战。</p>
+                        
+                        <p>在守望先锋解散后，猎空继续在世界各地打击犯罪和维护正义。她认为每个人都有责任让世界变得更好，而她会用自己的特殊能力来履行这一责任。</p>
+                        
+                        <p class="highlight">"别担心，交给我吧！"——猎空</p>
+                    </div>
+                </div>
+                
+                <!-- 英雄数据 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-graph-up me-2"></i>英雄数据</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-label">难度等级</span>
+                            <span class="stat-value medium">中等</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">生命值</span>
+                            <span class="stat-value">150</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">移动速度</span>
+                            <span class="stat-value excellent">顶级</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">机动性</span>
+                            <span class="stat-value excellent">顶级</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">近距离伤害</span>
+                            <span class="stat-value high">高</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">生存能力</span>
+                            <span class="stat-value medium">中等</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">上手难度</span>
+                            <span class="stat-value high">高</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">团队贡献</span>
+                            <span class="stat-value medium">中等</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 使用技巧 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-lightbulb me-2"></i>使用技巧</h3>
+                    <div class="tips-content">
+                        <p><strong>1. 机动性最大化：</strong>猎空的优势在于机动性。不断使用闪现移动，让敌人难以瞄准。记住，闪现可以朝任何方向使用，包括垂直方向。</p>
+                        
+                        <p><strong>2. 闪回时机：</strong>闪回是猎空的核心生存技能。不要随意使用，最好在生命值低于一半或中了关键技能（如安娜的睡眠针）时使用。记住闪回只能回溯3秒，所以要清楚自己3秒前的位置是否安全。</p>
+                        
+                        <p><strong>3. 近距离作战：</strong>猎空的伤害随距离快速衰减，尽量靠近敌人作战。最佳战斗距离是5-10米，这个距离既能造成高伤害，又不会太容易被秒杀。</p>
+                        
+                        <p><strong>4. 脉冲炸弹技巧：</strong>脉冲炸弹可以黏在敌人身上。最佳目标是坦克或静止不动的敌人（如托比昂的炮台）。可以配合闪现快速接近敌人投掷炸弹。</p>
+                        
+                        <p><strong>5. 目标选择：</strong>优先攻击支援英雄和脆皮输出英雄。猎空不适合正面作战，更适合骚扰后排、击杀关键目标。</p>
+                        
+                        <p><strong>6. 资源管理：</strong>管理好闪现的充能，不要一次性用完所有闪现。保持至少1次闪现用来逃跑或调整位置。</p>
+                    </div>
+                </div>
+                
+                <!-- 战斗定位 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-crosshair me-2"></i>战斗定位</h3>
+                    <div class="story-content">
+                        <p><strong>骚扰者：</strong>猎空是游戏中最好的骚扰者之一。她可以快速进入敌方后排，击杀支援英雄或迫使敌人回头应对，为队友创造机会。</p>
+                        
+                        <p><strong>刺客：</strong>凭借高机动性和爆发伤害，猎空可以快速击杀脆皮英雄。她的目标通常是安娜、禅雅塔、黑百合等支援和狙击英雄。</p>
+                        
+                        <p><strong>侧翼攻击者：</strong>猎空不适合正面作战，而是应该从侧翼或后方发起攻击。利用地图的绕后路线和闪现能力，从意想不到的位置发动袭击。</p>
+                        
+                        <p><strong>紧急支援者：</strong>猎空可以快速赶到战场任何位置，帮助队友击杀敌人或撤退。她的高机动性让她能够快速支援多个战场。</p>
+                        
+                        <p><strong>终极技能清场者：</strong>脉冲炸弹是强大的清场技能，特别适合在狭窄空间或控制目标点时使用。可以配合队友的控制技能使用。</p>
+                    </div>
+                </div>
+                
+                <!-- 电竞技巧 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-controller me-2"></i>电竞技巧</h3>
+                    <div class="story-content">
+                        <p><strong>闪现管理：</strong>高级玩家会精确计算闪现充能时间，并保留至少1次充能用于紧急情况。不要随意浪费闪现，每个闪现都应该有明确目的。</p>
+                        
+                        <p><strong>节奏控制：</strong>猎空的战斗节奏很快，但需要学会控制节奏。攻击-闪现-撤退-再攻击，形成自己的攻击节奏，让敌人难以适应。</p>
+                        
+                        <p><strong>地图掌握：</strong>猎空可以到达许多其他英雄无法到达的位置。熟悉地图的每一个角落、每一个高台和捷径，最大化利用机动性优势。</p>
+                        
+                        <p><strong>能量管理：</strong>猎空的脉冲炸弹充能很快。在高端局中，猎空玩家应该积极制造伤害，快速充能终极技能，然后寻找使用炸弹的机会。</p>
+                        
+                        <p><strong>团队配合：</strong>虽然猎空经常单独行动，但她需要与队友配合。告诉队友你的攻击目标，配合队友的控制技能使用脉冲炸弹，与另一个骚扰英雄协同作战。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== 页脚 ========== -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../../../assets/img/logo.png" alt="游戏Logo" class="footer-logo">
+                    <span class="footer-brand-text">守望先锋</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#" class="footer-link">联系客服</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">网页报错</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">用户协议</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">隐私政策</a>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p>© 2026 守望先锋风格官网 - 仿制练习项目</p>
+                    <p class="footer-disclaimer">本网站为学习项目，非官方网站。所有守望先锋相关内容版权归暴雪娱乐所有。</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== JavaScript 文件 ========== -->
+    <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/js/main.js"></script>
+    <script src="../../../assets/js/hero-animations.js"></script>
+</body>
+</html>
+
+<!-- ========== JavaScript 文件 ========== -->
+<script src="../../../assets/js/bootstrap.bundle.min.js"></script>
+<script src="../../../assets/js/main.js"></script>
+<script>
+    // 猎空专属动画效果
+    document.addEventListener('DOMContentLoaded', function() {
+        // 如果已经是英雄详情页，不需要重复初始化通用动画
+        // 只需添加猎空专属效果
+        
+        const heroAttribute = document.body.getAttribute('data-hero');
+        if (heroAttribute !== 'tracer') return;
+        
+        console.log('初始化猎空动画效果...');
+        
+        // 为技能卡片添加悬停效果
+        const skillCards = document.querySelectorAll('.skill-card');
+        skillCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px) scale(1.02)';
+                this.style.zIndex = '10';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+                this.style.zIndex = '1';
+            });
+        });
+        
+        // 统计卡片悬停效果
+        const statItems = document.querySelectorAll('.stat-item');
+        statItems.forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.08)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+        
+        // 返回按钮的历史记录处理
+        const backBtn = document.querySelector('.back-btn');
+        if (backBtn) {
+            backBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (window.history.length > 1) {
+                    window.history.back();
+                } else {
+                    window.location.href = this.getAttribute('href');
+                }
+            });
+        }
+        
+        // 页面加载动画
+        document.body.style.opacity = '0';
+        document.body.style.transition = 'opacity 0.5s ease';
+        setTimeout(() => { 
+            document.body.style.opacity = '1'; 
+        }, 100);
+        
+        // 猎空专属时间粒子动画
+        const createTimeParticle = () => {
+            const particle = document.createElement('div');
+            particle.innerHTML = '●';
+            particle.style.position = 'fixed';
+            particle.style.fontSize = Math.random() * 8 + 4 + 'px';
+            particle.style.color = '#ff9900';
+            particle.style.top = Math.random() * 30 + 10 + '%';
+            particle.style.left = Math.random() * 100 + 'vw';
+            particle.style.zIndex = '9999';
+            particle.style.opacity = '0';
+            particle.style.textShadow = '0 0 6px #ff6600';
+            particle.style.animation = 'timeParticle 3s ease-in-out forwards';
+            particle.style.pointerEvents = 'none';
+            
+            document.body.appendChild(particle);
+            
+            setTimeout(() => {
+                if (particle.parentNode) particle.remove();
+            }, 4000);
+        };
+        
+        // 每隔2秒创建一个时间粒子
+        setInterval(createTimeParticle, 2000);
+        
+        // 添加时间回溯闪光效果
+        const createRecallFlash = () => {
+            const flash = document.createElement('div');
+            flash.style.position = 'fixed';
+            flash.style.width = '100px';
+            flash.style.height = '100px';
+            flash.style.borderRadius = '50%';
+            flash.style.backgroundColor = '#ff9900';
+            flash.style.top = Math.random() * 100 + 'vh';
+            flash.style.left = Math.random() * 100 + 'vw';
+            flash.style.zIndex = '9998';
+            flash.style.opacity = '0';
+            flash.style.transform = 'translate(-50%, -50%)';
+            flash.style.animation = 'recallFlash 1.5s ease-in-out forwards';
+            flash.style.pointerEvents = 'none';
+            
+            document.body.appendChild(flash);
+            
+            setTimeout(() => {
+                if (flash.parentNode) flash.remove();
+            }, 2000);
+        };
+        
+        // 每隔5秒创建一个闪光
+        setInterval(createRecallFlash, 5000);
+        
+        // 添加猎空标志性语音文本效果
+        const titleText = document.querySelector('.hero-title');
+        if (titleText) {
+            const originalText = titleText.textContent;
+            const phrases = ["时间不等人！", "猎空登场！", "别担心，交给我吧！", "时间在我这边！"];
+            
+            setInterval(() => {
+                const phrase = phrases[Math.floor(Math.random() * phrases.length)];
+                titleText.textContent = phrase;
+                titleText.style.transform = 'scale(1.05)';
+                titleText.style.transition = 'transform 0.3s ease';
+                titleText.style.color = '#ffcc00';
+                
+                setTimeout(() => {
+                    titleText.textContent = originalText;
+                    titleText.style.transform = 'scale(1)';
+                    titleText.style.color = ''; // 恢复默认颜色
+                }, 1500);
+            }, 10000);
+        }
+    });
+</script>

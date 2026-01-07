@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>源氏 - 英雄详情 | 守望先锋风格官网</title>
+    
+    <!-- 引入 Bootstrap 5 CSS -->
+    <link href="../../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入自定义CSS -->
+    <link href="../../../assets/css/style.css" rel="stylesheet">
+    <!-- 引入英雄详情页专用CSS -->
+    <link href="../../../assets/css/hero-detail.css" rel="stylesheet">
+    <!-- 引入英雄居中布局CSS -->
+    <link href="../../../assets/css/hero-centered.css" rel="stylesheet">
+    <!-- 引入英雄主题色CSS -->
+    <link href="../../../assets/css/hero-themes.css" rel="stylesheet">
+    <!-- 引入 Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <style>
+        /* 页面加载时的过渡效果 */
+        body.hero-centered-page {
+            animation: pageFadeIn 0.5s ease-out;
+        }
+        
+        @keyframes pageFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* 确保内容完全显示 */
+        .hero-centered-page .hero-detail-main {
+            min-height: calc(100vh - 300px);
+        }
+        
+        /* 导航栏滚动时的padding调整 */
+        .main-navbar.scrolled + .hero-detail-main {
+            padding-top: 85px;
+        }
+    </style>
+</head>
+<body class="hero-detail-page hero-centered-page" data-hero="genji">
+    <!-- ========== 导航栏 ========== -->
+    <nav class="navbar navbar-expand-lg navbar-dark main-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="../../../index.html">
+                <img src="../../../assets/img/logo.png" alt="网站Logo" class="navbar-logo">
+                OVERWATCH
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../../index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../index.html">英雄</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../news/index.html">新闻</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-people-fill"></i> 社区</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-gift-fill"></i> 福利</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-trophy-fill"></i> 电竞</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-shop"></i> 商城</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== 英雄详情内容 ========== -->
+    <main class="hero-detail-main">
+        <div class="container">
+            <!-- 重新设计的标题区域 -->
+            <div class="hero-header-container">
+                <!-- 返回按钮在左上角 -->
+                <div class="back-btn-container">
+                    <a href="../index.html" class="back-btn">
+                        <i class="bi bi-arrow-left"></i> 返回英雄列表
+                    </a>
+                </div>
+                
+                <!-- 标题和角色居中 -->
+                <div class="hero-title-section">
+                    <h1 class="hero-title">源氏</h1>
+                    <span class="hero-role-badge" data-role="输出">输出</span>
+                </div>
+            </div>
+            
+            <div class="hero-content-container">
+                <!-- 英雄图片 -->
+                <div class="hero-image-container">
+                    <img src="../../../assets/img/源氏.webp" alt="源氏" class="hero-centered-image">
+                </div>
+                
+                <!-- 英雄简介 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-person-badge me-2"></i>英雄简介</h3>
+                    <p class="intro-text">源氏是一名高机动性的突击英雄，拥有爬墙和二段跳的能力，能够使用飞镖和武士刀对敌人造成巨大威胁。他的反射能力可以反弹敌人的攻击，而终极技能"斩"能在短时间内消灭多个敌人。作为一名半机械忍者，源氏在战场上如鬼魅般穿梭，是团队中的关键刺杀者。</p>
+                </div>
+                
+                <!-- 技能介绍 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-tools me-2"></i>技能介绍</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">01</span>
+                                <h4 class="skill-name">镖</h4>
+                            </div>
+                            <p class="skill-desc">发射三枚飞镖，可以快速连续发射。左键一次发射一枚，右键一次发射三枚但扩散较大。爆头伤害极高，需要精准的瞄准能力。基础伤害28，爆头伤害56。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">02</span>
+                                <h4 class="skill-name">闪</h4>
+                            </div>
+                            <p class="skill-desc">反弹面前的投射物并将其击回敌人。持续2秒，可以反弹大多数攻击，包括一些终极技能如半藏的"竜"和查莉娅的"重力喷涌"。冷却时间8秒。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">03</span>
+                                <h4 class="skill-name">影</h4>
+                            </div>
+                            <p class="skill-desc">快速向前突进，对路径上的敌人造成50点伤害。如果击杀敌人或造成助攻，冷却时间会立即重置，允许多次连击。最大距离15米，冷却时间8秒。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">04</span>
+                                <h4 class="skill-name">斩</h4>
+                            </div>
+                            <p class="skill-desc">终极技能，拔出武士刀，在6秒内可以快速斩击。每次斩击造成120点伤害，可以轻松秒杀脆皮英雄。期间可以使用"影"来调整位置。需要1875点能量充能。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 被动技能 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-lightning-charge me-2"></i>被动技能</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">P1</span>
+                                <h4 class="skill-name">爬墙</h4>
+                            </div>
+                            <p class="skill-desc">源氏可以在垂直墙面上攀爬，大幅增强他的垂直机动性。按住空格键即可攀爬，允许他到达其他英雄无法到达的位置。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">P2</span>
+                                <h4 class="skill-name">二段跳</h4>
+                            </div>
+                            <p class="skill-desc">源氏可以在空中进行第二次跳跃，使他的移动轨迹更加难以预测。配合爬墙能力，让他在战场上如鱼得水。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 背景故事 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-book me-2"></i>背景故事</h3>
+                    <div class="story-content">
+                        <p>源氏，原名岛田源氏，出生于日本花村一个古老而强大的黑道家族——岛田家族。他是家族首领最年轻的儿子，本该继承家族事业，但源氏天性叛逆，拒绝参与家族的非法活动。他沉迷于科技和武术，希望通过正当手段让家族转型。</p>
+                        
+                        <p>岛田家族的内部矛盾日益激化。源氏的哥哥半藏被指定为继承人，但许多家族长老更青睐源氏，认为他更具领导才能。在一次家族会议上，兄弟二人的矛盾彻底爆发，演变为一场生死决斗。半藏用箭射中了源氏的心脏，认为他已无生还希望，痛苦地离开了现场。</p>
+                        
+                        <p>濒死的源氏被守望先锋发现并救回。天使（安吉拉·齐格勒博士）和温斯顿对他进行了全面的身体改造，将他变成了一个半机械人。这次改造不仅挽救了他的生命，还赋予了他超人的速度和反应能力。但源氏对自己新的身体感到极度厌恶，他认为自己既不是人类也不是机器，成为了一个怪物。</p>
+                        
+                        <p>在极度的痛苦和迷茫中，守望先锋的指挥官莫里森安排源氏前往尼泊尔的香巴里寺院。在那里，源氏遇到了导师禅雅塔，一位智械僧侣。禅雅塔教导源氏学会接受自己的新形态，找到内心的平静。经过数年的修行，源氏终于与自己和解，将机械身体视为礼物而非诅咒。</p>
+                        
+                        <p>现在，源氏作为一名自由战士游走于世界各地。他放弃了岛田家族的姓氏，以简单的"源氏"自称。他用自己独特的技能保护无辜者，打击犯罪组织，同时也在暗中关注着岛田家族的动态。他最大的心愿是与哥哥半藏和解，让家族摆脱犯罪阴影。</p>
+                        
+                        <p>源氏与许多前守望先锋成员保持着联系，但他选择独立行动，遵循自己的道德准则。他相信，真正的力量不在于身体，而在于内心的平衡与和谐。</p>
+                        
+                        <p class="highlight">"身虽为械，心如止水。"——源氏</p>
+                    </div>
+                </div>
+                
+                <!-- 英雄数据 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-graph-up me-2"></i>英雄数据</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-label">难度等级</span>
+                            <span class="stat-value hard">困难</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">生命值</span>
+                            <span class="stat-value">200</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">移动速度</span>
+                            <span class="stat-value high">极高</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">机动性</span>
+                            <span class="stat-value excellent">顶级</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">伤害输出</span>
+                            <span class="stat-value high">高</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">生存能力</span>
+                            <span class="stat-value medium">中等</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">技能冷却</span>
+                            <span class="stat-value low">短</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">上手难度</span>
+                            <span class="stat-value very-hard">极高</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 使用技巧 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-lightbulb me-2"></i>使用技巧</h3>
+                    <div class="tips-content">
+                        <p><strong>1. 利用机动性：</strong>源氏的核心优势是机动性。熟练使用爬墙和二段跳来躲避攻击，从意想不到的角度发起进攻。记住，你的目标是敌方脆弱的支援和输出英雄。</p>
+                        
+                        <p><strong>2. 技能连招：</strong>基础的连招是"影"突进→近战攻击→"镖"爆头→"影"撤退。进阶技巧包括利用墙壁反弹飞镖、快速切换目标和灵活使用二段跳。</p>
+                        
+                        <p><strong>3. 反射时机：</strong>"闪"的时机至关重要。观察敌方习惯，预判关键技能如安娜的睡眠针、麦克雷的闪光弹等。反射成功不仅能保护自己，还能反杀敌人。</p>
+                        
+                        <p><strong>4. 终极技能使用：</strong>"斩"需要快速决策。优先击杀支援英雄，利用"影"追击逃跑的敌人。配合安娜的纳米激素或查莉娅的屏障效果更佳。注意6秒的时间限制。</p>
+                        
+                        <p><strong>5. 克制与被克：</strong>源氏擅长对付脆皮英雄，但被温斯顿、莫伊拉等AOE伤害英雄克制。面对重装英雄时，优先攻击支援英雄，避免正面硬刚。</p>
+                        
+                        <p><strong>6. 团队配合：</strong>与队友沟通，等待机会发起突袭。源氏不适合正面作战，最适合从侧面或后方切入，打乱敌方阵型后迅速撤离。</p>
+                    </div>
+                </div>
+                
+                <!-- 战斗定位 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-crosshair me-2"></i>战斗定位</h3>
+                    <div class="story-content">
+                        <p><strong>切入型刺客：</strong>源氏的主要职责是在战斗中寻找机会切入敌方后排，消灭关键目标如支援和输出英雄。他的高机动性使他能够快速接近和撤离战场。</p>
+                        
+                        <p><strong>骚扰者：</strong>通过不断的骚扰和骚扰，源氏可以分散敌方注意力，为队友创造进攻机会。他的存在本身就构成威胁，迫使敌方调整阵型。</p>
+                        
+                        <p><strong>终结者：</strong>源氏拥有出色的收割能力，可以在敌人残血时快速击杀并重置"影"的冷却时间，实现连续击杀。</p>
+                        
+                        <p><strong>防御者：</strong>尽管源氏是进攻型英雄，但他的"闪"技能也提供了一定的防御能力，可以保护自己和队友免受关键技能的伤害。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== 页脚 ========== -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../../../assets/img/logo.png" alt="游戏Logo" class="footer-logo">
+                    <span class="footer-brand-text">大神</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#" class="footer-link">联系客服</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">网页报错</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">用户协议</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">隐私政策</a>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p>© 2026 守望先锋风格官网 - 仿制练习项目</p>
+                    <p class="footer-disclaimer">本网站为学习项目，非官方网站。所有守望先锋相关内容版权归暴雪娱乐所有。</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== JavaScript 文件 ========== -->
+    <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/js/main.js"></script>
+    <script>
+        // 源氏专属动画效果
+        document.addEventListener('DOMContentLoaded', function() {
+            // 计算导航栏高度并设置内容padding
+            function setContentPadding() {
+                const navbar = document.querySelector('.main-navbar');
+                const navbarHeight = navbar.offsetHeight;
+                
+                // 为所有需要调整的元素设置padding
+                const contentMain = document.querySelector('.hero-detail-main');
+                if (contentMain) {
+                    contentMain.style.paddingTop = navbarHeight + 'px';
+                }
+                
+                // 设置滚动时的padding
+                document.documentElement.style.scrollPaddingTop = navbarHeight + 'px';
+                
+                console.log('导航栏高度:', navbarHeight, 'px');
+            }
+            
+            // 初始设置
+            setContentPadding();
+            
+            // 监听窗口大小变化
+            window.addEventListener('resize', setContentPadding);
+            
+            // 监听导航栏折叠状态变化
+            const navCollapse = document.getElementById('mainNav');
+            if (navCollapse) {
+                navCollapse.addEventListener('shown.bs.collapse', setContentPadding);
+                navCollapse.addEventListener('hidden.bs.collapse', setContentPadding);
+            }
+            
+            // 导航栏滚动效果
+            window.addEventListener('scroll', function() {
+                const navbar = document.querySelector('.main-navbar');
+                navbar.classList.toggle('scrolled', window.scrollY > 50);
+                
+                // 滚动时重新计算高度（如果需要）
+                if (window.scrollY > 50) {
+                    setContentPadding();
+                }
+            });
+            
+            // 页面加载动画
+            document.body.style.opacity = 0;
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => { document.body.style.opacity = 1; }, 100);
+            
+            // 为技能卡片添加悬停效果
+            const skillCards = document.querySelectorAll('.skill-card');
+            skillCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                    this.style.zIndex = '10';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.zIndex = '1';
+                });
+            });
+            
+            // 统计卡片悬停效果
+            const statItems = document.querySelectorAll('.stat-item');
+            statItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.08)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+            
+            // 源氏专属动画
+            const heroAttribute = document.body.getAttribute('data-hero');
+            if (heroAttribute === 'genji') {
+                console.log('初始化源氏动画效果...');
+                
+                // 创建忍者镖动画
+                const createShuriken = () => {
+                    const shuriken = document.createElement('div');
+                    shuriken.innerHTML = '✴';
+                    shuriken.style.position = 'fixed';
+                    shuriken.style.fontSize = Math.random() * 15 + 10 + 'px';
+                    shuriken.style.color = '#00ff9d';
+                    shuriken.style.top = Math.random() * 100 + 'vh';
+                    shuriken.style.left = Math.random() * 100 + 'vw';
+                    shuriken.style.zIndex = '9999';
+                    shuriken.style.opacity = '0';
+                    shuriken.style.textShadow = '0 0 6px #00e6ff';
+                    shuriken.style.animation = 'shurikenThrow 3s linear forwards';
+                    shuriken.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(shuriken);
+                    
+                    setTimeout(() => {
+                        if (shuriken.parentNode) shuriken.remove();
+                    }, 4000);
+                };
+                
+                // 创建武士刀斩击动画
+                const createKatanaSlash = () => {
+                    const slash = document.createElement('div');
+                    slash.innerHTML = '⚔';
+                    slash.style.position = 'fixed';
+                    slash.style.fontSize = Math.random() * 25 + 15 + 'px';
+                    slash.style.color = '#00ff9d';
+                    slash.style.top = Math.random() * 100 + 'vh';
+                    slash.style.left = Math.random() * 100 + 'vw';
+                    slash.style.zIndex = '9999';
+                    slash.style.opacity = '0';
+                    slash.style.textShadow = '0 0 10px #00e6ff';
+                    slash.style.animation = 'katanaSlash 2s ease-in-out forwards';
+                    slash.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(slash);
+                    
+                    setTimeout(() => {
+                        if (slash.parentNode) slash.remove();
+                    }, 3000);
+                };
+                
+                // 创建忍者瞬移动画
+                const createNinjaTeleport = () => {
+                    const smoke = document.createElement('div');
+                    smoke.innerHTML = '💨';
+                    smoke.style.position = 'fixed';
+                    smoke.style.fontSize = Math.random() * 20 + 15 + 'px';
+                    smoke.style.color = '#00e6ff';
+                    smoke.style.top = Math.random() * 100 + 'vh';
+                    smoke.style.left = Math.random() * 100 + 'vw';
+                    smoke.style.zIndex = '9999';
+                    smoke.style.opacity = '0';
+                    smoke.style.textShadow = '0 0 8px #00ff9d';
+                    smoke.style.animation = 'ninjaSmoke 2.5s ease-in-out forwards';
+                    smoke.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(smoke);
+                    
+                    setTimeout(() => {
+                        if (smoke.parentNode) smoke.remove();
+                    }, 3500);
+                };
+                
+                // 创建机械部件动画
+                const createMechanicalPart = () => {
+                    const part = document.createElement('div');
+                    part.innerHTML = '⚙';
+                    part.style.position = 'fixed';
+                    part.style.fontSize = Math.random() * 12 + 8 + 'px';
+                    part.style.color = '#00e6ff';
+                    part.style.top = Math.random() * 100 + 'vh';
+                    part.style.left = Math.random() * 100 + 'vw';
+                    part.style.zIndex = '9999';
+                    part.style.opacity = '0';
+                    part.style.textShadow = '0 0 5px #00ff9d';
+                    part.style.animation = 'mechanicalFloat 4s ease-in-out forwards';
+                    part.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(part);
+                    
+                    setTimeout(() => {
+                        if (part.parentNode) part.remove();
+                    }, 5000);
+                };
+                
+                // 添加动画关键帧
+                const style = document.createElement('style');
+                style.textContent = `
+                    @keyframes shurikenThrow {
+                        0% {
+                            transform: translateX(-100px) rotate(0deg) scale(0.8);
+                            opacity: 0;
+                        }
+                        20% {
+                            transform: translateX(0) rotate(90deg) scale(1);
+                            opacity: 0.9;
+                        }
+                        80% {
+                            transform: translateX(100px) rotate(270deg) scale(1);
+                            opacity: 0.9;
+                        }
+                        100% {
+                            transform: translateX(200px) rotate(360deg) scale(1.2);
+                            opacity: 0;
+                        }
+                    }
+                    
+                    @keyframes katanaSlash {
+                        0% {
+                            transform: scale(0.5) rotate(0deg);
+                            opacity: 0;
+                        }
+                        30% {
+                            transform: scale(1.3) rotate(90deg);
+                            opacity: 0.9;
+                        }
+                        70% {
+                            transform: scale(1.3) rotate(-90deg);
+                            opacity: 0.9;
+                        }
+                        100% {
+                            transform: scale(0.5) rotate(0deg);
+                            opacity: 0;
+                        }
+                    }
+                    
+                    @keyframes ninjaSmoke {
+                        0% {
+                            transform: scale(0.8);
+                            opacity: 0;
+                        }
+                        50% {
+                            transform: scale(1.2);
+                            opacity: 0.8;
+                        }
+                        100% {
+                            transform: scale(1.5);
+                            opacity: 0;
+                        }
+                    }
+                    
+                    @keyframes mechanicalFloat {
+                        0% {
+                            transform: translateY(0) rotate(0deg) scale(0.7);
+                            opacity: 0;
+                        }
+                        20% {
+                            opacity: 0.7;
+                        }
+                        80% {
+                            opacity: 0.7;
+                        }
+                        100% {
+                            transform: translateY(-100px) rotate(360deg) scale(1.1);
+                            opacity: 0;
+                        }
+                    }
+                `;
+                document.head.appendChild(style);
+                
+                // 每隔1.5秒创建一个忍者镖
+                setInterval(createShuriken, 1500);
+                
+                // 每隔3秒创建一个武士刀斩击
+                setInterval(createKatanaSlash, 3000);
+                
+                // 每隔2秒创建一个忍者瞬移
+                setInterval(createNinjaTeleport, 2000);
+                
+                // 每隔2.5秒创建一个机械部件
+                setInterval(createMechanicalPart, 2500);
+                
+                // 源氏标志性语音文本效果
+                const titleText = document.querySelector('.hero-title');
+                if (titleText) {
+                    const originalText = titleText.textContent;
+                    const phrases = ["身虽为械，心如止水", "源氏参上！", "斩！", "我即是龍！"];
+                    
+                    setInterval(() => {
+                        const phrase = phrases[Math.floor(Math.random() * phrases.length)];
+                        titleText.textContent = phrase;
+                        titleText.style.transform = 'scale(1.05)';
+                        titleText.style.transition = 'transform 0.3s ease';
+                        titleText.style.color = '#00ff9d';
+                        
+                        setTimeout(() => {
+                            titleText.textContent = originalText;
+                            titleText.style.transform = 'scale(1)';
+                            titleText.style.color = ''; // 恢复默认颜色
+                        }, 1500);
+                    }, 10000);
+                }
+            }
+        });
+        
+        // 处理返回按钮的历史记录
+        document.querySelector('.back-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            // 如果有历史记录则返回，否则跳转到列表页
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.location.href = this.getAttribute('href');
+            }
+        });
+    </script>
+</body>
+</html>

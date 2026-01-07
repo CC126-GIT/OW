@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D.Va - 英雄详情 | 守望先锋风格官网</title>
+    
+    <!-- 引入 Bootstrap 5 CSS -->
+    <link href="../../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入自定义CSS -->
+    <link href="../../../assets/css/style.css" rel="stylesheet">
+    <!-- 引入英雄详情页专用CSS -->
+    <link href="../../../assets/css/hero-detail.css" rel="stylesheet">
+    <!-- 引入英雄居中布局CSS -->
+    <link href="../../../assets/css/hero-centered.css" rel="stylesheet">
+    <!-- 引入英雄主题色CSS -->
+    <link href="../../../assets/css/hero-themes.css" rel="stylesheet">
+    <!-- 引入 Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <style>
+        /* 页面加载时的过渡效果 */
+        body.hero-centered-page {
+            animation: pageFadeIn 0.5s ease-out;
+        }
+        
+        @keyframes pageFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* 确保内容完全显示 */
+        .hero-centered-page .hero-detail-main {
+            min-height: calc(100vh - 300px);
+        }
+        
+        /* 导航栏滚动时的padding调整 */
+        .main-navbar.scrolled + .hero-detail-main {
+            padding-top: 85px;
+        }
+        
+        /* D.Va专属微调 */
+        [data-hero="dva"] .hero-title-section::after {
+            background: radial-gradient(circle, rgba(255, 102, 178, 0.15), transparent 70%);
+        }
+        
+        /* 游戏币动画效果 */
+        @keyframes coinFlip {
+            0% {
+                transform: translateY(-100px) rotateY(0deg) scale(1);
+                opacity: 0;
+            }
+            20% {
+                opacity: 1;
+            }
+            80% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100px) rotateY(720deg) scale(0);
+                opacity: 0;
+            }
+        }
+        
+        /* 爱心泡泡效果 */
+        @keyframes heartFloat {
+            0% {
+                transform: translateY(0) rotate(0deg) scale(0.8);
+                opacity: 0;
+            }
+            20% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg) scale(1.2);
+                opacity: 0;
+            }
+        }
+        
+        /* 像素闪光效果 */
+        @keyframes pixelFlash {
+            0%, 100% {
+                opacity: 0;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.8;
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body class="hero-detail-page hero-centered-page" data-hero="dva">
+    <!-- ========== 导航栏 ========== -->
+    <nav class="navbar navbar-expand-lg navbar-dark main-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="../../../index.html">
+                <img src="../../../assets/img/logo.png" alt="网站Logo" class="navbar-logo">
+                OVERWATCH
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../../index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../index.html">英雄</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../news/index.html">新闻</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-people-fill"></i> 社区</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-gift-fill"></i> 福利</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-trophy-fill"></i> 电竞</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-shop"></i> 商城</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== 英雄详情内容 ========== -->
+    <main class="hero-detail-main">
+        <div class="container">
+            <!-- 重新设计的标题区域 -->
+            <div class="hero-header-container">
+                <!-- 返回按钮在左上角 -->
+                <div class="back-btn-container">
+                    <a href="../index.html" class="back-btn">
+                        <i class="bi bi-arrow-left"></i> 返回英雄列表
+                    </a>
+                </div>
+                
+                <!-- 标题和角色居中 -->
+                <div class="hero-title-section">
+                    <h1 class="hero-title">D.Va</h1>
+                    <span class="hero-role-badge" data-role="重装">重装</span>
+                </div>
+            </div>
+            
+            <div class="hero-content-container">
+                <!-- 英雄图片 -->
+                <div class="hero-image-container">
+                    <img src="../../../assets/img/D.Va.webp" alt="D.Va" class="hero-centered-image">
+                </div>
+                
+                <!-- 英雄简介 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-person-badge me-2"></i>英雄简介</h3>
+                    <p class="intro-text">D.Va是前职业电竞选手宋哈娜，现在驾驶着强大的MEKA机甲保卫家园。她可以使用聚变机炮进行近距离高伤害输出，用防御矩阵吸收敌方攻击，用推进器快速移动并撞击敌人。她还能弹出机甲，以飞行员形态继续战斗并重新召唤机甲。D.Va以她的自信、技术和直播风格而闻名，是韩国最受欢迎的英雄之一。</p>
+                </div>
+                
+                <!-- 技能介绍 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-tools me-2"></i>技能介绍</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">01</span>
+                                <h4 class="skill-name">聚变机炮</h4>
+                            </div>
+                            <p class="skill-desc">D.Va的主要武器，在近距离发射大量弹幕，每发造成2点伤害，每秒最多发射66发。移动时射击会减速，但可以在空中使用。弹药无限，但需要冷却时间。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">02</span>
+                                <h4 class="skill-name">推进器</h4>
+                            </div>
+                            <p class="skill-desc">D.Va激活机甲推进器向前冲刺，对撞到的敌人造成25点伤害并击退。可以用来快速移动、逃跑或撞击敌人离开悬崖。冷却时间4秒。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">03</span>
+                                <h4 class="skill-name">防御矩阵</h4>
+                            </div>
+                            <p class="skill-desc">D.Va激活防御矩阵，摧毁面前的敌方投射物。持续2秒，可以吸收大多数攻击，包括终极技能。是保护队友和自身的关键技能。冷却时间1秒，但需要充能。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">04</span>
+                                <h4 class="skill-name">自毁</h4>
+                            </div>
+                            <p class="skill-desc">终极技能，D.Va弹出机甲，使其在3秒后自爆，对范围内的敌人造成最高1000点伤害。机甲可以投掷到远处，是强大的区域控制和清场技能。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 被动技能 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-lightning-charge me-2"></i>被动技能</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">P1</span>
+                                <h4 class="skill-name">弹出机甲</h4>
+                            </div>
+                            <p class="skill-desc">当D.Va的机甲被摧毁或主动弹出时，她会以飞行员形态弹出，继续战斗。在飞行员形态下，她可以使用光枪进行攻击，并通过造成伤害来充能重新召唤机甲。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">P2</span>
+                                <h4 class="skill-name">召唤机甲</h4>
+                            </div>
+                            <p class="skill-desc">在飞行员形态下，D.Va可以通过造成伤害充能。当充能满后，她可以重新召唤一台新的MEKA机甲。召唤机甲会对附近的敌人造成50点伤害并击退。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 背景故事 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-book me-2"></i>背景故事</h3>
+                    <div class="story-content">
+                        <p>宋哈娜，游戏名"D.Va"，出生于韩国釜山。她是前世界冠军电竞选手，在星际争霸职业联赛中创下了不败纪录。哈娜从小就展现出惊人的游戏天赋，16岁时就获得了第一个世界冠军，成为韩国最年轻的职业电竞选手。</p>
+                        
+                        <p>多年来，韩国海岸一直受到巨型海洋生物"龙神"的侵袭。这些生物从深海出现，对韩国沿海城市造成严重破坏。为了对抗这一威胁，韩国政府成立了MEKA（移动装备韩国陆军）计划，招募最优秀的飞行员驾驶战斗机甲。</p>
+                        
+                        <p>当传统飞行员无法跟上龙神的快速适应能力时，MEKA转向招募反应速度更快的电竞选手。哈娜是最早被招募的选手之一，她很快证明了自己不仅是优秀的玩家，也是出色的机甲驾驶员。她将自己的电竞技巧应用到实战中，创造了独特的战斗风格。</p>
+                        
+                        <p>作为MEKA的明星驾驶员，哈娜将自己的战斗过程直播给全世界观众。她的直播频道拥有数百万粉丝，人们不仅关注她的战斗技巧，也喜爱她自信、活泼的个性。哈娜经常在战斗中发表俏皮话，将自己的战斗称为"游戏"。</p>
+                        
+                        <p>尽管肩负着保卫国家的重任，哈娜依然保持着电竞选手的心态。她相信，战斗和游戏一样，需要技巧、策略和快速反应。她与MEKA的其他驾驶员保持着良好的竞争关系，经常在训练中进行"友谊赛"。</p>
+                        
+                        <p>现在，D.Va继续驾驶着她的粉色MEKA机甲保卫韩国海岸。她相信，只要有好的装备和正确的态度，任何挑战都可以被克服。她的座右铭是："玩游戏就要赢！"</p>
+                        
+                        <p class="highlight">"玩游戏就要赢！"——D.Va</p>
+                    </div>
+                </div>
+                
+                <!-- 英雄数据 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-graph-up me-2"></i>英雄数据</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-label">难度等级</span>
+                            <span class="stat-value medium">中等</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">机甲生命值</span>
+                            <span class="stat-value">350</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">装甲值</span>
+                            <span class="stat-value">150</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">移动速度</span>
+                            <span class="stat-value high">高</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">近距离伤害</span>
+                            <span class="stat-value excellent">顶级</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">生存能力</span>
+                            <span class="stat-value high">高</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">机动性</span>
+                            <span class="stat-value high">高</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">团队贡献</span>
+                            <span class="stat-value high">高</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 使用技巧 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-lightbulb me-2"></i>使用技巧</h3>
+                    <div class="tips-content">
+                        <p><strong>1. 近距离作战：</strong>D.Va的聚变机炮在近距离伤害极高，但距离越远伤害衰减越严重。尽量靠近敌人作战，特别是对付脆皮英雄和坦克英雄。</p>
+                        
+                        <p><strong>2. 防御矩阵使用：</strong>防御矩阵是D.Va的核心技能。用它保护队友免受关键技能伤害，如麦克雷的闪光弹、安娜的睡眠针等。也可以吸收敌方终极技能，如士兵76的战术目镜。</p>
+                        
+                        <p><strong>3. 推进器技巧：</strong>推进器有多种用途：追击敌人、快速撤退、撞击敌人离开悬崖、打断敌方技能。注意推进器冷却时间很短，可以频繁使用。</p>
+                        
+                        <p><strong>4. 自毁时机：</strong>自毁是强大的区域控制技能。最佳使用时机包括：控制目标点、逼退敌人、配合队友控制技能、在狭窄空间释放。也可以用来快速获得新机甲。</p>
+                        
+                        <p><strong>5. 机甲管理：</strong>学会管理机甲的生命值。当机甲即将被摧毁时，可以主动弹出避免死亡。在飞行员形态下，尽快造成伤害重新召唤机甲。</p>
+                        
+                        <p><strong>6. 团队角色：</strong>D.Va是灵活的坦克，可以保护后排、骚扰敌方后排、吸收伤害。根据战况灵活切换角色，不要一直待在正面。</p>
+                    </div>
+                </div>
+                
+                <!-- 战斗定位 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-crosshair me-2"></i>战斗定位</h3>
+                    <div class="story-content">
+                        <p><strong>灵活坦克：</strong>D.Va是游戏中最灵活的坦克之一，可以在战场上快速移动，适应各种战斗情况。她既可以保护队友，也可以主动进攻。</p>
+                        
+                        <p><strong>后排保护者：</strong>凭借防御矩阵，D.Va可以有效地保护后排支援和输出英雄，吸收敌方关键技能和伤害。</p>
+                        
+                        <p><strong>骚扰者：</strong>D.Va可以快速突入敌方后排，骚扰敌方支援和输出英雄。她的高机动性使她能够快速进出危险区域。</p>
+                        
+                        <p><strong>伤害吸收者：</strong>作为重装英雄，D.Va可以吸收大量伤害，为队友创造输出空间。她的机甲被摧毁后还可以继续战斗，生存能力极强。</p>
+                        
+                        <p><strong>区域控制者：</strong>自毁是强大的区域控制技能，可以清空目标区域、逼退敌人、创造进攻机会。</p>
+                    </div>
+                </div>
+                
+                <!-- 电竞技巧 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-controller me-2"></i>电竞技巧</h3>
+                    <div class="story-content">
+                        <p><strong>矩阵管理：</strong>防御矩阵的能量管理是关键。短按矩阵可以拦截关键技能，长按矩阵可以吸收持续伤害。学会预测敌方技能释放时机。</p>
+                        
+                        <p><strong>推进器取消：</strong>使用推进器撞击敌人后，可以立即接上近战攻击，造成额外伤害。也可以使用推进器取消其他技能的后摇。</p>
+                        
+                        <p><strong>飞行员形态：</strong>在飞行员形态下，D.Va的移动速度更快，体型更小。利用这一点躲避敌方攻击，同时用光枪充能召唤机甲。</p>
+                        
+                        <p><strong>自毁投掷：</strong>自毁的机甲可以投掷到高处或远处。学会利用地形投掷机甲，让敌人难以躲避。</p>
+                        
+                        <p><strong>地图控制：</strong>D.Va擅长控制高台和空中区域。利用推进器到达制高点，获得更好的视野和射击角度。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== 页脚 ========== -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../../../assets/img/logo.png" alt="游戏Logo" class="footer-logo">
+                    <span class="footer-brand-text">大神</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#" class="footer-link">联系客服</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">网页报错</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">用户协议</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">隐私政策</a>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p>© 2026 守望先锋风格官网 - 仿制练习项目</p>
+                    <p class="footer-disclaimer">本网站为学习项目，非官方网站。所有守望先锋相关内容版权归暴雪娱乐所有。</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== JavaScript 文件 ========== -->
+    <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/js/main.js"></script>
+    <script>
+        // 页面加载时动态计算padding
+        document.addEventListener('DOMContentLoaded', function() {
+            // 计算导航栏高度并设置内容padding
+            function setContentPadding() {
+                const navbar = document.querySelector('.main-navbar');
+                const navbarHeight = navbar.offsetHeight;
+                
+                // 为所有需要调整的元素设置padding
+                const contentMain = document.querySelector('.hero-detail-main');
+                if (contentMain) {
+                    contentMain.style.paddingTop = navbarHeight + 'px';
+                }
+                
+                // 设置滚动时的padding
+                document.documentElement.style.scrollPaddingTop = navbarHeight + 'px';
+            }
+            
+            // 初始设置
+            setContentPadding();
+            
+            // 监听窗口大小变化
+            window.addEventListener('resize', setContentPadding);
+            
+            // 监听导航栏折叠状态变化
+            const navCollapse = document.getElementById('mainNav');
+            if (navCollapse) {
+                navCollapse.addEventListener('shown.bs.collapse', setContentPadding);
+                navCollapse.addEventListener('hidden.bs.collapse', setContentPadding);
+            }
+            
+            // 导航栏滚动效果
+            window.addEventListener('scroll', function() {
+                const navbar = document.querySelector('.main-navbar');
+                navbar.classList.toggle('scrolled', window.scrollY > 50);
+                
+                // 滚动时重新计算高度（如果需要）
+                if (window.scrollY > 50) {
+                    setContentPadding();
+                }
+            });
+            
+            // 页面加载动画
+            document.body.style.opacity = 0;
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => { document.body.style.opacity = 1; }, 100);
+            
+            // 为技能卡片添加悬停效果
+            const skillCards = document.querySelectorAll('.skill-card');
+            skillCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                    this.style.zIndex = '10';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.zIndex = '1';
+                });
+            });
+            
+            // 统计卡片悬停效果
+            const statItems = document.querySelectorAll('.stat-item');
+            statItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.08)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+            
+            // D.Va专属效果：游戏主题动画
+            const heroTitle = document.querySelector('.hero-title');
+            if (heroTitle) {
+                // 创建游戏币动画效果
+                const createCoin = () => {
+                    const coin = document.createElement('div');
+                    coin.innerHTML = '🪙';
+                    coin.style.position = 'fixed';
+                    coin.style.fontSize = Math.random() * 20 + 15 + 'px';
+                    coin.style.color = '#ffcc00';
+                    coin.style.top = Math.random() * 30 + 10 + '%';
+                    coin.style.left = Math.random() * 100 + 'vw';
+                    coin.style.zIndex = '9999';
+                    coin.style.opacity = '0';
+                    coin.style.textShadow = '0 0 8px #ff9900';
+                    coin.style.animation = 'coinFlip ' + (3 + Math.random() * 2) + 's ease-in-out forwards';
+                    coin.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(coin);
+                    
+                    // 动画结束后移除
+                    setTimeout(() => {
+                        coin.remove();
+                    }, 5000);
+                };
+                
+                // 创建爱心泡泡效果
+                const createHeart = () => {
+                    const heart = document.createElement('div');
+                    heart.innerHTML = '💖';
+                    heart.style.position = 'fixed';
+                    heart.style.fontSize = Math.random() * 15 + 10 + 'px';
+                    heart.style.color = '#ff66b2';
+                    heart.style.top = '100vh';
+                    heart.style.left = Math.random() * 100 + 'vw';
+                    heart.style.zIndex = '9999';
+                    heart.style.opacity = '0';
+                    heart.style.textShadow = '0 0 6px #ff3399';
+                    heart.style.animation = 'heartFloat ' + (5 + Math.random() * 3) + 's ease-in-out forwards';
+                    heart.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(heart);
+                    
+                    // 动画结束后移除
+                    setTimeout(() => {
+                        heart.remove();
+                    }, 8000);
+                };
+                
+                // 创建像素闪光效果
+                const createPixel = () => {
+                    const pixel = document.createElement('div');
+                    pixel.innerHTML = '■';
+                    pixel.style.position = 'fixed';
+                    pixel.style.fontSize = Math.random() * 10 + 8 + 'px';
+                    pixel.style.color = ['#ff66b2', '#cc66ff', '#ff3399', '#ff99cc'][Math.floor(Math.random() * 4)];
+                    pixel.style.top = Math.random() * 100 + 'vh';
+                    pixel.style.left = Math.random() * 100 + 'vw';
+                    pixel.style.zIndex = '9999';
+                    pixel.style.opacity = '0';
+                    pixel.style.textShadow = '0 0 5px currentColor';
+                    pixel.style.animation = 'pixelFlash ' + (1 + Math.random()) + 's ease-in-out forwards';
+                    pixel.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(pixel);
+                    
+                    // 动画结束后移除
+                    setTimeout(() => {
+                        pixel.remove();
+                    }, 2000);
+                };
+                
+                // 每2秒创建一个游戏币
+                setInterval(createCoin, 2000);
+                
+                // 每1.5秒创建一个爱心泡泡
+                setInterval(createHeart, 1500);
+                
+                // 每0.5秒创建一个像素闪光
+                setInterval(createPixel, 500);
+                
+                // 添加游戏音效模拟（通过CSS动画）
+                const heroSection = document.querySelector('.hero-title-section');
+                if (heroSection) {
+                    setInterval(() => {
+                        heroSection.style.boxShadow = '0 0 25px rgba(255, 102, 178, 0.6)';
+                        setTimeout(() => {
+                            heroSection.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.4)';
+                        }, 300);
+                    }, 4000);
+                }
+                
+                // 添加D.Va标志性语音文本效果
+                const titleText = document.querySelector('.hero-title');
+                const originalText = titleText.textContent;
+                const phrases = ["玩游戏就要赢！", "D.Va登场！", "胜者为王！", "战斗开始！"];
+                
+                setInterval(() => {
+                    const phrase = phrases[Math.floor(Math.random() * phrases.length)];
+                    titleText.textContent = phrase;
+                    titleText.style.transform = 'scale(1.05)';
+                    titleText.style.transition = 'transform 0.3s ease';
+                    
+                    setTimeout(() => {
+                        titleText.textContent = originalText;
+                        titleText.style.transform = 'scale(1)';
+                    }, 1000);
+                }, 8000);
+            }
+        });
+        
+        // 处理返回按钮的历史记录
+        document.querySelector('.back-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            // 如果有历史记录则返回，否则跳转到列表页
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.location.href = this.getAttribute('href');
+            }
+        });
+    </script>
+</body>
+</html>

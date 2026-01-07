@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>破坏球 - 英雄详情 | 守望先锋风格官网</title>
+    
+    <!-- 引入 Bootstrap 5 CSS -->
+    <link href="../../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入自定义CSS -->
+    <link href="../../../assets/css/style.css" rel="stylesheet">
+    <!-- 引入英雄详情页专用CSS -->
+    <link href="../../../assets/css/hero-detail.css" rel="stylesheet">
+    <!-- 引入英雄居中布局CSS -->
+    <link href="../../../assets/css/hero-centered.css" rel="stylesheet">
+    <!-- 引入英雄主题色CSS -->
+    <link href="../../../assets/css/hero-themes.css" rel="stylesheet">
+    <!-- 引入 Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+<body class="hero-detail-page hero-centered-page" data-hero="wreckingball">
+    <!-- ========== 导航栏 ========== -->
+    <nav class="navbar navbar-expand-lg navbar-dark main-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="../../../index.html">
+                <img src="../../../assets/img/logo.png" alt="网站Logo" class="navbar-logo">
+                OVERWATCH
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../../index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../index.html">英雄</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../news/index.html">新闻</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-people-fill"></i> 社区</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-gift-fill"></i> 福利</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-trophy-fill"></i> 电竞</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-shop"></i> 商城</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== 英雄详情内容 ========== -->
+    <main class="hero-detail-main">
+        <div class="container">
+            <!-- 重新设计的标题区域 -->
+            <div class="hero-header-container">
+                <!-- 返回按钮在左上角 -->
+                <div class="back-btn-container">
+                    <a href="../index.html" class="back-btn">
+                        <i class="bi bi-arrow-left"></i> 返回英雄列表
+                    </a>
+                </div>
+                
+                <!-- 标题和角色居中 -->
+                <div class="hero-title-section">
+                    <h1 class="hero-title">破坏球</h1>
+                    <span class="hero-role-badge" data-role="重装">重装</span>
+                </div>
+            </div>
+            
+            <div class="hero-content-container">
+                <!-- 英雄图片 -->
+                <div class="hero-image-container">
+                    <img src="../../../assets/img/破坏球.webp" alt="破坏球" class="hero-centered-image">
+                </div>
+                
+                <!-- 英雄简介 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-person-badge me-2"></i>英雄简介</h3>
+                    <p class="intro-text">破坏球是一只名叫哈蒙德（Hammond）的仓鼠，驾驶着一台名为"破坏球"的自制战斗机甲。他是地平线月球基地的"实验体"，与温斯顿一样拥有被基因工程增强的智力。破坏球具有极高的机动性，可以变形成球形快速滚动，用抓钩在环境中摆荡，部署自适应护盾保护自己，并用四联机炮和地雷清扫场造成巨大伤害。他是游戏中最具机动性的坦克英雄，擅长扰乱敌方阵型和创造混乱。</p>
+                </div>
+                
+                <!-- 技能介绍 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-tools me-2"></i>技能介绍</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">01</span>
+                                <h4 class="skill-name">四联机炮</h4>
+                            </div>
+                            <p class="skill-desc">破坏球的主要武器，四联装自动机炮，每发造成5点伤害，射速快但弹道扩散较大。适合中近距离作战，在近距离可以造成可观的伤害。弹药无限，但需要冷却（过热机制）。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">02</span>
+                                <h4 class="skill-name">球形模式</h4>
+                            </div>
+                            <p class="skill-desc">破坏球的核心技能，将机甲变形为球形，大幅提升移动速度。在球形模式下可以攀爬斜坡和墙壁，使用抓钩摆荡，并撞击敌人造成伤害和击退效果。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">03</span>
+                                <h4 class="skill-name">抓钩</h4>
+                            </div>
+                            <p class="skill-desc">破坏球发射抓钩附着在表面上，然后可以摆荡或将自己拉向目标。是破坏球实现高机动性的关键技能，可以用来快速移动、逃离危险或撞击敌人。没有冷却时间，但需要表面附着点。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">04</span>
+                                <h4 class="skill-name">地雷清扫场</h4>
+                            </div>
+                            <p class="skill-desc">破坏球的终极技能，在周围部署一圈感应地雷。地雷会在敌人接近时爆炸，造成130点伤害。地雷可以被摧毁，但数量众多，可以有效地控制区域或逼迫敌人走位。持续20秒。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 被动技能 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-lightning-charge me-2"></i>被动技能</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">P1</span>
+                                <h4 class="skill-name">自适应护盾</h4>
+                            </div>
+                            <p class="skill-desc">破坏球激活自适应护盾，根据附近敌人的数量获得临时护盾。每有一个敌人获得100点护盾，最多获得700点护盾。护盾持续7秒，是破坏球重要的生存技能。冷却时间15秒。</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <span class="skill-number">P2</span>
+                                <h4 class="skill-name">动力坠击</h4>
+                            </div>
+                            <p class="skill-desc">破坏球从空中撞击地面，对范围内的敌人造成伤害并击飞。伤害取决于坠落高度，最高100点。可以配合抓钩从高处坠落，是重要的控制技能。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 背景故事 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-book me-2"></i>背景故事</h3>
+                    <div class="story-content">
+                        <p>哈蒙德是一只来自地平线月球基地的基因工程仓鼠，与温斯顿一样是"地平线月球殖民地"的实验体。当温斯顿启动逃生舱返回地球时，哈蒙德也偷偷建造了自己的逃生舱，并跟随温斯顿来到了地球。</p>
+                        
+                        <p>与温斯顿不同，哈蒙德对人类世界没有崇高的理想。他降落在澳大利亚的渣客镇，这个充满混乱和暴力的废土城市。哈蒙德凭借自己的智慧和工程技能，从渣客镇的废料中建造了一台战斗机甲，并称之为"破坏球"。</p>
+                        
+                        <p>哈蒙德很快在渣客镇的机甲大战中崭露头角。他的小型体型和快速移动的球形机甲让其他参赛者难以应对。他赢得了多场机甲大战，积累了财富和名声。</p>
+                        
+                        <p>尽管哈蒙德是一只仓鼠，但他的智力远超普通人类。他不仅精通机械工程，还懂得战术和策略。他将自己的机甲设计得既能快速移动，又能造成巨大破坏，完美结合了机动性和火力。</p>
+                        
+                        <p>哈蒙德最初参加机甲大战只是为了生存和财富，但随着时间的推移，他开始享受这种战斗带来的刺激感。他将每一场战斗都视为一场游戏，总是带着轻松愉快的心态参与。</p>
+                        
+                        <p>现在，哈蒙德驾驶着他的破坏球机甲在世界各地参加机甲比赛和战斗。他没有像温斯顿那样加入守望先锋，而是选择了一种更自由、更刺激的生活方式。他相信，生活就应该充满乐趣和冒险。</p>
+                        
+                        <p>尽管外表看起来只是一只可爱的仓鼠，但哈蒙德是一名出色的战士和工程师。他用行动证明，即使是小型生物也能成为强大的力量。</p>
+                        
+                        <p class="highlight">"游戏开始！"——哈蒙德</p>
+                    </div>
+                </div>
+                
+                <!-- 英雄数据 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-graph-up me-2"></i>英雄数据</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-label">难度等级</span>
+                            <span class="stat-value high">高</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">生命值</span>
+                            <span class="stat-value">500</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">护甲</span>
+                            <span class="stat-value">100</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">机动性</span>
+                            <span class="stat-value excellent">顶级</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">控制能力</span>
+                            <span class="stat-value high">高</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">生存能力</span>
+                            <span class="stat-value medium">中等</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">伤害输出</span>
+                            <span class="stat-value medium">中等</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">团队贡献</span>
+                            <span class="stat-value medium">中等</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 使用技巧 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-lightbulb me-2"></i>使用技巧</h3>
+                    <div class="tips-content">
+                        <p><strong>1. 机动性最大化：</strong>破坏球的优势在于机动性。不断使用球形模式和抓钩移动，让敌人难以瞄准。记住，抓钩没有冷却时间，只要找到附着点就可以使用。</p>
+                        
+                        <p><strong>2. 撞击连招：</strong>破坏球的经典连招是：使用抓钩摆荡获得速度 → 撞击敌人造成伤害和击退 → 使用动力坠击再次造成伤害和击飞 → 变形为站立模式用机炮攻击。</p>
+                        
+                        <p><strong>3. 自适应护盾时机：</strong>自适应护盾根据附近敌人的数量提供护盾。在冲入敌阵时使用，可以获得最大护盾值。护盾持续7秒，足够时间造成混乱后撤离。</p>
+                        
+                        <p><strong>4. 地雷清扫场使用：</strong>地雷清扫场是强大的区域控制技能。最佳使用时机包括：控制目标点、封堵敌人撤退路线、配合队友控制技能使用。注意地雷可以被摧毁，尽量放在敌人难以瞄准的位置。</p>
+                        
+                        <p><strong>5. 目标优先级：</strong>优先攻击支援英雄和脆皮输出英雄。破坏球不适合正面作战，更适合骚扰后排、打断敌方支援和治疗。</p>
+                        
+                        <p><strong>6. 生存策略：</strong>破坏球虽然有高机动性，但生命值不高。学会"打带跑"战术：冲入敌阵造成混乱 → 造成伤害 → 使用自适应护盾 → 快速撤离 → 等待技能冷却 → 再次攻击。</p>
+                    </div>
+                </div>
+                
+                <!-- 战斗定位 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-crosshair me-2"></i>战斗定位</h3>
+                    <div class="story-content">
+                        <p><strong>骚扰型坦克：</strong>破坏球是典型的骚扰型坦克，不适合站在前排吸收伤害，而是通过高机动性扰乱敌方阵型。</p>
+                        
+                        <p><strong>后排杀手：</strong>凭借高机动性和控制能力，破坏球可以快速突入敌方后排，击杀或驱赶支援和输出英雄。</p>
+                        
+                        <p><strong>控制专家：</strong>撞击和动力坠击是强大的控制技能，可以打断敌方技能、击飞敌人、创造击杀机会。</p>
+                        
+                        <p><strong>区域控制者：</strong>地雷清扫场可以有效地控制大片区域，逼迫敌人改变位置或清理地雷。</p>
+                        
+                        <p><strong>信息收集者：</strong>破坏球的高机动性让他可以快速侦察敌方位置和阵型，为团队提供宝贵信息。</p>
+                    </div>
+                </div>
+                
+                <!-- 电竞技巧 -->
+                <div class="info-card">
+                    <h3><i class="bi bi-controller me-2"></i>电竞技巧</h3>
+                    <div class="story-content">
+                        <p><strong>1. 抓钩高级技巧：</strong>顶级玩家会使用抓钩实现复杂移动，如墙上奔跑、快速转向、空中变向等。掌握这些技巧可以大幅提升破坏球的机动性。</p>
+                        
+                        <p><strong>2. 能量管理：</strong>破坏球的终极技能充能很快。在高端局中，破坏球玩家应该积极造成伤害和控制，快速充能地雷清扫场。</p>
+                        
+                        <p><strong>3. 撞击时机：</strong>撞击不仅可以造成伤害，还可以打断关键技能。学会预判敌方英雄的技能释放时机，用撞击打断它们。</p>
+                        
+                        <p><strong>4. 地雷布置艺术：</strong>地雷的布置位置很重要。最佳位置包括：狭窄通道、目标点中心、敌人必经之路。也可以将地雷布置在空中，让敌人难以摧毁。</p>
+                        
+                        <p><strong>5. 团队配合：</strong>破坏球需要与团队配合。告诉队友你的攻击目标，配合队友的控制技能使用地雷清扫场，与另一个骚扰英雄协同作战。</p>
+                        
+                        <p><strong>6. 地图掌握：</strong>破坏球可以到达许多其他英雄无法到达的位置。熟悉地图的每一个角落、每一个斜坡和墙壁，最大化利用机动性优势。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== 页脚 ========== -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../../../assets/img/logo.png" alt="游戏Logo" class="footer-logo">
+                    <span class="footer-brand-text">守望先锋</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#" class="footer-link">联系客服</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">网页报错</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">用户协议</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">隐私政策</a>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p>© 2026 守望先锋风格官网 - 仿制练习项目</p>
+                    <p class="footer-disclaimer">本网站为学习项目，非官方网站。所有守望先锋相关内容版权归暴雪娱乐所有。</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== JavaScript 文件 ========== -->
+    <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/js/main.js"></script>
+    <script>
+        // 破坏球专属动画效果
+        document.addEventListener('DOMContentLoaded', function() {
+            // 为技能卡片添加悬停效果
+            const skillCards = document.querySelectorAll('.skill-card');
+            skillCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                    this.style.zIndex = '10';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.zIndex = '1';
+                });
+            });
+            
+            // 统计卡片悬停效果
+            const statItems = document.querySelectorAll('.stat-item');
+            statItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.08)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+            
+            // 返回按钮的历史记录处理
+            const backBtn = document.querySelector('.back-btn');
+            if (backBtn) {
+                backBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (window.history.length > 1) {
+                        window.history.back();
+                    } else {
+                        window.location.href = this.getAttribute('href');
+                    }
+                });
+            }
+            
+            // 页面加载动画
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => { 
+                document.body.style.opacity = '1'; 
+            }, 100);
+            
+            // 破坏球专属动画
+            const heroAttribute = document.body.getAttribute('data-hero');
+            if (heroAttribute === 'wreckingball') {
+                console.log('初始化破坏球动画效果...');
+                
+                // 创建滚动球体动画
+                const createRollingBall = () => {
+                    const ball = document.createElement('div');
+                    ball.innerHTML = '●';
+                    ball.style.position = 'fixed';
+                    ball.style.fontSize = Math.random() * 20 + 10 + 'px';
+                    ball.style.color = '#ffcc00';
+                    ball.style.top = Math.random() * 100 + 'vh';
+                    ball.style.left = Math.random() * 100 + 'vw';
+                    ball.style.zIndex = '9999';
+                    ball.style.opacity = '0';
+                    ball.style.textShadow = '0 0 8px #ff9900';
+                    ball.style.animation = 'rollingBall 4s linear forwards';
+                    ball.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(ball);
+                    
+                    setTimeout(() => {
+                        if (ball.parentNode) ball.remove();
+                    }, 5000);
+                };
+                
+                // 创建地雷爆炸动画
+                const createMineExplosion = () => {
+                    const explosion = document.createElement('div');
+                    explosion.innerHTML = '💥';
+                    explosion.style.position = 'fixed';
+                    explosion.style.fontSize = Math.random() * 15 + 10 + 'px';
+                    explosion.style.color = '#ff9900';
+                    explosion.style.top = Math.random() * 100 + 'vh';
+                    explosion.style.left = Math.random() * 100 + 'vw';
+                    explosion.style.zIndex = '9999';
+                    explosion.style.opacity = '0';
+                    explosion.style.textShadow = '0 0 6px #ff6600';
+                    explosion.style.animation = 'mineExplosion 2s ease-in-out forwards';
+                    explosion.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(explosion);
+                    
+                    setTimeout(() => {
+                        if (explosion.parentNode) explosion.remove();
+                    }, 3000);
+                };
+                
+                // 创建仓鼠跑轮动画
+                const createHamsterWheel = () => {
+                    const hamster = document.createElement('div');
+                    hamster.innerHTML = '🐹';
+                    hamster.style.position = 'fixed';
+                    hamster.style.fontSize = Math.random() * 18 + 12 + 'px';
+                    hamster.style.color = '#ffcc00';
+                    hamster.style.top = Math.random() * 100 + 'vh';
+                    hamster.style.left = Math.random() * 100 + 'vw';
+                    hamster.style.zIndex = '9999';
+                    hamster.style.opacity = '0';
+                    hamster.style.textShadow = '0 0 5px #ff9900';
+                    hamster.style.animation = 'hamsterWheel 3s ease-in-out forwards';
+                    hamster.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(hamster);
+                    
+                    setTimeout(() => {
+                        if (hamster.parentNode) hamster.remove();
+                    }, 4000);
+                };
+                
+                // 创建钩爪摆荡动画
+                const createGrappleSwing = () => {
+                    const grapple = document.createElement('div');
+                    grapple.innerHTML = '🪝';
+                    grapple.style.position = 'fixed';
+                    grapple.style.fontSize = Math.random() * 16 + 10 + 'px';
+                    grapple.style.color = '#ff9900';
+                    grapple.style.top = Math.random() * 100 + 'vh';
+                    grapple.style.left = Math.random() * 100 + 'vw';
+                    grapple.style.zIndex = '9999';
+                    grapple.style.opacity = '0';
+                    grapple.style.textShadow = '0 0 5px #ff6600';
+                    grapple.style.animation = 'grappleSwing 3.5s ease-in-out forwards';
+                    grapple.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(grapple);
+                    
+                    setTimeout(() => {
+                        if (grapple.parentNode) grapple.remove();
+                    }, 4500);
+                };
+                
+                // 添加动画关键帧
+                const style = document.createElement('style');
+                style.textContent = `
+                    @keyframes rollingBall {
+                        0% {
+                            transform: translateX(-100px) rotate(0deg) scale(0.8);
+                            opacity: 0;
+                        }
+                        20% {
+                            opacity: 0.8;
+                        }
+                        80% {
+                            opacity: 0.8;
+                        }
+                        100% {
+                            transform: translateX(100px) rotate(720deg) scale(1.2);
+                            opacity: 0;
+                        }
+                    }
+                    
+                    @keyframes mineExplosion {
+                        0% {
+                            transform: scale(0.5);
+                            opacity: 0;
+                        }
+                        50% {
+                            transform: scale(1.3);
+                            opacity: 0.9;
+                        }
+                        100% {
+                            transform: scale(1);
+                            opacity: 0;
+                        }
+                    }
+                    
+                    @keyframes hamsterWheel {
+                        0% {
+                            transform: translateY(0) rotate(0deg) scale(0.7);
+                            opacity: 0;
+                        }
+                        20% {
+                            opacity: 0.7;
+                        }
+                        80% {
+                            opacity: 0.7;
+                        }
+                        100% {
+                            transform: translateY(-80px) rotate(360deg) scale(1.1);
+                            opacity: 0;
+                        }
+                    }
+                    
+                    @keyframes grappleSwing {
+                        0% {
+                            transform: translateY(0) rotate(-30deg) scale(0.8);
+                            opacity: 0;
+                        }
+                        30% {
+                            transform: translateY(-40px) rotate(30deg) scale(1);
+                            opacity: 0.8;
+                        }
+                        70% {
+                            transform: translateY(-40px) rotate(-30deg) scale(1);
+                            opacity: 0.8;
+                        }
+                        100% {
+                            transform: translateY(0) rotate(30deg) scale(0.8);
+                            opacity: 0;
+                        }
+                    }
+                `;
+                document.head.appendChild(style);
+                
+                // 每隔1.5秒创建一个滚动球体
+                setInterval(createRollingBall, 1500);
+                
+                // 每隔3秒创建一个地雷爆炸
+                setInterval(createMineExplosion, 3000);
+                
+                // 每隔2.5秒创建一个仓鼠跑轮
+                setInterval(createHamsterWheel, 2500);
+                
+                // 每隔4秒创建一个钩爪摆荡
+                setInterval(createGrappleSwing, 4000);
+                
+                // 破坏球标志性语音文本效果
+                const titleText = document.querySelector('.hero-title');
+                if (titleText) {
+                    const originalText = titleText.textContent;
+                    const phrases = ["游戏开始！", "哈蒙德登场！", "滚起来！", "破坏球来了！"];
+                    
+                    setInterval(() => {
+                        const phrase = phrases[Math.floor(Math.random() * phrases.length)];
+                        titleText.textContent = phrase;
+                        titleText.style.transform = 'scale(1.05)';
+                        titleText.style.transition = 'transform 0.3s ease';
+                        titleText.style.color = '#ffcc00';
+                        
+                        setTimeout(() => {
+                            titleText.textContent = originalText;
+                            titleText.style.transform = 'scale(1)';
+                            titleText.style.color = ''; // 恢复默认颜色
+                        }, 1500);
+                    }, 10000);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
